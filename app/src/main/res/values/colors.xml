@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_color">#5B4DFF</color>
+    <color name="green_active">#4CAF50</color>
+    <color name="primary_default">#5B4DFF</color>
+    <color name="primary_dark">#3C2FCC</color>
+    <color name="accent">#00C9A7</color>
+</resources>

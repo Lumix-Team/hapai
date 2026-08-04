@@ -1,0 +1,38 @@
+<resources>
+    <style name="Theme.Hapai" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/primary_default</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">#008A72</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="android:statusBarColor">@color/primary_dark</item>
+
+        <item name="colorSurface">#F5F5F5</item>
+        <item name="colorOnSurface">#212121</item>
+
+        <item name="materialCardViewStyle">@style/SmallShadowCard</item>
+    </style>
+
+    <style name="SmallShadowCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">1dp</item>
+    </style>
+
+    <style name="CircleButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">60dp</item>
+        <item name="android:textSize">0sp</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="iconTint">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <!-- -->
+    </style>
+
+    <style name="PillCard">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
