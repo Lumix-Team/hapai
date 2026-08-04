@@ -1,8 +1,6 @@
 <div align="center">
-  <p>
-    <img src="https://github.com/romanvht/ByeDPIAndroid/raw/master/.github/images/app.svg" alt="Логотип ByeDPI" width="200" />
-  </p>
-  <h1>ByeByeDPI Android</h1>
+
+  <h1>hapai Android</h1>
   <p>
     Русский |
     <a href="README-en.md">English</a> |
@@ -50,24 +48,6 @@
 Хост: 127.0.0.1
 Порт: 1080 (по умолчанию)
 ```
-
-### Сборка
-1. Клонируйте репозиторий с сабмодулями:
-```bash
-git clone --recurse-submodules
-```
-2. Запустите скрипт сборки из корня репозитория:
-```bash
-./gradlew assembleRelease
-```
-3. APK будет в `app/build/outputs/apk/release/`
-
-> P.S.: hev_socks5_tunnel не соберется под Windows, вам нужно будет использовать WSL
-
-### Хеш подписи
-SHA-256: 
-`77:45:10:75:AC:EA:40:64:06:47:5D:74:D4:59:88:3A:49:A6:40:51:FA:F3:2E:42:F7:18:F3:F9:77:7A:8D:FB`
-
 ### Зависимости
 - [ByeDPI](https://github.com/hufrea/byedpi)
 - [hev-socks5-tunnel](https://github.com/heiher/hev-socks5-tunnel)
