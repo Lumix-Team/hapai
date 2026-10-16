@@ -20,13 +20,13 @@ class UpdateChecker {
   static final UpdateChecker I = UpdateChecker._();
 
   static const _repoApi =
-      'https://api.github.com/repos/Leadaxe/LxBox/releases/latest';
+      'https://api.github.com/repos/Lumix-Team/hapai/releases/latest';
   /// Fallback — own manifest, committed to repo on every release by CI.
   /// Используется когда api.github.com даёт 403/429/5xx/timeout (типичный
   /// сценарий — shared VPN exit IP исчерпал anonymous 60 req/h cap).
   /// Schema контролируем сами; raw-endpoint cdn-cached, anti-abuse лояльнее.
   static const _repoFallback =
-      'https://raw.githubusercontent.com/Leadaxe/LxBox/main/docs/latest.json';
+      'https://raw.githubusercontent.com/Lumix-Team/hapai/lxbox-fork/docs/latest.json';
   static const _userAgent = 'Hapai';
   static const _httpTimeout = Duration(seconds: 10);
   static const _minCheckInterval = Duration(hours: 24);

@@ -205,16 +205,16 @@ class SupportMessageService {
   SupportMessageService._();
   static final SupportMessageService I = SupportMessageService._();
 
-  /// Прод-канал — main. Для проверки кампании до публикации можно собрать
-  /// тестовый APK с override'ом:
-  /// `--dart-define=LXBOX_SUPPORT_URL=https://raw.githubusercontent.com/Leadaxe/LxBox/develop/app/assets/support.test.json`
+  /// Прод-канал — ветка [lxbox-fork] репозитория форка. Для проверки кампании
+  /// до публикации можно собрать тестовый APK с override'ом:
+  /// `--dart-define=LXBOX_SUPPORT_URL=https://raw.githubusercontent.com/Lumix-Team/hapai/lxbox-fork/app/assets/support.test.json`
   ///
   /// §422 — до этого лента жила в `docs/support.json`; версии ≤ 2.22.0 читают
   /// тот путь, после удаления файла получают 404 и живут на своём кэше.
   static const _url = String.fromEnvironment(
     'LXBOX_SUPPORT_URL',
     defaultValue:
-        'https://raw.githubusercontent.com/Leadaxe/LxBox/main/app/assets/support.json',
+        'https://raw.githubusercontent.com/Lumix-Team/hapai/lxbox-fork/app/assets/support.json',
   );
   static const _httpTimeout = Duration(seconds: 10);
 

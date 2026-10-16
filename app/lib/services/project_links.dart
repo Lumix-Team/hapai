@@ -12,39 +12,39 @@ import 'version_info.dart';
 class ProjectLinks {
   ProjectLinks._();
 
-  static const repo = 'https://github.com/Leadaxe/LxBox';
-  static const latestRelease =
-      'https://github.com/Leadaxe/LxBox/releases/latest';
+  /// Hapai публикуется в ветке [ghBranch] репозитория Lumix-Team/hapai: в его
+  /// `main` лежит другой проект, поэтому и «Source Code», и ссылки на файлы
+  /// указывают на ветку. Переезд (в `main`, в отдельный репозиторий или
+  /// переименование ветки) — правка двух констант ниже.
+  static const ghRepo = 'https://github.com/Lumix-Team/hapai';
+  static const ghBranch = 'lxbox-fork';
+
+  static const repo = '$ghRepo/tree/$ghBranch';
+  static const latestRelease = '$ghRepo/releases/latest';
   static const core = 'https://github.com/Leadaxe/sing-box-lx';
   static const launcher = 'https://github.com/Leadaxe/singbox-launcher';
   static const singboxUpstream = 'https://github.com/SagerNet/sing-box';
   static const telegram = 'https://t.me/singbox_launcher/4317';
   static const donate = 'https://t.me/singbox_launcher/340/3621';
-  static const issues = 'https://github.com/Leadaxe/LxBox/issues';
-  static const donatePage =
-      'https://github.com/Leadaxe/LxBox/blob/main/docs/DONATE.md';
-  static const donatePageRu =
-      'https://github.com/Leadaxe/LxBox/blob/main/docs/DONATE.ru.md';
+  static const issues = '$ghRepo/issues';
+  static const donatePage = '$ghRepo/blob/$ghBranch/docs/DONATE.md';
+  static const donatePageRu = '$ghRepo/blob/$ghBranch/docs/DONATE.ru.md';
 
   /// Страница поддержки на языке интерфейса (пара RU/EN, как гайд).
   static String donatePageFor(String tag) =>
       tag == 'ru' ? donatePageRu : donatePage;
-  static const automationDoc =
-      'https://github.com/Leadaxe/LxBox/blob/main/docs/AUTOMATION.md';
+  static const automationDoc = '$ghRepo/blob/$ghBranch/docs/AUTOMATION.md';
 
   /// §361 — руководство пользователя. Пара RU/EN держится синхронной
-  /// CI-проверкой парности (tool/docs/parity_check.dart). Ветка `main`: в APK
-  /// попадает релизный код, а релиз — это merge в main, который принесёт туда
-  /// и оба файла гайда. Незнакомый тег → английская версия, а не 404.
-  static const guideEn =
-      'https://github.com/Leadaxe/LxBox/blob/main/docs/USER_GUIDE.md';
-  static const guideRu =
-      'https://github.com/Leadaxe/LxBox/blob/main/docs/USER_GUIDE.ru.md';
+  /// CI-проверкой парности (tool/docs/parity_check.dart). Ветка [ghBranch]:
+  /// оба файла гайда лежат в том же коммите, что и код. Незнакомый тег →
+  /// английская версия, а не 404.
+  static const guideEn = '$ghRepo/blob/$ghBranch/docs/USER_GUIDE.md';
+  static const guideRu = '$ghRepo/blob/$ghBranch/docs/USER_GUIDE.ru.md';
 
   static String guideFor(String tag) => tag == 'ru' ? guideRu : guideEn;
 
-  static String releaseTag(String tag) =>
-      'https://github.com/Leadaxe/LxBox/releases/tag/$tag';
+  static String releaseTag(String tag) => '$ghRepo/releases/tag/$tag';
 
   /// §390 — страницы приложения в сторах. Куда вести за обновлением, решает
   /// канал установки (`InstallSource.updateUrl`): APK с GitHub не встанет

@@ -24,12 +24,15 @@ void main() {
       }
     });
 
-    test('оба URL смотрят на main и на разные файлы репозитория', () {
+    test('оба URL смотрят на ветку форка и на разные файлы репозитория', () {
       for (final url in [AboutScreen.guideUrlEn, AboutScreen.guideUrlRu]) {
-        // Ветка main — единственная, куда доезжают релизные доки (§361);
+        // Ветка форка — единственная, куда доезжают релизные доки (§361);
         // ссылка на develop сгнила бы после мержа.
-        expect(url, startsWith('https://github.com/Leadaxe/LxBox/blob/main/'),
-            reason: 'ссылка должна вести в main: $url');
+        expect(
+            url,
+            startsWith(
+                'https://github.com/Lumix-Team/hapai/blob/lxbox-fork/'),
+            reason: 'ссылка должна вести в ветку форка: $url');
         expect(url, endsWith('.md'));
       }
       expect(AboutScreen.guideUrlEn, contains('docs/USER_GUIDE.md'));

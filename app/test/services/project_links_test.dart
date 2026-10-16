@@ -36,6 +36,6 @@ void main() {
 
   test('releaseTag строит адрес релиза по тегу', () {
     expect(ProjectLinks.releaseTag('v2.19.4'),
-        'https://github.com/Leadaxe/LxBox/releases/tag/v2.19.4');
+        'https://github.com/Lumix-Team/hapai/releases/tag/v2.19.4');
   });
 }
