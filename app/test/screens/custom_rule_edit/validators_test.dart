@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/custom_rule_edit/validators.dart';
+import 'package:hapai/screens/custom_rule_edit/validators.dart';
 
 /// §053 Stage 1 — unit tests для extracted validators.
 /// До extract'а эти функции были private в CustomRuleEditScreen и не

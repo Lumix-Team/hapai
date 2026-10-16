@@ -9,7 +9,7 @@ import '../models/template_vars.dart';
 ///
 ///   identity = uniquify_within_source( raw_provider_tag )
 ///
-/// - `raw_provider_tag` — `NodeSpec.tag`: в LxBox он уже сырой, наш
+/// - `raw_provider_tag` — `NodeSpec.tag`: в Hapai он уже сырой, наш
 ///   `tag_prefix` клеится позже и только в билдере
 ///   (`TagResolver.displayTag`, `server_list_build.dart`). Значит смена
 ///   префикса подписки идентичность не двигает;

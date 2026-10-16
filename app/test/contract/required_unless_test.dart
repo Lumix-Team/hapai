@@ -4,12 +4,12 @@
 // `listen_port` (код `wg_peer_incoming`), `peers[].port` — без `address`.
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/services/contract/body_edit.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/services/contract/body_edit.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 const _key = 'AQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyA=';
 

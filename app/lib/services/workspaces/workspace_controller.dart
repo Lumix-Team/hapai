@@ -15,7 +15,7 @@ import 'workspace_store.dart';
 /// Загрузка (спека §417 п. 2.3): стоп VPN (колбэк `HomeScreen`, он владеет
 /// контроллером) → flush стораджа → файлы ([WorkspaceStore.load]) →
 /// перечитать состояние ([_reloadStateFromDisk]) → [generation]++ →
-/// `LxBoxApp` пересоздаёт `HomeScreen` со всеми его контроллерами → новый
+/// `HapaiApp` пересоздаёт `HomeScreen` со всеми его контроллерами → новый
 /// `HomeScreen` на bootstrap'е видит «грязно», пересобирает конфиг и, если
 /// VPN был поднят ([takePendingAutoConnect]), поднимает его снова.
 ///
@@ -39,7 +39,7 @@ class WorkspaceController extends ChangeNotifier {
 
   int _generation = 0;
 
-  /// Ключ `HomeScreen` в `LxBoxApp`: инкремент = пересоздать экран и все
+  /// Ключ `HomeScreen` в `HapaiApp`: инкремент = пересоздать экран и все
   /// контроллеры, которыми он владеет.
   int get generation => _generation;
 

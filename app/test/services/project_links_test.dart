@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/project_links.dart';
+import 'package:hapai/services/project_links.dart';
 
 /// §362 — общий слой ссылок + подстановка `@плейсхолдеров` remote-контента.
 void main() {

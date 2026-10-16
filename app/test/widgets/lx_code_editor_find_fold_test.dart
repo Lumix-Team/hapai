@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/config_parse.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/config/config_parse.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 /// §614/§624 — поиск в LxCodeEditor (панель — Flutter-виджет, сам поиск —
 /// в нативе) и синхронизация LxTextCodeField с `TextEditingController` на

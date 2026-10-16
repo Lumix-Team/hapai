@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/parser/drop_verdict.dart';
-import 'package:lxbox/services/parser/engine/interpreter.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/parser/drop_verdict.dart';
+import 'package:hapai/services/parser/engine/interpreter.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
 
 import 'engine_test_setup.dart';
 

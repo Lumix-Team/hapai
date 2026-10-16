@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/template_loader.dart';
 
 import '../parser/engine_test_setup.dart';
 

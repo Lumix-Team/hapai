@@ -23,7 +23,7 @@ list with a copy button is shown in App Settings → Automation.
 |---------|--------|---------|
 | Accept automation commands | on/off; turning on — after the warning "any app on the device will be able to control the VPN" | off |
 
-Commands (prefix `com.leadaxe.lxbox.`):
+Commands (prefix `studio.creater120.hapai.`):
 
 | Command | Extra | Action | Requires |
 |---------|-------|--------|----------|

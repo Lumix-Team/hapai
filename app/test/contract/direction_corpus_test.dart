@@ -3,22 +3,22 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/codec/node_link_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/models/codec/source_replace_record.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_replace.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/codec/node_link_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/models/codec/source_replace_record.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_replace.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 
-// Конформанс-раннер корпуса НАПРАВЛЕНИЙ (SPEC 104, §393 A5), сторона LxBox.
+// Конформанс-раннер корпуса НАПРАВЛЕНИЙ (SPEC 104, §393 A5), сторона Hapai.
 // Тот же корпус гоняет лаунчер — `core/config/contract_direction_test.go`.
 //
 // Проверяется то, что увидит ЯДРО: `<case>.direction.json` прогоняется через
@@ -64,7 +64,7 @@ const _autoDefaultKeys = {'url', 'interval', 'tolerance', 'idle_timeout'};
 /// как у Направления (§570).
 const Map<String, String> _skipFold = {};
 
-/// Коды предупреждений корпуса → как их опознать в `emitWarnings` LxBox.
+/// Коды предупреждений корпуса → как их опознать в `emitWarnings` Hapai.
 ///
 /// Реестр (`registry/warnings.json`) — нормативный словарь кодов, и там, где
 /// у кода есть поле `dart` (класс `NodeWarning`), сверка идёт по классу
@@ -99,7 +99,7 @@ bool _isChainHopMissing(String line) =>
 bool _isChainCycleThroughDirection(String line) =>
     line.contains('was left out of it') || line.contains('were left out of it');
 
-/// Коды, которые LxBox не умеет выдать в принципе (нет фичи). Встретив такой
+/// Коды, которые Hapai не умеет выдать в принципе (нет фичи). Встретив такой
 /// код в ожиданиях НЕ-скипнутого кейса, раннер обязан упасть, а не молчать —
 /// поэтому список пуст: всё, чего нет, лежит в chain_*/fold_*.
 const _unsupportedCodes = <String>{};
@@ -118,7 +118,7 @@ const _groupsNotComparable = <String, String>{
       'ожидание groups:[] описывает АВАРИЮ СБОРКИ лаунчера, а не модель: при '
           'нулевом пуле GenerateOutboundsFromParserConfig возвращает ошибку '
           '«no nodes parsed from any source» (outbound_generator.go:1050), '
-          'Go-раннер получает res==nil и печатает пустой список. У LxBox '
+          'Go-раннер получает res==nil и печатает пустой список. У Hapai '
           'такого обрыва нет и быть не должно: buildConfig обязан отдать '
           'РАБОЧИЙ конфиг, а Направление — цель route.rules[].outbound, и его '
           'исчезновение сделало бы ссылку висячей. Мобила применяет ту же '
@@ -190,7 +190,7 @@ Future<void> _runCase(
 
   // `magic` — теги служебных опций ПРИНИМАЮЩЕГО конфига: у лаунчера
   // `block-out`, у мобилы `block` (`kBlockOutboundTag`). Корпус нормирует
-  // СТРУКТУРУ, а не чужие имена, поэтому ожидание переводится в теги LxBox.
+  // СТРУКТУРУ, а не чужие имена, поэтому ожидание переводится в теги Hapai.
   final tagMap = <String, String>{
     if (magic['direct'] is String) magic['direct'] as String: kDirectOutboundTag,
     if (magic['block'] is String) magic['block'] as String: kBlockOutboundTag,
@@ -267,7 +267,7 @@ Future<void> _runCase(
             'outbounds': [kBlockOutboundTag, kDirectOutboundTag],
             'default': kBlockOutboundTag,
           },
-    ]), reason: '$doc\n\nсписок групп сверяется по правилу LxBox, не по '
+    ]), reason: '$doc\n\nсписок групп сверяется по правилу Hapai, не по '
         'ожиданию корпуса — $why');
   }
 
@@ -307,7 +307,7 @@ Future<void> _runCase(
 
 // ── вход ────────────────────────────────────────────────────────────────────
 
-/// Канон (`schema/direction.schema.json`) → модель LxBox. Это и есть
+/// Канон (`schema/direction.schema.json`) → модель Hapai. Это и есть
 /// проверяемый шов: если маппинг перестанет быть однозначным, корпус
 /// развалится раньше, чем расхождение доедет до пользователя.
 Direction _toDirection(Map<String, dynamic> c) {
@@ -328,7 +328,7 @@ Direction _toDirection(Map<String, dynamic> c) {
   );
 }
 
-/// Канон (`schema/source_chain.schema.json`) + `tag` корпуса → модель LxBox.
+/// Канон (`schema/source_chain.schema.json`) + `tag` корпуса → модель Hapai.
 SourceChain _toChain(Map<String, dynamic> c) => SourceChain(
       tag: c['tag'] as String? ?? '',
       hops: [
@@ -491,7 +491,7 @@ List<Map<String, dynamic>> _groupsOf(
   return out;
 }
 
-/// Ожидание в терминах LxBox: служебные теги переведены (`block-out`→`block`)
+/// Ожидание в терминах Hapai: служебные теги переведены (`block-out`→`block`)
 /// и там, и внутри `outbounds`/`default`.
 Map<String, dynamic> _localizeGroup(
   Map<String, dynamic> g,

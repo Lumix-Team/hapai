@@ -2,15 +2,15 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/tls_spec.dart';
-import 'package:lxbox/models/transport_spec.dart';
-import 'package:lxbox/services/probe/probe_config.dart';
-import 'package:lxbox/services/probe/probe_runner.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/tls_spec.dart';
+import 'package:hapai/models/transport_spec.dart';
+import 'package:hapai/services/probe/probe_config.dart';
+import 'package:hapai/services/probe/probe_runner.dart';
 
 import '../parser/engine_test_setup.dart';
 
@@ -523,7 +523,7 @@ void main() {
   });
 
   group('§236 ProbeRunner (mock method channel)', () {
-    const channel = MethodChannel('com.leadaxe.lxbox/methods');
+    const channel = MethodChannel('studio.creater120.hapai/methods');
     final calls = <MethodCall>[];
     String probeStartAnswer = '';
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/config_staleness.dart';
-import 'package:lxbox/services/platform_channels.dart';
+import 'package:hapai/services/config_staleness.dart';
+import 'package:hapai/services/platform_channels.dart';
 
 /// §324 — зеркало `OverrideOptions` и сравнение канонических форм.
 ///

@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/subscription_meta.dart';
-import 'package:lxbox/services/subscription/sources.dart';
-import 'package:lxbox/services/subscription/subscription_identity.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/subscription_meta.dart';
+import 'package:hapai/services/subscription/sources.dart';
+import 'package:hapai/services/subscription/subscription_identity.dart';
 
 import '../parser/engine_test_setup.dart';
 
@@ -200,7 +200,7 @@ void main() {
       ));
       expect(h['User-Agent'], isNotNull);
       expect(h['User-Agent'], isNotEmpty);
-      expect(h['User-Agent'], contains('LxBox'));
+      expect(h['User-Agent'], contains('Hapai'));
     });
   });
 }

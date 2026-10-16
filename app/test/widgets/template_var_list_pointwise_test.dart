@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/widgets/template_var_list.dart';
-import 'package:lxbox/widgets/var_values_model.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/widgets/template_var_list.dart';
+import 'package:hapai/widgets/var_values_model.dart';
 
 /// SPEC 393 фаза D (D1/D2) — ТОЧЕЧНОСТЬ перерисовки списка настроек шаблона.
 ///
@@ -15,7 +15,7 @@ import 'package:lxbox/widgets/var_values_model.dart';
 /// `переменная → строки` поверх `CondDeps`, потому что там строка зависит от
 /// гейта (условия), а не только от собственного значения.
 ///
-/// У LxBox условных гейтов на строках НЕТ (`WizardVar` не несёт ни `if`, ни
+/// У Hapai условных гейтов на строках НЕТ (`WizardVar` не несёт ни `if`, ни
 /// `#enable`), поэтому зависимость строки ровно одна — её собственный ключ, и
 /// индексом служит сам per-key `ValueNotifier` модели (§232). Этот файл держит
 /// свойство под наблюдением: если гейты появятся или подписка поедет на общий

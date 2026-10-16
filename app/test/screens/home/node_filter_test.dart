@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/screens/home/node_filter.dart';
+import 'package:hapai/screens/home/node_filter.dart';
 
 /// §048 — unit tests для `NodeFilter` predicate + `extractEmojis`.
 /// Тестируется PURE predicate (без UI). Detour exclusion здесь не

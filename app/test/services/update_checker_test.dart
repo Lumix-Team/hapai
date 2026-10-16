@@ -5,8 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/update_checker.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/update_checker.dart';
 
 void main() {
   // §605 — одно правило для чекера и first-run вопроса: `0.0.0-dev` раньше

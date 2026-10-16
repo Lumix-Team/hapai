@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/direction_tag_prefix.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/direction_tag_prefix.dart';
 
 /// §393 A6 — смена `tag_prefix` источника молча ломала regex-фильтры
 /// Направлений: билдер эмитит тег как `'$prefix $bare'`, а Направление

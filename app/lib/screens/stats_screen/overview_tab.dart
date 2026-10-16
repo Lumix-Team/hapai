@@ -76,11 +76,11 @@ class _OverviewTabState extends State<OverviewTab> {
                   context, 'Connections', '${widget.totalConns}', Icons.link, cs.secondary,
                   onTap: () => DefaultTabController.of(context).animateTo(1),
                 ),
-                // Подпись — LxBox, а не sing-box: это RSS всего процесса
+                // Подпись — Hapai, а не sing-box: это RSS всего процесса
                 // приложения (ядро в том же процессе), не только ядра. Тап →
                 // попап с разбивкой памяти.
                 _totalChip(
-                  context, 'LxBox', formatBytes(widget.memory, spaced: true), Icons.memory, cs.secondary,
+                  context, 'Hapai', formatBytes(widget.memory, spaced: true), Icons.memory, cs.secondary,
                   onTap: () => showMemoryDetailSheet(
                     context,
                     rss: widget.memory,

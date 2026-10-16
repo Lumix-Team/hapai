@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/widgets/template_warnings_snack.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/services/builder/if_engine.dart' show TemplateWarning;
+import 'package:hapai/screens/home/widgets/template_warnings_snack.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/services/builder/if_engine.dart' show TemplateWarning;
 
 /// §555 / задача 570 — поверхность `template_degraded` на Home: снек со
 /// счётчиком и переход в шторку кодов.

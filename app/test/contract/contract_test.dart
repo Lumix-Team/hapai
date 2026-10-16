@@ -3,16 +3,16 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import 'corpus_warnings.dart';
 
 // Конформанс-раннер общего корпуса контракта (SPEC 103, фаза 1), сторона
-// LxBox. Аналог core/config/contract_test.go в singbox-launcher — гоняет тот
+// Hapai. Аналог core/config/contract_test.go в singbox-launcher — гоняет тот
 // же корпус contract/corpus/uri/**/*.uri через parseUri() и сравнивает
 // результат с ожиданием корпуса.
 //
@@ -27,7 +27,7 @@ import 'corpus_warnings.dart';
 // базы, и 257 из 281 override'а были побайтовыми дублями, которые ничего не
 // проверяли и глушили расхождения. Аудит 25.08 (контракт 0.8.0) их снёс.
 //
-// Регенерация ожиданий LxBox:
+// Регенерация ожиданий Hapai:
 //
 //   cd app && UPDATE_CONTRACT=1 flutter test test/contract/
 //
@@ -52,7 +52,7 @@ const _thisSide = 'lxbox';
 /// Схемы, объявленные реестром расширением ЧУЖОЙ стороны
 /// (`registry/protocols/<scheme>.json` → `"extension"`).
 ///
-/// Каталог корпуса такой схемы пропускается ЦЕЛИКОМ: у LxBox нет парсера
+/// Каталог корпуса такой схемы пропускается ЦЕЛИКОМ: у Hapai нет парсера
 /// hysteria v1, и каждая его фикстура падала бы «нода не разобралась» —
 /// шум, который прятал бы настоящие расхождения. Пропуск идёт от РЕЕСТРА,
 /// а не от списка в тесте: появится вторая desktop-only схема — раннер

@@ -4,7 +4,7 @@
 |------|----------|
 | Статус | **Code-complete + девайс-смок ✅ (OnePlus CPH2411, Android 15, vc=2542, 2026-06-14).** self-инъекция в `BoxService.kt` (helper `buildOverrideOptions`). Все 3 проверки пройдены на устройстве (см. «Девайс-смок»). autoRedirect-проброс — отложен (root-фича, отдельно). Репро на Samsung-репортёрах НЕ проводилось (нет устройства), но механика подтверждена на нашем. |
 | Дата старта | 2026-06-14 |
-| Триггер | Форум: на двух Samsung (Android 10/11) «Allow-list — всё те же проблемы». Юзер: на части устройств (Android 12/13) ручное добавление `com.leadaxe.lxbox` в allow-list **чинит** туннель. Связь с upstream [SagerNet/sing-box#3715](https://github.com/SagerNet/sing-box/issues/3715) (fix в `1.13.0-rc.7`) и [#3387](https://github.com/SagerNet/sing-box/issues/3387). |
+| Триггер | Форум: на двух Samsung (Android 10/11) «Allow-list — всё те же проблемы». Юзер: на части устройств (Android 12/13) ручное добавление `studio.creater120.hapai` в allow-list **чинит** туннель. Связь с upstream [SagerNet/sing-box#3715](https://github.com/SagerNet/sing-box/issues/3715) (fix в `1.13.0-rc.7`) и [#3387](https://github.com/SagerNet/sing-box/issues/3387). |
 | Связанные | [§046](../tasks/046F-tunnel-apps-split-tunneling/spec.md) (tunnel apps), [§069](069-current-session-allow-bypass.md) (allowBypass snapshot), [§075](075-tun-apps-restart-regen-config.md), [§048](048-perapp-trace-attribution-gaps.md), [§049](049-singbox-wrapper-deep-audit/spec.md) (wrapper audit), [§119/§120](119-default-network-not-vpn.md) (defaultNetwork) |
 
 > **Назначение документа:** зафиксировать всё, что прочитано и подтверждено по коду в этой сессии, чтобы НЕ перечитывать заново. Все факты ниже — с `file:line`. Где факт не из кода (Android-семантика, эталон без локального клона) — помечено.
@@ -34,7 +34,7 @@ tun_apps (storage, выбор юзера)  — backup_tun.dart
    │
    └──► ТЕНЬ: → OverrideOptions               (runtime-only, daemon/instance.go:75-89 НЕ трогает profileContent)
           BoxService.kt:254 (старт) + :424 (reload)
-          • self  → includePackage = [com.leadaxe.lxbox]   ⚠️ ТОЛЬКО allow
+          • self  → includePackage = [studio.creater120.hapai]   ⚠️ ТОЛЬКО allow
           • autoRedirect = <настройка>                     (root-only фича)
    │
    └─► сходятся в ядре: append (instance.go:84-85) → Android addAllowedApplication/addDisallowedApplication
@@ -129,7 +129,7 @@ tun_apps storage (lxbox_settings.json)
    VpnService.Builder  →  establish()  →  per-UID kernel whitelist
 ```
 
-**Вывод цепочки:** на всём пути self-пакет (`com.leadaxe.lxbox`) **не добавляется нигде** — ни в Dart, ни в Go/libbox, ни в Kotlin. Подтверждено чтением каждого звена.
+**Вывод цепочки:** на всём пути self-пакет (`studio.creater120.hapai`) **не добавляется нигде** — ни в Dart, ни в Go/libbox, ни в Kotlin. Подтверждено чтением каждого звена.
 
 > `OverrideOptions` (альтернативный путь) **append'ит**, не заменяет: `daemon/instance.go:84-85` — `IncludePackage = append(tunInboundOptions.IncludePackage, overrideOptions.IncludePackage...)`. У нас `OverrideOptions()` пустой (`BoxService.kt:254` старт, `:424` reload).
 > `sing-tun/tun_rules.go:22 BuildAndroidRules()` (package→UID) — это **root/non-VpnService** путь, для нашего VpnService-режима фильтрацию делает Android, не он. Тоже self не добавляет. `common.Uniq` на строках 52/72 → дубли self безопасны.
@@ -231,7 +231,7 @@ VpnService.Builder.establish()
 
 > Изначально (выше) я писал «механизм OverrideOptions возвращать не нужно, равноценно». **Это было верно только по критерию ПОВЕДЕНИЯ** (доходит ли трафик). Юзер ввёл другой критерий — **наблюдаемость / чистота конфига**, и по нему вывод обратный.
 
-**Претензия юзера (верная):** если впечатать self прямо в `include_package`, то в сохранённом/отдаваемом конфиге **нельзя отличить** выбор юзера от нашей докрутки — `["org.telegram.messenger","com.leadaxe.lxbox"]` без признака, кто что положил.
+**Претензия юзера (верная):** если впечатать self прямо в `include_package`, то в сохранённом/отдаваемом конфиге **нельзя отличить** выбор юзера от нашей докрутки — `["org.telegram.messenger","studio.creater120.hapai"]` без признака, кто что положил.
 
 **Где конфиг наблюдаем:** Debug API `GET /config` + `/config/pretty` (`config.dart:25-26`), snapshot `lxbox-diag.sh`, ручная отладка JSON.
 
@@ -310,8 +310,8 @@ VpnService.Builder.establish()
 - ⚠️ **Юнит-тест НЕ добавлен** — в проекте НЕТ Kotlin-тест-инфраструктуры (`src/test`, `testImplementation`, JUnit отсутствуют; вся тестируемая логика на Dart). Заводить ради одного теста несоразмерно. Логику «self только в allow» защищает конструкция (`has("include_package")`), не тест.
 - ✅ **Девайс-смок ПРОЙДЕН** — OnePlus CPH2411 (Android 15), vc=2542, USB, через Debug API, 2026-06-14:
   1. **allow** (1 приложение `org.telegram.messenger`) → VPN поднялся (`tun0 UP`); монитор logcat поймал live:
-     `D BoxService: [vpn] override: +self (com.leadaxe.lxbox) — allow-mode` ✅ — **helper сработал, self долетел в ядро через OverrideOptions**.
-  2. `GET /config` (allow) → `include_package = ['org.telegram.messenger']`, `com.leadaxe.lxbox` **ОТСУТСТВУЕТ** в файле ✅ — тень мимо снапшота, как задумано.
+     `D BoxService: [vpn] override: +self (studio.creater120.hapai) — allow-mode` ✅ — **helper сработал, self долетел в ядро через OverrideOptions**.
+  2. `GET /config` (allow) → `include_package = ['org.telegram.messenger']`, `studio.creater120.hapai` **ОТСУТСТВУЕТ** в файле ✅ — тень мимо снапшота, как задумано.
   3. **deny** (3 юзерских пакета) → VPN поднялся, краша `UnsupportedOperationException` **НЕТ** ✅; `GET /config` → `exclude_package` = только юзерские, self НИ в include НИ в exclude ✅.
   - Исходная конфигурация юзера (deny+3) восстановлена после теста.
   - НЕ проверено: репро на самих Samsung-репортёрах (нет их устройств) — механика подтверждена на нашем. Если у них не чинит → корень в lockdown/SDK (см. открытые вопросы), не в self.

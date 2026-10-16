@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/post_steps.dart';
 
 /// §247 — healDanglingResolveServers: битая `server`-ссылка resolve-правила
 /// деградирует (server снимается → DNS-роутинг), а не валит каждое

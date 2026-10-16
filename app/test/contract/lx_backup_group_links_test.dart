@@ -3,24 +3,24 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../contract_paths.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/import_rule.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/import_rule.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
 
-// Контракт 1.0.1 — импорт групп `kind: auto` и полей стороны LxBox по норме
-// LxBox на файлах корпуса. Кейсы `v10_group_links` и `v10_dev_forms` раннер
+// Контракт 1.0.1 — импорт групп `kind: auto` и полей стороны Hapai по норме
+// Hapai на файлах корпуса. Кейсы `v10_group_links` и `v10_dev_forms` раннер
 // корпуса сверяет по `.expected.lxbox.json` (selector читается urltest'ом с
 // `backup_group_degraded`, ответ 6, TASKS_LXBOX.md §17.8); здесь закреплена
 // перепись членов, позиций и dev-форм по модели. `v10_lxbox_fields` раннер
-// проходит, но поля стороны LxBox его ожидание не несёт: «раннер LxBox сверяет
+// проходит, но поля стороны Hapai его ожидание не несёт: «раннер Hapai сверяет
 // их по своей модели» (README корпуса) — здесь.
 
 String get _corpus => '$kVendorRoot/corpus/backup';
@@ -122,7 +122,7 @@ void main() {
     ]);
   });
 
-  test('v10_lxbox_fields: поля стороны LxBox применены к модели', () {
+  test('v10_lxbox_fields: поля стороны Hapai применены к модели', () {
     final raw = _read('v10_lxbox_fields.backup.json')!;
     final got = _import(raw);
     expect(got.file.warnings, isEmpty);
@@ -136,7 +136,7 @@ void main() {
           useDetourServers: false,
           replaceDetourChain: true,
         ));
-    // Контракт 1.0.1: `import_rules` — anyOf [форма LxBox {conditions,
+    // Контракт 1.0.1: `import_rules` — anyOf [форма Hapai {conditions,
     // action, …}, старая плоская форма {pattern, is_regex, action}]. Кейс
     // несёт по правилу каждой формы, и применяются оба: старое переносится в
     // условие по `tag` (миграция §302 v1).
@@ -165,7 +165,7 @@ void main() {
 
     final server = got.lists.whereType<UserServer>().single;
     expect(server.detourPolicy, DetourPolicy.defaults);
-    // У LxBox tag_policy корневого сервера — префикс имени в списке.
+    // У Hapai tag_policy корневого сервера — префикс имени в списке.
     expect(server.tagPrefix, 'lx:');
 
     final work = _folder(got.lists, 'Work');

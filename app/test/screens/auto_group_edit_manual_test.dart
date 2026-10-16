@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/screens/auto_group_edit_screen.dart';
-import 'package:lxbox/services/contract/group_genus.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/screens/auto_group_edit_screen.dart';
+import 'package:hapai/services/contract/group_genus.dart';
 
 // §565 — группа ручного рода (selector): редактор показывает членов пула с
 // отметкой выбранного, выбор члена меняет `default`. Проверяется поведение,

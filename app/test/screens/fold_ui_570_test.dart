@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_replace.dart';
-import 'package:lxbox/screens/direction_edit_screen.dart';
-import 'package:lxbox/screens/source_replace_screen.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_replace.dart';
+import 'package:hapai/screens/direction_edit_screen.dart';
+import 'package:hapai/screens/source_replace_screen.dart';
 
 /// §568 / задача 570 — UI свёртки: опция `include` Направления на группу
 /// свёртки и предупреждение редактора свёртки о занятом имени.

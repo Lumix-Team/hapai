@@ -96,7 +96,7 @@ enum SubscriptionOnUpdateAction {
 /// локальный слепок. Инициализируется копией глобальных при включении Custom;
 /// отбрасывается (→ null) при возврате в Default.
 class SubscriptionIdentityOverride {
-  /// User-Agent. Пусто → дефолт из глобала (брендированный `LxBox-android`,
+  /// User-Agent. Пусто → дефолт из глобала (брендированный `Hapai-android`,
   /// см. `resolveSubscriptionUserAgent`).
   final String userAgent;
 
@@ -621,7 +621,7 @@ final class FolderMember {
 final class FolderServers extends ServerList {
   final List<FolderMember> members;
 
-  /// Поле LxBox записи (`created_at`, §439): его отдаёт Debug API `/folders`.
+  /// Поле Hapai записи (`created_at`, §439): его отдаёт Debug API `/folders`.
   final DateTime createdAt;
 
   /// §284 — опции теста этой папки (override глобальных ping_options). null =

@@ -2,13 +2,13 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller/core_reject_ops.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/controllers/subscription_controller/core_reject_ops.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/parser_config.dart';
+import 'package:hapai/models/parser_config.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/widgets/template_var_list.dart';
-import 'package:lxbox/widgets/var_values_model.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/widgets/template_var_list.dart';
+import 'package:hapai/widgets/var_values_model.dart';
 
 /// §161 — поведение пустых required-полей в [TemplateVarListView]:
 ///  - «UI сам чинит»: пустое required с непустым default → подставляется

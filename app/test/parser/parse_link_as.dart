@@ -1,5 +1,5 @@
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §566 — разбор ссылки общим входом движка с приведением к ожидаемому
 /// классу узла. Заменяет снятые обёртки `parse<Схема>()`: тип тела выбирает

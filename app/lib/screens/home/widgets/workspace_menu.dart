@@ -9,7 +9,7 @@ import '../../../services/workspaces/workspace_controller.dart';
 import '../../../services/workspaces/workspace_store.dart';
 import '../../../widgets/app_bottom_sheet.dart';
 
-/// §417 — кнопка справа от «L×Box»: имя текущего workspace и попап с двумя
+/// §417 — кнопка справа от «Hapai»: имя текущего workspace и попап с двумя
 /// разделами — Load (слоты, у каждого меню «⋮»: переименовать / удалить) и
 /// Save (Save as…). Отдельного экрана управления нет.
 ///

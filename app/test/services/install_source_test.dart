@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/install_source.dart';
-import 'package:lxbox/services/project_links.dart';
+import 'package:hapai/services/install_source.dart';
+import 'package:hapai/services/project_links.dart';
 
 /// §390 — канал установки: маппинг installer → [InstallSource] и адрес
 /// обновления. Чистые функции, без `MethodChannel` и без device.

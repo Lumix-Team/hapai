@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/if_engine.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/if_engine.dart';
 
 // SPEC 393 фаза D (D5) — рубеж LOAD-валидации на общем корпусе шаблонов.
 //
@@ -17,7 +17,7 @@ import 'package:lxbox/services/builder/if_engine.dart';
 //
 // Почему отдельный файл, а не расширение раннера: фикстуры в `contract/**` —
 // read-only копия общего контракта, а формата «ожидаемый вердикт загрузки» у
-// корпуса СЕГОДНЯ НЕТ. Поэтому здесь — сторона LxBox, с явными списками
+// корпуса СЕГОДНЯ НЕТ. Поэтому здесь — сторона Hapai, с явными списками
 // кейсов; предложение общего формата описано в конце файла и уходит в контракт
 // отдельной задачей.
 //

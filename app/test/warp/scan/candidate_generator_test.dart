@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/warp/scan/candidate_generator.dart';
-import 'package:lxbox/services/warp/scan/scan_models.dart';
-import 'package:lxbox/services/warp/scan/scan_pool.dart';
+import 'package:hapai/services/warp/scan/candidate_generator.dart';
+import 'package:hapai/services/warp/scan/scan_models.dart';
+import 'package:hapai/services/warp/scan/scan_pool.dart';
 
 /// §284 — генератор кандидатов для рандом-скана (фаза 1 посев + фаза 2 вариации).
 void main() {

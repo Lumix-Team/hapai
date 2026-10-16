@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/config_node.dart';
-import 'package:lxbox/services/runtime_chain.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/config_node.dart';
+import 'package:hapai/services/runtime_chain.dart';
 
 /// §258 — рантайм-цепочка detour по собранному конфигу: порядок пакета,
 /// продолжение через выбор селектора, Направления (tag/autoTag), гейты

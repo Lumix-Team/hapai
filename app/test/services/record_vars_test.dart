@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/preset_expand.dart';
-import 'package:lxbox/services/record_vars.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/preset_expand.dart';
+import 'package:hapai/services/record_vars.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/services/template_loader.dart';
 
 import '../storage_migration/golden_harness.dart';
 
@@ -373,7 +373,7 @@ void main() {
       final servers = ((raw['dns'] as Map)['servers'] as List).cast<Map>();
       expect(servers[0]['vars'], {'dns_ip': '8.8.4.4'});
       expect(servers[1].containsKey('vars'), isFalse,
-          reason: 'google_dot: outbound vpn-1 — умолчание шаблона LxBox');
+          reason: 'google_dot: outbound vpn-1 — умолчание шаблона Hapai');
       final rules = (raw['rules'] as List).cast<Map>();
       expect(rules.single['vars'], {'dns_ip': '77.88.8.1'});
     });

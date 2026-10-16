@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/backup_service.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/backup_service.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 import '../storage_migration/golden_harness.dart';
 

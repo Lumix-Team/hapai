@@ -441,7 +441,7 @@ _channel.setMethodCallHandler((call) async {
 - [x] `WifiNetworkObserver` registered в `BoxApplication.onCreate` (singleton, lifecycle = process); `WifiHistoryListener.I.init()` в `main.dart` синкает state с storage flag
 - [x] `STICKINESS_THRESHOLD_MS = 300_000` константа (5 минут — отсекает drive-by сети агрессивнее чем 60 сек)
 - [x] Pending state per process (не персистится — by design)
-- [x] `WifiHistoryBridge` MethodChannel `com.leadaxe.lxbox/wifi_history` event `onWifiSeen` + Dart handler `WifiHistoryListener`
+- [x] `WifiHistoryBridge` MethodChannel `studio.creater120.hapai/wifi_history` event `onWifiSeen` + Dart handler `WifiHistoryListener`
 - [x] `wifi_history` растёт ровно когда юзер реально пробыл на сети ≥ 5 мин И toggle ON
 - [x] Permission revoke → skip без crash (defensive try/catch SecurityException)
 - [x] Persistent info-banner в Pick saved bottom sheet когда toggle OFF — explainer + Open Settings button (visible сверху всегда, не только при empty history)
@@ -503,7 +503,7 @@ Sing-box обрабатывает `wifi_ssid` и `wifi_bssid` как **неза�
 **`WifiStateCache` для readWIFIState hot path** — premature optimization без бенчмарка. Перед добавлением:
 
 1. Включить Forward sing-box logs + busy traffic + wifi rule в config.
-2. Снять `dumpsys binder_calls_stats com.leadaxe.lxbox` до/после.
+2. Снять `dumpsys binder_calls_stats studio.creater120.hapai` до/после.
 3. Если IPC к `WifiManager` не пропорционален connection rate (sing-box внутри уже дедупит) → cache не нужен, close Phase 4.
 4. Если IPC растёт линейно с traffic → добавить cache backed by NetworkCallback (тот же `WifiNetworkObserver` экспозит cached `current: WIFIState?` для hot path).
 

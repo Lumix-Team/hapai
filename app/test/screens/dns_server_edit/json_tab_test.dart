@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/screens/dns_server_edit/edit_controller.dart';
-import 'package:lxbox/screens/dns_server_edit/tabs/json_tab.dart';
-import 'package:lxbox/screens/dns_settings_screen/resolved_server.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/screens/dns_server_edit/edit_controller.dart';
+import 'package:hapai/screens/dns_server_edit/tabs/json_tab.dart';
+import 'package:hapai/screens/dns_settings_screen/resolved_server.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 /// #143 / §458 — read-only JSON-вкладка редактора template/preset-сервера.
 /// После §439 у [DnsServerRef] нет `toJson`; вкладка кодировала снимок

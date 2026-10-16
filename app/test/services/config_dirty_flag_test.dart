@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/config_dirty_check.dart';
-import 'package:lxbox/services/platform_channels.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/config_dirty_check.dart';
+import 'package:hapai/services/platform_channels.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §113 — config-dirty флаг владеется `SettingsStorage`, поднимается
 /// config-значимыми сейверами; `_save` при снятом флаге выравнивает mtime

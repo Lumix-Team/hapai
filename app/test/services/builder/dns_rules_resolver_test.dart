@@ -13,14 +13,14 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/if_engine.dart'
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/if_engine.dart'
     show
         TemplateWarnings,
         collectTemplateWarnings,
         templateWarnFragmentDropped;
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §604 — шаблон DNS с серверами под все теги, на которые ссылаются правила
 /// этих тестов: правило на сервер вне `dns.servers` сборка теперь отбрасывает.

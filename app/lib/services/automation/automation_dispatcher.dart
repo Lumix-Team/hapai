@@ -9,7 +9,7 @@ import '../debug/debug_registry.dart';
 import 'event_emitter.dart';
 import 'handlers.dart' as handlers;
 
-/// §047 — incoming-роутер automation-интентов. Native (`LxBoxIntentReceiver`)
+/// §047 — incoming-роутер automation-интентов. Native (`HapaiIntentReceiver`)
 /// форвардит intent-action + extras сюда через [BoxVpnClient.
 /// registerAutomationActionHandler]. Мы собираем [DebugContext] из
 /// [DebugRegistry] (контроллеры биндятся в `HomeScreen.initState`) и зовём

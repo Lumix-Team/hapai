@@ -17,7 +17,7 @@
 ### 1.1 VPN-статус — нативный broadcast (НЕ CommandClient)
 
 **Источник:** `BoxService.setStatus(VpnStatus)` → `service.sendBroadcast(BROADCAST_STATUS)`.
-**Транспорт:** Android-broadcast → `VpnPlugin.statusReceiver` (системный `BroadcastReceiver`, `registerReceiver` в `onAttachedToEngine`) → `statusSink` → EventChannel `com.leadaxe.lxbox/status_events` → Dart `onStatusChanged` → `_handleStatusEvent`.
+**Транспорт:** Android-broadcast → `VpnPlugin.statusReceiver` (системный `BroadcastReceiver`, `registerReceiver` в `onAttachedToEngine`) → `statusSink` → EventChannel `studio.creater120.hapai/status_events` → Dart `onStatusChanged` → `_handleStatusEvent`.
 **Несёт:** connected / disconnected / connecting / stopping / revoked / error+errorMessage.
 **Природа:** событие (дискретный переход фазы туннеля).
 

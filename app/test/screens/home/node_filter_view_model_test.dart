@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/node_filter_view_model.dart';
+import 'package:hapai/screens/home/node_filter_view_model.dart';
 
 /// §085 R3 — unit tests для NodeFilterViewModel (извлечён из home_screen).
 /// Раньше эта логика жила в _HomeScreenState и была не покрыта тестами.

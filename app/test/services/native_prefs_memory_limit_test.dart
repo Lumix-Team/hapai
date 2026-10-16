@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/memory_limit_setting.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/memory_limit_setting.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §271 — memory_limit в §189 native_prefs: default, write-through (JSON +
 /// method direction), нормализация мусора, участие в backup-блоке vpn_settings.
@@ -12,7 +12,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   late Directory tmp;
   const pathChannel = MethodChannel('plugins.flutter.io/path_provider');
-  const methodsChannel = MethodChannel('com.leadaxe.lxbox/methods');
+  const methodsChannel = MethodChannel('studio.creater120.hapai/methods');
   final messenger =
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   final nativeCalls = <MethodCall>[];

@@ -171,7 +171,7 @@ PUT validates:
 | Сценарий | Поведение |
 |---|---|
 | Юзер удалил app из системы — package в `tun_apps.packages` | Native `NameNotFoundException` skip (уже работает). UI greyed-icon + label `(uninstalled)`. Не auto-удаляем (юзер может переустановить) |
-| Юзер добавляет `com.leadaxe.lxbox` в Deny-list | Не блокируем добавление (никакого effect — наш process сам не зависит от tun). Snackbar warning при выборе в picker'е: `L×Box itself doesn't need VPN — adding here has no effect` |
+| Юзер добавляет `studio.creater120.hapai` в Deny-list | Не блокируем добавление (никакого effect — наш process сам не зависит от tun). Snackbar warning при выборе в picker'е: `L×Box itself doesn't need VPN — adding here has no effect` |
 | Юзер переключил mode `allow → deny` или наоборот | `packages` сохраняется (тот же list, разная семантика) |
 | Юзер переключил mode на `off` | `packages` сохраняется (на случай возврата). В config'е ничего не пишем, sing-box default = всё через tun |
 | VPN не запущен на момент save | Banner не показываем. Изменения применятся при следующем старте |

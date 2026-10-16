@@ -4,17 +4,17 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/record_vars.dart';
-import 'package:lxbox/services/rule_set_downloader.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/subscription/http_cache.dart';
-import 'package:lxbox/services/warp/warp_backup.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/record_vars.dart';
+import 'package:hapai/services/rule_set_downloader.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/subscription/http_cache.dart';
+import 'package:hapai/services/warp/warp_backup.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -33,7 +33,7 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 //     и Направлений, поля L из §1.2 спеки 439, мёртвые ключи. После сборки
 //     хранение не меняется, кроме намеренной сироты — DNS-правила
 //     `kind: template` с именем, которого нет в шаблоне (резолвер её снимает);
-//   • `avd_v0` — снимок AVD `LxBox_test` на 2.23.2 (`GET
+//   • `avd_v0` — снимок AVD `Hapai_test` на 2.23.2 (`GET
 //     /backup/export?include=storage`, 14.09.2026). Секреты заменены
 //     синтетикой той же формы: ключи WG/AWG/Amnezia и MASQUE, UUID узлов,
 //     пароли, идентификаторы и токены WARP, IPv6 WARP, домашние IP,
@@ -60,7 +60,7 @@ const kStorageFixtures = ['rich_v0', 'avd_v0'];
 const kGoldenCoreVersion = '1.14.0-lx.39';
 
 /// Корень `state_directory` узлов Tailscale (native `filesDir` на устройстве).
-const kGoldenTailscaleStateRoot = '/data/user/0/com.leadaxe.lxbox/files';
+const kGoldenTailscaleStateRoot = '/data/user/0/studio.creater120.hapai/files';
 
 /// Подстановка вместо временного каталога песочницы (пути кэша `.srs`).
 const kSandboxPlaceholder = '<sandbox>';

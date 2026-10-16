@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/screens/settings_screen.dart';
+import 'package:hapai/screens/settings_screen.dart';
 
 /// SPEC 393 фаза D (D3) — выключенная строка гасит ПОДПИСЬ, а не только
 /// контрол.

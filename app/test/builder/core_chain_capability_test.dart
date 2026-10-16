@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/builder/core_chain_capability.dart';
+import 'package:hapai/services/builder/core_chain_capability.dart';
 
 // §393 C5 — гейт поддержки цепочек по версии ядра.
 //

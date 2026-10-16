@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §604 — запись переменной шаблона через `setVar` поднимает «конфиг
 /// устарел»: список config-var совпадает с переменными секций шаблона.

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/background_mode.dart';
-import 'package:lxbox/services/settings_storage.dart' show TunAppsConfig;
+import 'package:hapai/models/background_mode.dart';
+import 'package:hapai/services/settings_storage.dart' show TunAppsConfig;
 
 /// §293 — валидаторы enum-настроек на моделях (единый источник для storage-
 /// сеттеров и Debug write-путей; раньше инлайн-списки в обоих).

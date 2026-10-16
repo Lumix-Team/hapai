@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/config_node.dart';
-import 'package:lxbox/widgets/node_row.dart';
-import 'package:lxbox/widgets/node_view_item.dart';
+import 'package:hapai/models/config_node.dart';
+import 'package:hapai/widgets/node_row.dart';
+import 'package:hapai/widgets/node_view_item.dart';
 
 import '../contract_paths.dart';
 

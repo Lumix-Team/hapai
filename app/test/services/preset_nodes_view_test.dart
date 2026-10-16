@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/preset_nodes_view.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/preset_nodes_view.dart';
 
 /// §578/§643 — узлы для пресетов с обходом узлов на экранах, обслуживаемые узлы
 /// строки пресета и видимость переключателя `Skip presets`.

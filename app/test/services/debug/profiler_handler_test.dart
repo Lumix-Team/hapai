@@ -3,13 +3,13 @@
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/debug/context.dart';
-import 'package:lxbox/services/debug/debug_registry.dart';
-import 'package:lxbox/services/debug/handlers/profiler.dart';
-import 'package:lxbox/services/debug/transport/request.dart';
-import 'package:lxbox/services/debug/transport/response.dart';
-import 'package:lxbox/services/traffic_profiler.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
+import 'package:hapai/services/debug/context.dart';
+import 'package:hapai/services/debug/debug_registry.dart';
+import 'package:hapai/services/debug/handlers/profiler.dart';
+import 'package:hapai/services/debug/transport/request.dart';
+import 'package:hapai/services/debug/transport/response.dart';
+import 'package:hapai/services/traffic_profiler.dart';
+import 'package:hapai/vpn/cc_channel.dart';
 
 /// §048 P17 (028) — `/profiler/live*` читают и управляют ТЕМ ЖЕ синглтоном
 /// `TrafficProfiler.I`, что и Live tab: тот же лог, тот же start/stop,

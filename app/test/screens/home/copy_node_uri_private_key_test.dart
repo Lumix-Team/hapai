@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart'
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart'
     show carriesPrivateKeyByRegistry, credentialByRegistry;
-import 'package:lxbox/screens/home/node_actions.dart';
+import 'package:hapai/screens/home/node_actions.dart';
 
 import '../../parser/engine_test_setup.dart';
 

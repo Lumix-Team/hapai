@@ -3,18 +3,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/screens/subscription_detail_screen/node_inspect_screen.dart';
-import 'package:lxbox/widgets/node_diagnostics_tab.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warning_row.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/subscription_node_list.dart';
-import 'package:lxbox/services/contract/contract_docs.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/widgets/banner_palette.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/screens/subscription_detail_screen/node_inspect_screen.dart';
+import 'package:hapai/widgets/node_diagnostics_tab.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warning_row.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/subscription_node_list.dart';
+import 'package:hapai/services/contract/contract_docs.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/widgets/banner_palette.dart';
 
 /// §479 — уведомления узла: строка в списке подписки и общий компонент
 /// [NodeNotificationsView] (раздел на экране узла и шторка из списка).

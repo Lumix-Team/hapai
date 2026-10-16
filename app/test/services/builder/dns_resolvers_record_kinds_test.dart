@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §439 §4.2, §2.3 п. 6 — записи `dns{}` всех видов формы 1.0 переживают оба
 /// резолвера: `resolveDnsServersList` и `resolveDnsRulesList` отдают тот же
@@ -69,7 +69,7 @@ void main() {
     },
   ];
 
-  // Правила: все четыре вида, включая виды LxBox (srs, template).
+  // Правила: все четыре вида, включая виды Hapai (srs, template).
   const ruleRecords = [
     {
       'kind': 'user',

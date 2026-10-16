@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/direction_filters.dart';
+import 'package:hapai/screens/home/direction_filters.dart';
 
 /// §083 — unit tests для `DirectionFilters` snapshot class.
 void main() {

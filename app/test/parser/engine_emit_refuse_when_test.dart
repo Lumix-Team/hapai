@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/engine/emitter.dart';
-import 'package:lxbox/services/parser/engine/section.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/engine/emitter.dart';
+import 'package:hapai/services/parser/engine/section.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
 
 import 'engine_test_setup.dart';
 

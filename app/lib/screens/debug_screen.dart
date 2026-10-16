@@ -91,7 +91,7 @@ class _DebugScreenState extends State<DebugScreen> with SnackHelper {
       final name = path.split('/').last;
       await SharePlus.instance.share(ShareParams(
         files: [XFile(path, name: name, mimeType: 'application/json')],
-        text: 'LxBox diagnostic dump',
+        text: 'Hapai diagnostic dump',
         subject: name,
       ));
     } catch (e) {

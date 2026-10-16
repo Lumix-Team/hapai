@@ -4,14 +4,14 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/builder/preset_expand.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/preset_expand.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
 
 /// §439 — preset-сервер DNS проходит миграцию 2.23.2, пересборку, слияние
 /// бэкапа и экспорт одной формой: тег модели — тег конфига

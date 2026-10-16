@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/screens/backup_screen/lx_import_summary.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/screens/backup_screen/lx_import_summary.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 /// §641 — превью и снек импорта LX Backup после §640: файл без ключа `rules`
 /// правил не трогает, замена правил приёмника — не отказ.

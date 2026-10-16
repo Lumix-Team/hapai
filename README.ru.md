@@ -8,8 +8,8 @@
 Android-клиент на ядре [sing-box-lx](https://github.com/Leadaxe/sing-box-lx) — форке [sing-box](https://sing-box.sagernet.org/) с AmneziaWG 2.0 и нативным XHTTP — для гибкой маршрутизации сетевого трафика. Мульти-подписки, умные правила, встроенный тест скорости. Интерфейс на русском и английском.
 
 <p align="center">
-  <a href="https://f-droid.org/ru/packages/com.leadaxe.lxbox/"><img src="https://f-droid.org/badge/get-it-on-ru.png" alt="Доступно на F-Droid" height="80"></a>
-  <a href="https://play.google.com/store/apps/details?id=com.leadaxe.lxbox"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" alt="Доступно в Google Play" height="80"></a>
+  <a href="https://f-droid.org/ru/packages/studio.creater120.hapai/"><img src="https://f-droid.org/badge/get-it-on-ru.png" alt="Доступно на F-Droid" height="80"></a>
+  <a href="https://play.google.com/store/apps/details?id=studio.creater120.hapai"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" alt="Доступно в Google Play" height="80"></a>
   <a href="https://github.com/Leadaxe/LxBox"><img src="docs/badges/get-it-on-github.png" alt="Get it on GitHub" height="80"></a>
 </p>
 
@@ -38,7 +38,7 @@ Android-клиент на ядре [sing-box-lx](https://github.com/Leadaxe/sing
 
 **Есть Cloudflare WARP?** Да — одно нажатие «Получить WARP» регистрирует учётную запись и создаёт ключи WireGuard или MASQUE на устройстве. Приватный ключ не покидает телефон. Ключи лицензии WARP+ поддерживаются.
 
-**Где скачать?** [GitHub Releases](https://github.com/Leadaxe/LxBox/releases/latest), [F-Droid](https://f-droid.org/ru/packages/com.leadaxe.lxbox/) и [Google Play](https://play.google.com/store/apps/details?id=com.leadaxe.lxbox).
+**Где скачать?** [GitHub Releases](https://github.com/Leadaxe/LxBox/releases/latest), [F-Droid](https://f-droid.org/ru/packages/studio.creater120.hapai/) и [Google Play](https://play.google.com/store/apps/details?id=studio.creater120.hapai).
 
 ---
 

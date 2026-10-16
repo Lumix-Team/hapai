@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/tls_policy.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
+import 'package:hapai/models/tls_policy.dart';
+import 'package:hapai/services/builder/post_steps.dart';
 
 import '../contract_paths.dart';
 

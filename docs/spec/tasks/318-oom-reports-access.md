@@ -8,7 +8,7 @@
 
 ## 1. Проблема
 
-На тест-устройстве в `/data/data/com.leadaxe.lxbox/files/oom_reports/`
+На тест-устройстве в `/data/data/studio.creater120.hapai/files/oom_reports/`
 обнаружено **575 каталогов, 427 МБ** — снимки с 27.06 по 15.07.2026.
 Их пишет ядро (`experimental/libbox/oom_report.go:84`), приложение о папке
 не знает вовсе: строки `oom_reports` в коде LxBox не было.

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/debug_entry.dart';
-import 'package:lxbox/screens/home/widgets/errors_counter_row.dart';
-import 'package:lxbox/services/app_log.dart';
+import 'package:hapai/models/debug_entry.dart';
+import 'package:hapai/screens/home/widgets/errors_counter_row.dart';
+import 'package:hapai/services/app_log.dart';
 
 /// §614 — строка «Errors (N)» на главном: считает error-записи AppLog
 /// с последнего открытия журнала, тап открывает журнал и обнуляет счёт.

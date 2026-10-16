@@ -498,7 +498,7 @@ AutoSelectSpec? _xrayAutoSelect(
   final d = const AutoSelectParams();
   final params = AutoSelectParams(
     // §322 — умолчания балансировщика Xray — лаунчерные (gstatic, 3m), не
-    // общие LxBox: тело группы у сторон обязано совпасть (корпус
+    // общие Hapai: тело группы у сторон обязано совпасть (корпус
     // `body/xray/duplicates_collapsed_owner`).
     url: ping['destination']?.toString() ?? kXrayBalancerDefaultUrl,
     interval: ping['interval']?.toString() ?? kXrayBalancerDefaultInterval,

@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/engine/engine_mapper.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/engine/engine_mapper.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §480 W1 — ЗАМЕР: 2000 ссылок одной схемы через полный конвейер.
 ///

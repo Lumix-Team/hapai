@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/debug/context.dart';
-import 'package:lxbox/services/debug/debug_registry.dart';
-import 'package:lxbox/services/debug/transport/config.dart';
-import 'package:lxbox/services/debug/transport/server.dart';
+import 'package:hapai/services/debug/context.dart';
+import 'package:hapai/services/debug/debug_registry.dart';
+import 'package:hapai/services/debug/transport/config.dart';
+import 'package:hapai/services/debug/transport/server.dart';
 
 /// Integration-тесты крутят реальный [HttpServer.bind] на ephemeral-порту
 /// и стучатся curl-like запросами. Покрывают security-guarantees middleware

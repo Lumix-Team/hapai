@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/engine/interpreter.dart';
-import 'package:lxbox/services/parser/engine/section.dart';
+import 'package:hapai/services/parser/engine/interpreter.dart';
+import 'package:hapai/services/parser/engine/section.dart';
 
 /// Ревью после v2.25.1 (движок), m2 — `matches` / `not_matches` в условиях
 /// компилируются общим `_regex`, как прочие регулярки реестра.

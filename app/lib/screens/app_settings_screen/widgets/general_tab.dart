@@ -129,7 +129,7 @@ class GeneralTab extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.touch_app_outlined),
           title: Text(getLocalText.s("Home-screen shortcut")),
-          subtitle: Text(getLocalText.s("Long-press the L×Box icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.")),
+          subtitle: Text(getLocalText.s("Long-press the Hapai icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.")),
         ),
         const Divider(height: 32),
         Text(getLocalText.s("Updates"),

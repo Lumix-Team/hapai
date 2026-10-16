@@ -27,7 +27,7 @@ Tombstone эту гипотезу **опровергает**: краш не в G
 
 ```
 E flutter : [ERROR:.../pipeline_library_gles.cc(245)] Impeller validation: Could not link pipeline program.
-F libc   : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x34 in tid 28024 (1.raster), pid 27968 (com.leadaxe.lxbox)
+F libc   : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x34 in tid 28024 (1.raster), pid 27968 (studio.creater120.hapai)
 F DEBUG  : Cause: null pointer dereference
 F DEBUG  : backtrace:
 F DEBUG  :   #00 pc 000741a8  /system/vendor/lib/libsc-a3xx.so

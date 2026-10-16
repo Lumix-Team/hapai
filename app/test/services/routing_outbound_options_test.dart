@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/screens/routing_screen/routing_screen_helpers.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/screens/routing_screen/routing_screen_helpers.dart';
 
 /// §248/§274 — outbound-опции экрана Routing
 /// ([RoutingHelpers.outboundOptions]): detour-Направление — валидная цель

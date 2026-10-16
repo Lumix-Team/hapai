@@ -5,12 +5,12 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/preset_rule_set.dart';
-import 'package:lxbox/services/rule_set_auto_updater.dart';
-import 'package:lxbox/services/rule_set_downloader.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/preset_rule_set.dart';
+import 'package:hapai/services/rule_set_auto_updater.dart';
+import 'package:hapai/services/rule_set_downloader.dart';
 
 void main() {
   final now = DateTime(2026, 8, 3, 12);

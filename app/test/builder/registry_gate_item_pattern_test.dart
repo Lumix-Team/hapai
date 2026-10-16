@@ -10,11 +10,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/services/builder/registry_gate.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/services/builder/registry_gate.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import '../parser/engine_test_setup.dart';
 import '../storage_migration/golden_harness.dart';

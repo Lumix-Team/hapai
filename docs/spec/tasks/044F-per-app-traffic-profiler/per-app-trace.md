@@ -285,7 +285,7 @@ Recording **продолжается независимо от UI**: можно 
 
 ### 5. Dogfooding разработки L×Box
 
-Когда сам L×Box себя ведёт странно — `Stats → App` на `com.leadaxe.lxbox`. Видим, какие подписки fetch'аются, через какой outbound, есть ли DNS retry'и. Ускоряет TDD на VPN-flow'ах.
+Когда сам L×Box себя ведёт странно — `Stats → App` на `studio.creater120.hapai`. Видим, какие подписки fetch'аются, через какой outbound, есть ли DNS retry'и. Ускоряет TDD на VPN-flow'ах.
 
 ## Debug API
 

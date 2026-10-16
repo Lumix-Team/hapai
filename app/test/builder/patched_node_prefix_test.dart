@@ -1,13 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/emit_context.dart';
-import 'package:lxbox/models/import_rule.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/builder/rule_set_registry.dart';
-import 'package:lxbox/services/builder/server_list_build.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/subscription/import_rules.dart';
+import 'package:hapai/models/emit_context.dart';
+import 'package:hapai/models/import_rule.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/builder/rule_set_registry.dart';
+import 'package:hapai/services/builder/server_list_build.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/subscription/import_rules.dart';
 
 import '../parser/engine_test_setup.dart';
 

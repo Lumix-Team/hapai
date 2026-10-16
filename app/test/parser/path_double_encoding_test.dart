@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'engine_test_setup.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/parser/transport.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/parser/transport.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §320 — двойное percent-кодирование пути. Агрегаторы отдают
 /// `path=%2F%252Fassignment`: `Uri.queryParameters` декодит ровно один раз, и в

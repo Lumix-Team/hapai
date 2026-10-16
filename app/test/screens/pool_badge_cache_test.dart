@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/home/node_list_presenter.dart';
-import 'package:lxbox/screens/home/widgets/node_list.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/home/node_list_presenter.dart';
+import 'package:hapai/screens/home/widgets/node_list.dart';
 
 /// §446 — `poolBadgeOf` зовётся из `itemBuilder` на каждую видимую строку
 /// автовыбора каждый кадр, и раньше обходил ВСЕ узлы всех подписок. Теперь

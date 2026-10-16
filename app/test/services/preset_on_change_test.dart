@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/preset_on_change.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/preset_on_change.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §266 — on_change пресета FakeIP: `@rule_enable AND @dns_enable` → глушит
 /// глобальную `resolve_enabled`. Тест на РЕАЛЬНОМ wizard_template.json.

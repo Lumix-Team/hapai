@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warning_row.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/widgets/node_row.dart';
-import 'package:lxbox/widgets/node_view_item.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warning_row.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/widgets/node_row.dart';
+import 'package:hapai/widgets/node_view_item.dart';
 
 /// §502 — значок уведомлений в строке протокола на главном экране.
 void main() {

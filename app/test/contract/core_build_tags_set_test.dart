@@ -9,7 +9,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/builder/core_chain_capability.dart';
+import 'package:hapai/services/builder/core_chain_capability.dart';
 
 /// Достаёт список тегов из блока ```…``` под заголовком «## AAR build tags»
 /// в `docs/KERNEL.md`. Теги перечислены через запятую, возможно на нескольких

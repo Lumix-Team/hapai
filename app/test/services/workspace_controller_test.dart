@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/workspaces/workspace_controller.dart';
-import 'package:lxbox/services/workspaces/workspace_store.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/workspaces/workspace_controller.dart';
+import 'package:hapai/services/workspaces/workspace_store.dart';
 
 /// §417 — оркестрация загрузки: стоп-колбэк, generation для пересоздания
 /// HomeScreen, одноразовый флаг автозапуска, no-op на current.

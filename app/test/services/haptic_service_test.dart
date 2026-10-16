@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/haptic_service.dart';
+import 'package:hapai/services/haptic_service.dart';
 
 void main() {
   // Перехватываем платформенный канал — на host без вибро-мотора `HapticFeedback`

@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 import 'parse_link_as.dart';
 
 /// §472 шаг 5 — заглушки `u` и `aaaa-bbbb` в ссылках заменены настоящими

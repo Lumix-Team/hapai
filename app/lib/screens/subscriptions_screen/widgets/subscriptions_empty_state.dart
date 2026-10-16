@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../services/l10n/locale_controller.dart';
+import '../../../widgets/hapai_cat.dart';
 import '../../../widgets/safe_bottom.dart';
 
 /// Onboarding card (night T5-1): вместо голого "No subscriptions yet"
@@ -25,6 +26,8 @@ class SubscriptionsEmptyState extends StatelessWidget {
       physics: const AlwaysScrollableScrollPhysics(),
       padding: const EdgeInsets.all(16).withSafeBottom(context),
       children: [
+        const Center(child: HapaiCat(size: 96)),
+        const SizedBox(height: 4),
         Card(
           elevation: 0,
           color: cs.surfaceContainerHighest,
@@ -46,7 +49,7 @@ class SubscriptionsEmptyState extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(getLocalText.s("2. Paste it into the field above, or tap ⋮ → «Paste from clipboard», «Scan QR code».")),
                 const SizedBox(height: 8),
-                Text(getLocalText.s("3. Hit «+». L×Box will fetch, parse and configure — and you can connect from the Home tab.")),
+                Text(getLocalText.s("3. Hit «+». Hapai will fetch, parse and configure — and you can connect from the Home tab.")),
                 if (onPickPublicTestServer != null) ...[
                 const SizedBox(height: 18),
                 Text(

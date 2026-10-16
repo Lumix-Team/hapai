@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/direction.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/direction.dart';
 
 /// §248/§274 — parse-гейт detour-инвариантов в Direction.fromJson: restore из
 /// backup и ручная правка файла пишут raw JSON мимо UI/storage/API — read-time

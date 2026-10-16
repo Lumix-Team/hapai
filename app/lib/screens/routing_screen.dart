@@ -729,7 +729,7 @@ class _RoutingScreenState extends State<RoutingScreen>
           await File(path).writeAsString(json);
           await SharePlus.instance.share(ShareParams(
             files: [XFile(path, mimeType: 'application/json', name: filename)],
-            subject: 'LxBox rules',
+            subject: 'Hapai rules',
           ));
           showSnack(getLocalText.s("Rules exported"));
           return;

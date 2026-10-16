@@ -73,8 +73,8 @@ API gate: `Build.VERSION.SDK_INT >= R` (Android 11+) — primary support tier; �
 
 **Smoke-test через adb на 192.168.1.71:5555 (ColorOS / MTK Dimensity):**
 
-1. `dumpsys shortcut com.leadaxe.lxbox` — после старта app'а виден `qc_connect` (Stopped) или `qc_disconnect` (Started), label корректный, intent с `extra action=connect`/`disconnect`.
-2. Tap по плитке через `cmd statusbar click-tile com.leadaxe.lxbox/.vpn.LxBoxTileService` — `onClick` логируется, optimistic flip → `BoxVpnService.start/stop` пайплайн отрабатывает.
+1. `dumpsys shortcut studio.creater120.hapai` — после старта app'а виден `qc_connect` (Stopped) или `qc_disconnect` (Started), label корректный, intent с `extra action=connect`/`disconnect`.
+2. Tap по плитке через `cmd statusbar click-tile studio.creater120.hapai/.vpn.LxBoxTileService` — `onClick` логируется, optimistic flip → `BoxVpnService.start/stop` пайплайн отрабатывает.
 3. Realtime logcat подтвердил: `setStatus(Stopping)` → `LxBoxTileService.refreshTile` → `instanceRef.get()?.renderTile()` через main handler → `tile.updateTile()` без warning'ов от системы.
 4. После kill -9 процесса и повторного tap'а на tile — VPN стартует, нет `UninitializedPropertyAccessException` (lateinit fix отработал).
 

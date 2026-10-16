@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/wireguard/masquerade_source.dart';
-import 'package:lxbox/widgets/masquerade_fields.dart';
+import 'package:hapai/services/wireguard/masquerade_source.dart';
+import 'package:hapai/widgets/masquerade_fields.dart';
 
 /// §623 (ревизия 1) — секция Masquerade вкладки Settings узла
 /// WireGuard/AmneziaWG: строки как у Detour, выбор пишется сразу. Запись в

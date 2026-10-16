@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/traffic_profiler.dart';
-import 'package:lxbox/screens/stats_screen/profiler_filter.dart';
-import 'package:lxbox/screens/per_app_trace_tab/session_json.dart';
+import 'package:hapai/services/traffic_profiler.dart';
+import 'package:hapai/screens/stats_screen/profiler_filter.dart';
+import 'package:hapai/screens/per_app_trace_tab/session_json.dart';
 
 /// §044/new-profiler — тесты фильтр-модели (ортогональность осей app/тип,
 /// includeApps-флаг для App-вкладки, §177 family) и eventsToJson.

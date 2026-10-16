@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/screens/dns_server_edit/edit_controller.dart';
-import 'package:lxbox/services/dns/tailscale_endpoint_options.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/screens/dns_server_edit/edit_controller.dart';
+import 'package:hapai/services/dns/tailscale_endpoint_options.dart';
 
 /// §435 — `DnsServerEditController` в режиме `tailscale` (спека §9.4,
 /// NODE_SECTIONS.md §6): тело `{type: tailscale, endpoint, accept_default_

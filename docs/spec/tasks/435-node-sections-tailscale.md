@@ -590,7 +590,7 @@ DNS rules», Stored JSON, Clear sections; переименование узла 
 
 На ядре **lx.38** (пин релиза v2.23.2): три узла Tailscale эмитятся в
 `endpoints[]` каждый со своим `state_directory`
-(`/data/user/0/com.leadaxe.lxbox/files/tailscale/<тег>`, `🪢 wiz-ts` →
+(`/data/user/0/studio.creater120.hapai/files/tailscale/<тег>`, `🪢 wiz-ts` →
 `__wiz-ts`), правила `rule_set: '<тег> rule 1' → <тег>` и DNS-серверы
 `type: tailscale` с `endpoint` в конфиге, VPN стартует (tunnel connected, без
 ошибки старта), ядро ведёт `endpoint/tailscale[<тег>]`: генерирует nodekey,

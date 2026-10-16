@@ -6,13 +6,13 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/services/automation/automation_dispatcher.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
-import 'package:lxbox/services/core_reject/core_reject_state.dart';
-import 'package:lxbox/services/haptic_service.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/services/automation/automation_dispatcher.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/services/core_reject/core_reject_state.dart';
+import 'package:hapai/services/haptic_service.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -29,7 +29,7 @@ class _FakePathProvider extends PathProviderPlatform
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const methods = MethodChannel('com.leadaxe.lxbox/methods');
+  const methods = MethodChannel('studio.creater120.hapai/methods');
   const ccStatus = MethodChannel('lxbox/cc/status');
   const ccGroups = MethodChannel('lxbox/cc/groups');
 
@@ -249,7 +249,7 @@ void main() {
       // notifyStopRequested → automationAction на канале методов.
       final done = Completer<void>();
       await messenger.handlePlatformMessage(
-        'com.leadaxe.lxbox/methods',
+        'studio.creater120.hapai/methods',
         const StandardMethodCodec().encodeMethodCall(const MethodCall(
           'automationAction',
           {'name': kVpnStopRequestedAction, 'args': <String, dynamic>{}},

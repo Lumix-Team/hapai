@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/parser/uri_utils.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/parser/uri_utils.dart';
 
 import '../parser/engine_test_setup.dart';
 import '../parser/parse_link_as.dart';

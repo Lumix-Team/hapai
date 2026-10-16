@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/automation/event_emitter.dart';
+import 'package:hapai/services/automation/event_emitter.dart';
 
 /// §047 — AutomationEventEmitter: gate-toggles, throttle policy.
 void main() {

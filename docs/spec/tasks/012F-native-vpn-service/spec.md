@@ -16,7 +16,7 @@
 
 ### Нативный код в `android/app/`
 
-Пакет: `com.leadaxe.lxbox.vpn`
+Пакет: `studio.creater120.hapai.vpn`
 
 | Файл | Назначение |
 |------|-----------|
@@ -28,11 +28,11 @@
 
 ### Хранение конфига
 
-Файл: `/data/data/com.leadaxe.lxbox/files/singbox_config.json`
+Файл: `/data/data/studio.creater120.hapai/files/singbox_config.json`
 
 ### Контракт Flutter <-> Android
 
-**MethodChannel**: `"com.leadaxe.lxbox/methods"`
+**MethodChannel**: `"studio.creater120.hapai/methods"`
 
 | Метод | Вход | Выход | Семантика |
 |-------|------|-------|-----------|
@@ -45,7 +45,7 @@
 | `setNotificationText` | `text: String` | `bool` | Обновляет подтекст foreground notification — тег активной ноды / `route.final` ([§123](../../tasks/123-server-name-in-notification.md)). Пусто → native fallback на `"Connected"` |
 | + ряд helper-методов | | | Battery-opt, installed apps, auto-start/keep-on-exit toggles, etc. |
 
-**EventChannel**: `"com.leadaxe.lxbox/status_events"`
+**EventChannel**: `"studio.creater120.hapai/status_events"`
 
 ```json
 {"status": "Started" | "Starting" | "Stopped" | "Stopping", "error": "..."?, "revoked": true?}

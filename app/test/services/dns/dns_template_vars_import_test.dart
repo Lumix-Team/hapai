@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/record_vars.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/record_vars.dart';
 
 // §441 (SPEC 129 контракта) — импорт значений переменных записи:
 // Н8 (корневые `dns_<tag>_<var>` → запись сервера файла), слияние §5.2

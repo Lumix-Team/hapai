@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/screens/config_screen.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/screens/config_screen.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 // §624 (доработка после rc.2) — Back с несохранённой правкой на Config
 // спрашивает общий диалог Unsaved changes, как соседние экраны правки.

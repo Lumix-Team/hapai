@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/source_replace.dart';
-import 'package:lxbox/screens/source_replace_screen.dart';
+import 'package:hapai/models/source_replace.dart';
+import 'package:hapai/screens/source_replace_screen.dart';
 
 // §626 — редактор свёртки: Back с несохранённой правкой спрашивает общий
 // диалог Unsaved changes.

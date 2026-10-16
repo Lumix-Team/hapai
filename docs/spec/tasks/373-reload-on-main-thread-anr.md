@@ -33,7 +33,7 @@ RssKb: 573192   RssHwmKb: 585436
   at android.os.Looper.loop(Looper.java:367)
 ```
 
-В Debug Store того же дампа виден источник: `act=com.leadaxe.lxbox.ACTION_RELOAD`.
+В Debug Store того же дампа виден источник: `act=studio.creater120.hapai.ACTION_RELOAD`.
 
 ## Root cause
 

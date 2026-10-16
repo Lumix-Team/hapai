@@ -3,17 +3,17 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/app_log.dart';
-import 'package:lxbox/services/backup_service.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/app_log.dart';
+import 'package:hapai/services/backup_service.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 // §393 C2 — хранение источников-цепочек (§439: записи `kind: chain` хвостом
 // `sources[]`) и их выживание во ВНУТРЕННЕМ backup/restore: иначе перенос на

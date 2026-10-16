@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Quick Settings tile icon - Hapai cat glyph (monochrome, tint-able).
+
+  QS renders the icon as a tinted monochrome glyph: a white shape on a
+  transparent background, coloured by the system for Active/Inactive.
+  Everything is therefore white (@android:color/white) with tint
+  ?colorControlNormal.
+
+  Silhouette: cat head with two pointed ears (stroked outline), filled eyes
+  and nose, four whiskers. Reads as a cat at 24dp and survives the QS
+  active/inactive tinting.
+
+  Same drawable is the static icon of TileService in the manifest -
+  otherwise the editor/QS preview shows the launcher logo as a white square.
+
+  NOTE: flutter_launcher_icons overwrites android:icon of that service to
+  @mipmap/ic_launcher on every icon run - restore @drawable/ic_hapai_tile
+  afterwards (see AndroidManifest.xml).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?android:attr/colorControlNormal">
+
+    <!-- Head + ears outline -->
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M6.1,3.8 L10.6,8.4 Q12,7.3 13.4,8.4 L17.9,3.8 L18.8,11.2 C20.6,16 18.4,20.6 12,20.6 C5.6,20.6 3.4,16 5.2,11.2 Z" />
+
+    <!-- Eyes -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M9.5,13.4 m-1.2,0 a1.2,1.2 0 1,0 2.4,0 a1.2,1.2 0 1,0 -2.4,0" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M14.5,13.4 m-1.2,0 a1.2,1.2 0 1,0 2.4,0 a1.2,1.2 0 1,0 -2.4,0" />
+
+    <!-- Nose -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12,17.6 L10.9,16.1 L13.1,16.1 Z" />
+
+    <!-- Whiskers -->
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1.0"
+        android:strokeLineCap="round"
+        android:pathData="M2.4,14.4 L5.5,15.0 M2.7,17.3 L5.6,16.6 M21.6,14.4 L18.5,15.0 M21.3,17.3 L18.4,16.6" />
+</vector>

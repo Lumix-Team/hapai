@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/transport_spec.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/singbox_config.dart';
-import 'package:lxbox/services/parser/transport.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/transport_spec.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/singbox_config.dart';
+import 'package:hapai/services/parser/transport.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import 'engine_test_setup.dart';
 

@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 import '../parser/engine_test_setup.dart';
 

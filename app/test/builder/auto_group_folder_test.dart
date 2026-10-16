@@ -1,16 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/emit_context.dart';
-import 'package:lxbox/models/node_warning.dart' show RegistryWarning;
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/builder/rule_set_registry.dart';
-import 'package:lxbox/services/builder/server_list_build.dart';
-import 'package:lxbox/services/contract/group_genus.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/emit_context.dart';
+import 'package:hapai/models/node_warning.dart' show RegistryWarning;
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/builder/rule_set_registry.dart';
+import 'package:hapai/services/builder/server_list_build.dart';
+import 'package:hapai/services/contract/group_genus.dart';
 
 import '../parser/engine_test_setup.dart';
 

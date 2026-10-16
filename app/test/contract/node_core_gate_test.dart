@@ -3,9 +3,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/builder/core_chain_capability.dart';
-import 'package:lxbox/services/contract/node_core_gate.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/services/builder/core_chain_capability.dart';
+import 'package:hapai/services/contract/node_core_gate.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 import '../contract_paths.dart';
 

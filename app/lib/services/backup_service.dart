@@ -351,7 +351,7 @@ class BackupService {
       decoded = jsonDecode(raw);
     } catch (e) {
       throw const FormatException(
-          'Not a valid JSON file. Make sure you picked a LxBox backup file.');
+          'Not a valid JSON file. Make sure you picked a Hapai backup file.');
     }
 
     if (decoded is! Map<String, dynamic>) {
@@ -362,7 +362,7 @@ class BackupService {
     final kind = decoded['kind']?.toString();
     if (app != 'lxbox' || kind != 'backup') {
       throw const FormatException(
-          'Not a LxBox backup file (missing or invalid app/kind markers).');
+          'Not a Hapai backup file (missing or invalid app/kind markers).');
     }
 
     final storage = decoded['storage'];

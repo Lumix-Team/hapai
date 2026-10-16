@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/post_steps.dart';
 
 /// §419 — healDanglingDnsResolvers: `dns.final` / `route.default_domain_resolver`
 /// на исчезнувший сервер (пресет выключен/удалён) заменяются дефолтом шаблона

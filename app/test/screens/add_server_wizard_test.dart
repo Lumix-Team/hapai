@@ -5,13 +5,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/add_server_wizard_screen.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/add_server_wizard_screen.dart';
+import 'package:hapai/services/settings_storage.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -227,7 +227,7 @@ void main() {
       expect(node.body['auth_key'], 'tskey-auth-secret');
       // §449 — Hostname приходит с дефолтом; в тестах модель устройства пуста
       // (`SubscriptionIdentity.init` не звался), отсюда голый префикс.
-      expect(node.body['hostname'], 'LxBox');
+      expect(node.body['hostname'], 'Hapai');
       // Пустые поля и выключенные тумблеры в тело не пишутся.
       expect(node.body.containsKey('control_url'), isFalse);
       expect(node.body.containsKey('ephemeral'), isFalse);
@@ -238,11 +238,11 @@ void main() {
       expect(us.rawBody, contains('"auth_key":"tskey-auth-secret"'));
     });
 
-    testWidgets('§449 Hostname с дефолтом LxBox, стирание возвращает пустое тело',
+    testWidgets('§449 Hostname с дефолтом Hapai, стирание возвращает пустое тело',
         (tester) async {
       final c = await openTailscale(tester);
       // Поле открывается заполненным — юзер видит имя до создания узла.
-      expect(find.text('LxBox'), findsOneWidget);
+      expect(find.text('Hapai'), findsOneWidget);
 
       await tester.enterText(field(0), '🪢 Wiped');
       await tester.enterText(field(1), 'tskey-auth-w');

@@ -2,16 +2,16 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/screens/subscriptions_screen/clipboard_analysis.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/screens/subscriptions_screen/clipboard_analysis.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 // §110 — Amnezia vpn://-ссылки. Энкодер-хелпер повторяет формат
 // qCompress: 4 байта big-endian длины + zlib-поток, base64url без padding.

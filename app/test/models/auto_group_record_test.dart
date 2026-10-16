@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/codec/auto_group_record.dart';
-import 'package:lxbox/models/direction.dart' show StickyHashKey, UrltestMode;
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/codec/auto_group_record.dart';
+import 'package:hapai/models/direction.dart' show StickyHashKey, UrltestMode;
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
 
 // §439 N2 — кодек члена папки `kind: auto` (`codec/auto_group_record.dart`):
-// круг записи, поля стороны LxBox внутри `group` (контракт 1.0.1) и терпимое
+// круг записи, поля стороны Hapai внутри `group` (контракт 1.0.1) и терпимое
 // чтение (S1 член `{tag}`, `default` строкой, `selector`, форма dev-сборок
 // с полями на уровне узла).
 
@@ -73,7 +73,7 @@ void main() {
         {'folder_id': 'f1', 'tag': 'de-1'},
         {'folder_id': 'f1', 'tag': 'de-2'},
       ], reason: 'член без folder_id пишется парой своей папки');
-      expect(group['pool_badge'], '', reason: 'поле стороны LxBox — в group');
+      expect(group['pool_badge'], '', reason: 'поле стороны Hapai — в group');
       expect(record.containsKey('pool_badge'), isFalse);
       expect((group['strategy'] as Map)['sticky_hash'], ['none']);
 
@@ -217,7 +217,7 @@ void main() {
       expect(noGenus.notes, isEmpty);
     });
 
-    test('поля стороны LxBox на уровне узла (dev-форма до 1.0.1) читаются '
+    test('поля стороны Hapai на уровне узла (dev-форма до 1.0.1) читаются '
         'молча, group сильнее', () {
       final dev = _read({
         'kind': 'auto',

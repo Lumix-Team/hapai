@@ -4,13 +4,13 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/services/automation/event_emitter.dart';
-import 'package:lxbox/services/automation/handlers.dart' as automation;
-import 'package:lxbox/services/debug/context.dart';
-import 'package:lxbox/services/debug/contract/errors.dart';
-import 'package:lxbox/services/debug/debug_registry.dart';
-import 'package:lxbox/services/haptic_service.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/services/automation/event_emitter.dart';
+import 'package:hapai/services/automation/handlers.dart' as automation;
+import 'package:hapai/services/debug/context.dart';
+import 'package:hapai/services/debug/contract/errors.dart';
+import 'package:hapai/services/debug/debug_registry.dart';
+import 'package:hapai/services/haptic_service.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -30,7 +30,7 @@ class _FakePathProvider extends PathProviderPlatform
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const methods = MethodChannel('com.leadaxe.lxbox/methods');
+  const methods = MethodChannel('studio.creater120.hapai/methods');
   const ccStatus = MethodChannel('lxbox/cc/status');
   const ccGroups = MethodChannel('lxbox/cc/groups');
   final messenger =

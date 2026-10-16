@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:collection/collection.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/if_engine.dart';
-import 'package:lxbox/services/builder/preset_expand.dart';
-import 'package:lxbox/services/builder/preset_node_loop.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/if_engine.dart';
+import 'package:hapai/services/builder/preset_expand.dart';
+import 'package:hapai/services/builder/preset_node_loop.dart';
 
-// Конформанс-раннер корпуса обхода узлов (контракт 1.1.119, LxBox §643):
+// Конформанс-раннер корпуса обхода узлов (контракт 1.1.119, Hapai §643):
 // `corpus/template/for_each_node/` (бывший `for_each/`, §578) и
 // `corpus/template/for_each_node_do/` — по формату README «Разделы
 // for_each_node/ и for_each_node_do/»:
@@ -22,7 +22,7 @@ import 'package:lxbox/services/builder/preset_node_loop.dart';
 //
 // `preset` несёт только ключи языка — оболочку (`preset_id`, `ui`) добавляет
 // этот раннер. `nodes` — узлы конфига в порядке файла; `enabled: false` /
-// `in_config: false` отсеиваются здесь (сборка LxBox их до обхода не
+// `in_config: false` отсеиваются здесь (сборка Hapai их до обхода не
 // доводит). `load: reject` = исключение [parsePresetNodeLoop] — той же
 // функции, которой загрузчик шаблона разбирает обход
 // (`validateTemplateConstructs`).

@@ -2,18 +2,18 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/node_identity.dart';
-import 'package:lxbox/services/parser/engine/engine_mapper.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/mappers/uri_mapper.dart';
-import 'package:lxbox/services/parser/mappers/uri_pipeline.dart';
-import 'package:lxbox/services/parser/singbox_config.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/parser/uri_utils.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/node_identity.dart';
+import 'package:hapai/services/parser/engine/engine_mapper.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/mappers/uri_mapper.dart';
+import 'package:hapai/services/parser/mappers/uri_pipeline.dart';
+import 'package:hapai/services/parser/singbox_config.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/parser/uri_utils.dart';
 
 import 'vm_profile.dart';
 

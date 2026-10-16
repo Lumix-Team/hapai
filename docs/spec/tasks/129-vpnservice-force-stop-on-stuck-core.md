@@ -47,7 +47,7 @@ App-логи воспроизведённого зависания:
 ```
 - Процесс ядра **не падает** (нет Runtime::Abort/panic/SIGABRT), но `tun0` не создан, сервис висит.
 - Debug API `POST /action/start-vpn` возвращает `200/true`, но реального туннеля не даёт.
-- Восстановление: только `am force-stop com.leadaxe.lxbox` + перезапуск.
+- Восстановление: только `am force-stop studio.creater120.hapai` + перезапуск.
 
 ---
 

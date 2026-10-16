@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
 
 import '../parser/engine_test_setup.dart';
 

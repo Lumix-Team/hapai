@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/backup_merge.dart';
-import 'package:lxbox/services/backup_service.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/backup_merge.dart';
+import 'package:hapai/services/backup_service.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §633 — Merge при импорте бэкапа: добавляется то, чего у получателя нет; то,
 /// что есть, остаётся его.

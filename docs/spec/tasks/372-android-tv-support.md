@@ -174,7 +174,7 @@ String? pickProblemText(PickOutcome);  // текст снекбара, null дл
 Правила разбора:
 
 - **до пика** — `UrlLauncher.hasRealFilePicker()` (нативный метод канала
-  `com.leadaxe.lxbox/utils`, реализация в
+  `studio.creater120.hapai/utils`, реализация в
   [`MainActivity.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/MainActivity.kt)):
   `queryIntentActivities(OPEN_DOCUMENT)` и отбрасываем кандидатов, чьё имя
   пакета содержит `frameworkpackagestubs`. Пусто → `PickNoPicker`, пикер

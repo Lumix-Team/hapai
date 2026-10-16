@@ -4,8 +4,8 @@ Related: [`RELEASE_PROCESS.md`](RELEASE_PROCESS.md), [`BUILD.md`](BUILD.md).
 
 | What | Where |
 |---|---|
-| Recipe | `metadata/com.leadaxe.lxbox.yml` in `fdroid/fdroiddata` (merged 2026-09-06) |
-| Fork for CI runs | `gitlab.com/leadaxe/fdroiddata`, branch `com.leadaxe.lxbox` |
+| Recipe | `metadata/studio.creater120.hapai.yml` in `fdroid/fdroiddata` (merged 2026-09-06) |
+| Fork for CI runs | `gitlab.com/leadaxe/fdroiddata`, branch `studio.creater120.hapai` |
 | MR | [fdroiddata!44731](https://gitlab.com/fdroid/fdroiddata/-/merge_requests/44731) |
 | Open MR | [fdroiddata!50151](https://gitlab.com/fdroid/fdroiddata/-/merge_requests/50151) (2026-09-26): 2.25.5, submodules by directory pathspec, cronet-go ref derived from the core's `go.mod`. Replaces the failed bot MR !49202 (2.24.2, missing `submodules/utls`) |
 | RFP | [rfp#4218](https://gitlab.com/fdroid/rfp/-/work_items/4218) |
@@ -45,7 +45,7 @@ Checklist for a manual edit:
 5. Toolchain versions are read from the sources (`android/flutter.version`,
    the core's `go.version`, `android/libbox.version`). No version literals in
    the recipe.
-6. `fdroid lint com.leadaxe.lxbox && fdroid rewritemeta com.leadaxe.lxbox && git diff --quiet metadata/com.leadaxe.lxbox.yml`
+6. `fdroid lint studio.creater120.hapai && fdroid rewritemeta studio.creater120.hapai && git diff --quiet metadata/studio.creater120.hapai.yml`
    (`pip install fdroidserver`). `rewritemeta` is a separate CI job; it fails on
    key order and on a missing trailing newline. Apply the diff it prints.
 7. Push; the pipeline starts on its own. The verdict is in the `fdroid build`

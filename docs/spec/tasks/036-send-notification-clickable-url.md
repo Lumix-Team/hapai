@@ -159,7 +159,7 @@ curl -s -H "Authorization: Bearer $TOKEN" http://127.0.0.1:9270/state/storage \
 # {
 #   "type": "tailscale",
 #   "tag": "tailscale-out",
-#   "state_directory": "/data/data/com.leadaxe.lxbox/files/tailscale-test"
+#   "state_directory": "/data/data/studio.creater120.hapai/files/tailscale-test"
 # }
 
 # Можно через Debug API: PUT /clash/configs или прямое модифицирование

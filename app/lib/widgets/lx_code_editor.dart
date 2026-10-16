@@ -208,7 +208,7 @@ class LxCodeEditor extends StatefulWidget {
 /// финальный `changed` должен лечь в контроллер, а не потеряться.
 class _SoraLink {
   _SoraLink(int viewId, this.controller)
-    : channel = MethodChannel('com.leadaxe.lxbox/sora_editor_$viewId') {
+    : channel = MethodChannel('studio.creater120.hapai/sora_editor_$viewId') {
     channel.setMethodCallHandler(_handle);
   }
 

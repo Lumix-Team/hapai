@@ -15,15 +15,15 @@
 /// ```
 ///
 /// К — `kind`, `tag`, `enabled`, `group{group_type, members, strategy}`.
-/// Поля стороны LxBox внутри `group` (контракт 1.0.1, BACKUP.md §2 «Поля
-/// стороны LxBox»): `members_rule` (членство правилом: регулярки не ссылки,
+/// Поля стороны Hapai внутри `group` (контракт 1.0.1, BACKUP.md §2 «Поля
+/// стороны Hapai»): `members_rule` (членство правилом: регулярки не ссылки,
 /// NODE_LINK §9.1) и `pool_badge` (значки строки списка, в конфиг не уходят).
 /// У группы-правила `members` нет: состав считает сборка.
 ///
 /// Писатель: `group_type` всегда `urltest`, члены — только парами (NODE_LINK
 /// §2 п. 1). Читатель терпим (решение 15.09): член `{tag}` → пара с `id` своей
 /// папки (S1); `default` строкой → пара, если член с этим тегом ровно один
-/// (S2); у urltest-группы LxBox `default` нет, он называется потерей;
+/// (S2); у urltest-группы Hapai `default` нет, он называется потерей;
 /// `selector` читается urltest'ом с предупреждением. `members_rule` и
 /// `pool_badge` уровня узла — форма dev-сборок до контракта 1.0.1 — читаются
 /// молча; `group` сильнее. Непустой `members[]` сильнее `members_rule`: по
@@ -96,7 +96,7 @@ Map<String, dynamic> autoGroupMemberToRecord(
         ],
       // Параметры замера — у автовыбора; у ручного рода их нет.
       if (!group.isManual) 'strategy': autoSelectParamsToStrategy(group.params),
-      // Поля стороны LxBox (контракт 1.0.1).
+      // Поля стороны Hapai (контракт 1.0.1).
       if (membership is RuleMembers)
         'members_rule': {
           'include': membership.include,
@@ -231,7 +231,7 @@ AutoGroupRead autoGroupMemberFromRecord(
     manualDefault = def?.tag ?? (rawDefault is String ? rawDefault : '');
   }
 
-  // Поле стороны LxBox — в `group`; уровень узла — dev-форма до 1.0.1.
+  // Поле стороны Hapai — в `group`; уровень узла — dev-форма до 1.0.1.
   final inGroup = group.containsKey('members_rule');
   final rule = inGroup ? group['members_rule'] : j['members_rule'];
   final AutoSelectMembership membership;

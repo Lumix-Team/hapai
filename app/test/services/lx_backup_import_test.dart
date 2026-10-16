@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/template_loader.dart';
 
 import '../storage_migration/golden_harness.dart';
 

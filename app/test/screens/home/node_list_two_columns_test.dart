@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/screens/home/node_filter_view_model.dart';
-import 'package:lxbox/screens/home/node_list_presenter.dart';
-import 'package:lxbox/screens/home/widgets/node_list.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/subscription/auto_updater.dart';
-import 'package:lxbox/widgets/node_row.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/screens/home/node_filter_view_model.dart';
+import 'package:hapai/screens/home/node_list_presenter.dart';
+import 'package:hapai/screens/home/widgets/node_list.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/subscription/auto_updater.dart';
+import 'package:hapai/widgets/node_row.dart';
 
 /// §537 — две колонки списка узлов при ширине ≥ 600 dp (issue #134).
 void main() {

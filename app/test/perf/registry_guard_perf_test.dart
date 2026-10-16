@@ -2,15 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/services/builder/registry_gate.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/probe/probe_config.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/services/builder/registry_gate.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/probe/probe_config.dart';
 
 import 'vm_profile.dart';
 

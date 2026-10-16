@@ -814,7 +814,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver, Ti
           builder: (_, onDrawerChanged) => Scaffold(
               appBar: AppBar(
                 // l10n-exempt: brand name, идентичен во всех локалях
-                title: const Text('L×Box'),
+                title: const Text('Hapai'),
                 // §417 — имя текущего workspace + попап Load / Save as.
                 actions: [
                   WorkspaceMenuButton(stopVpn: _stopForWorkspaceSwitch),

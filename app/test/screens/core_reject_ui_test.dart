@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/home/core_reject_ui.dart';
-import 'package:lxbox/screens/home/widgets/app_banner.dart';
-import 'package:lxbox/screens/node_settings_screen.dart';
-import 'package:lxbox/screens/subscription_detail_screen/node_inspect_screen.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
-import 'package:lxbox/services/core_reject/core_reject_state.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/home/core_reject_ui.dart';
+import 'package:hapai/screens/home/widgets/app_banner.dart';
+import 'package:hapai/screens/node_settings_screen.dart';
+import 'package:hapai/screens/subscription_detail_screen/node_inspect_screen.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/services/core_reject/core_reject_state.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
 
 /// Фича 478 — рендер того, что человек видит: плашка «N servers disabled»
 /// (кнопка Show открывает список выключенных) и диалог предела кругов

@@ -1,6 +1,6 @@
 /// Ссылка на узел (D-112, §439 п. 8): «в каком контейнере» + «какой сырой тег».
 ///
-/// Носители в модели LxBox — `DetourPolicy.overrideDetour` источника,
+/// Носители в модели Hapai — `DetourPolicy.overrideDetour` источника,
 /// `FolderMember.detour`, `SourceChain.hops`. Запись хранит ссылку как есть
 /// (`codec/node_link_record.dart`), финальный тег вычисляет только сборка
 /// конфига (`services/builder/node_link_resolve.dart`).

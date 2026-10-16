@@ -487,7 +487,7 @@ NodeSpec? _runPipeline(
 
   // §560 — поле, которое модель не держит, дельта тела возвращает узлу
   // (`BodyDelta`). Кроме параметров ссылки, которые реестр числит за другой
-  // стороной (`uri.query.<имя>.ext`): их LxBox не переносил и не переносит —
+  // стороной (`uri.query.<имя>.ext`): их Hapai не переносил и не переносит —
   // путь к файлу ключа у ssh на телефоне смысла не имеет. Поле, которое
   // модель держит сама, этим не снимается: дельта его не касается.
   if (mapping.bodySource == BodySource.uri) {
@@ -534,7 +534,7 @@ void markPipelineParsed(NodeSpec node) => _pipelineParsed[node] = true;
 bool isPipelineParsed(NodeSpec node) => _pipelineParsed[node] == true;
 
 /// §560 — имя этой стороны в `ext` параметров `uri.query` реестра
-/// (`registry.schema.json`: `desktop` — лаунчер, `mobile` — LxBox).
+/// (`registry.schema.json`: `desktop` — лаунчер, `mobile` — Hapai).
 const _kThisSideExt = 'mobile';
 
 /// Пути тела, куда едут параметры ссылки, поддержанные только ДРУГОЙ

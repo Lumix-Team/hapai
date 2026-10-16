@@ -1,6 +1,6 @@
 # Политика конфиденциальности
 
-**Приложение:** L×Box (`com.leadaxe.lxbox`)
+**Приложение:** L×Box (`studio.creater120.hapai`)
 **Дата обновления:** 14 августа 2026
 
 > English version: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)

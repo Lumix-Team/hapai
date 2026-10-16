@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'engine_test_setup.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/transport_spec.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/transport.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/transport_spec.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/transport.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §320 — вторая форма WebSocket early data: плоские `ed`/`eh` в query, а не
 /// хвостом пути (§303). Потеря `eh` ломает коннект: при пустом

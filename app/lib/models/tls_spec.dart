@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 
 /// §454 — ключи `OutboundTLSOptions` ядра (sing-box `option/tls.go`), о
-/// которых LxBox не рассуждает гейтами: хранятся в [TlsSpec.passthrough] в
+/// которых Hapai не рассуждает гейтами: хранятся в [TlsSpec.passthrough] в
 /// форме прибытия и эмитятся как есть. Порядок списка = порядок полей
 /// структуры ядра = порядок эмита. Всё, чего тут нет и что не типизировано
 /// в [TlsSpec], парсер отбрасывает: ядро отвергает unknown field на ВСЁМ

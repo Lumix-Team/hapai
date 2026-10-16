@@ -3,15 +3,15 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/codec/dns_record.dart';
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/builder/rule_set_registry.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/models/codec/dns_record.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/rule_set_registry.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
 
 /// Правило через запись `rules[]` и обратно — путь хранения (§439).
 CustomRule _storageRoundTrip(CustomRule r) =>

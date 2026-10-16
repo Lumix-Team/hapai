@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/ini_parser.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/ini_parser.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 // SPEC 103 D-023/D-030 — normalizeWGKey (wireguard_parser.dart) требует
 // РОВНО 32 байта base64; короткие плейсхолдеры вроде "pk"/"pubk" больше не

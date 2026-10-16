@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/rule_transfer.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/rule_transfer.dart';
 
 /// §396 — экспорт/импорт правил файлом: конверт, парс, санация ссылок,
 /// вставка (имя/num). Схема wire-формата — в спеке §396 §3.

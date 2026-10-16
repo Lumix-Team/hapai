@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/debug/context.dart';
-import 'package:lxbox/services/debug/debug_registry.dart';
-import 'package:lxbox/services/debug/handlers/settings.dart';
-import 'package:lxbox/services/debug/transport/request.dart';
-import 'package:lxbox/services/debug/transport/response.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/debug/context.dart';
+import 'package:hapai/services/debug/debug_registry.dart';
+import 'package:hapai/services/debug/handlers/settings.dart';
+import 'package:hapai/services/debug/transport/request.dart';
+import 'package:hapai/services/debug/transport/response.dart';
+import 'package:hapai/services/settings_storage.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

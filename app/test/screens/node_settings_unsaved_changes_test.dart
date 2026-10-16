@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/screens/node_settings_screen.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/screens/node_settings_screen.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

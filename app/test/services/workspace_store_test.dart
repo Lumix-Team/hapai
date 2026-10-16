@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/workspaces/workspace_store.dart';
+import 'package:hapai/services/workspaces/workspace_store.dart';
 
 /// §417 — Workspaces: справочник, копирование состава слота в обе стороны,
 /// журнал незавершённой загрузки, управление слотами.

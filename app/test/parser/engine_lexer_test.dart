@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/engine/decoders.dart';
-import 'package:lxbox/services/parser/engine/lexer.dart';
+import 'package:hapai/services/parser/engine/decoders.dart';
+import 'package:hapai/services/parser/engine/lexer.dart';
 
 /// §480 W1 — лексер и декодеры, таблично.
 ///

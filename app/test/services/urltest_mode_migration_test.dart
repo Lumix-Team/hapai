@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §612 — миграция от `passive_check` (§611) к режиму `failover`: один раз,
 /// по сырому ключу `urltest_passive_check` (true/отсутствует → failover,

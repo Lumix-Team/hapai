@@ -14,14 +14,14 @@ import '../version_info.dart';
 /// конфига мы берём только транспортный слой.
 ///
 /// Эмпирически (боевая панель `sub.vern13.ru`): UA с голым `singbox` (без
-/// дефиса) → JSON-объект; UA с подстрокой `LxBox` → base64 URI-list. Поэтому
-/// бренд-токена `LxBox-android` достаточно для распознавания — ни `sing-box`,
+/// дефиса) → JSON-объект; UA с подстрокой `Hapai` → base64 URI-list. Поэтому
+/// бренд-токена `Hapai-android` достаточно для распознавания — ни `sing-box`,
 /// ни платформенный комментарий не нужны (см. таск 114).
 ///
 /// Инварианты:
-///   1. бренд-токен начинается с `LxBox-android/` — по нему панель опознаёт
+///   1. бренд-токен начинается с `Hapai-android/` — по нему панель опознаёт
 ///      клиента и отдаёт base64/URI-list; суффикс `-android` отличает от
-///      десктопной сборки `LxBox-desktop`;
+///      десктопной сборки `Hapai-desktop`;
 ///   2. голой подстроки `singbox` (без дефиса) нет нигде — именно она триггерит
 ///      неправильную маршрутизацию (см. regression-тест в
 ///      `test/subscription/user_agent_test.dart`).
@@ -29,12 +29,12 @@ import '../version_info.dart';
 /// Формат:
 ///
 /// ```
-/// LxBox-android/<appVersion>
+/// Hapai-android/<appVersion>
 /// ```
 ///
-/// например `LxBox-android/2.0.4`.
+/// например `Hapai-android/2.0.4`.
 
-const _kProductToken = 'LxBox-android';
+const _kProductToken = 'Hapai-android';
 
 // §219 — module-level: раньше компилился на каждый вызов _sanitizeToken
 // (в т.ч. при инициализации приложения).
@@ -69,18 +69,18 @@ String resolveSubscriptionUserAgent() =>
 class UserAgentPreset {
   const UserAgentPreset(this.label, this.value);
 
-  /// Подпись в списке (имя клиента). Пустой [value] — дефолтный UA LxBox.
+  /// Подпись в списке (имя клиента). Пустой [value] — дефолтный UA Hapai.
   final String label;
 
   /// Строка UA; пустая = вернуть дефолт ([resolveSubscriptionUserAgent]).
   final String value;
 }
 
-/// Пресеты UA (§610). Первый — дефолт LxBox (пустая строка). Версии
+/// Пресеты UA (§610). Первый — дефолт Hapai (пустая строка). Версии
 /// зафиксированы: панели узнают клиента по имени. Клиентов семейства Clash
 /// нет — Clash YAML мы не разбираем.
 const kUserAgentPresets = <UserAgentPreset>[
-  UserAgentPreset('LxBox (default)', ''),
+  UserAgentPreset('Hapai (default)', ''),
   UserAgentPreset('Happ', 'Happ/3.5.0'),
   UserAgentPreset('v2RayTun', 'v2raytun/android'),
   UserAgentPreset('Streisand', 'Streisand'),

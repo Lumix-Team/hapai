@@ -703,8 +703,8 @@
   "2. Paste it into the field above, or tap ⋮ → «Paste from clipboard», «Scan QR code».": {
     "value": "2. Вставьте её в поле выше или нажмите ⋮ → «Вставить из буфера обмена», «Сканировать QR-код»."
   },
-  "3. Hit «+». L×Box will fetch, parse and configure — and you can connect from the Home tab.": {
-    "value": "3. Нажмите «+». L×Box загрузит, разберёт и настроит всё сам — подключайтесь с главного экрана."
+  "3. Hit «+». Hapai will fetch, parse and configure — and you can connect from the Home tab.": {
+    "value": "3. Нажмите «+». Hapai загрузит, разберёт и настроит всё сам — подключайтесь с главного экрана."
   },
   "A chain is a route through several hops in a row. It joins the pool as a node, so directions can pick it like any server.": {
     "value": "Цепочка — это маршрут через несколько хопов подряд. В общий пул она попадает узлом, и Направления отбирают её наравне с обычными серверами."
@@ -964,14 +964,14 @@
   "Android did not report the network name. Check that Location permission is set to \"Precise\" and \"Allow all the time\".": {
     "value": "Android не сообщил имя сети. Проверьте, что для разрешения «Местоположение» выбраны «Точное» и «Разрешить в любом режиме»."
   },
-  "Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen L×Box.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".": {
-    "value": "Android ограничивает фоновую активность ради экономии батареи. Без исключения туннель VPN может быть закрыт при выключении экрана — связь пропадёт, пока вы снова не откроете L×Box.\n\nОткройте системные настройки и выберите «Без ограничений» / «Не оптимизировать»."
+  "Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen Hapai.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".": {
+    "value": "Android ограничивает фоновую активность ради экономии батареи. Без исключения туннель VPN может быть закрыт при выключении экрана — связь пропадёт, пока вы снова не откроете Hapai.\n\nОткройте системные настройки и выберите «Без ограничений» / «Не оптимизировать»."
   },
   "Announce a local HTTP proxy to the VPN network (Android 10+).": {
     "value": "Объявить локальный HTTP-прокси в сети VPN (Android 10+)."
   },
-  "Another VPN app is currently running. Switch to L×Box?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.": {
-    "value": "Сейчас работает VPN другого приложения. Переключиться на L×Box?\n\nЧтобы узнать, какое именно, откройте настройки VPN — активный VPN отмечен как подключённый."
+  "Another VPN app is currently running. Switch to Hapai?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.": {
+    "value": "Сейчас работает VPN другого приложения. Переключиться на Hapai?\n\nЧтобы узнать, какое именно, откройте настройки VPN — активный VPN отмечен как подключённый."
   },
   "Another VPN app took the system VPN slot (e.g. an always-on VPN). Start again to reconnect.": {
     "value": "Другое VPN-приложение заняло системный VPN-слот (например, постоянный VPN). Запустите снова, чтобы переподключиться."
@@ -1623,8 +1623,8 @@
   "Continue": {
     "value": "Продолжить"
   },
-  "Control L×Box from Tasker / Macrodroid / Llama and other automation apps via Android broadcast intents.": {
-    "value": "Управляйте L×Box из Tasker / MacroDroid / Llama и других приложений автоматизации через broadcast-интенты Android."
+  "Control Hapai from Tasker / Macrodroid / Llama and other automation apps via Android broadcast intents.": {
+    "value": "Управляйте Hapai из Tasker / MacroDroid / Llama и других приложений автоматизации через broadcast-интенты Android."
   },
   "Control URL (optional)": {
     "value": "Control URL (необязательно)"
@@ -1710,8 +1710,8 @@
   "Could not read file.": {
     "value": "Не удалось прочитать файл."
   },
-  "Could not request tile add (%s). Pull down the status bar → edit tiles → drag L×Box manually.": {
-    "value": "Не удалось запросить добавление плитки (%s). Опустите шторку → изменить плитки → перетащите L×Box вручную."
+  "Could not request tile add (%s). Pull down the status bar → edit tiles → drag Hapai manually.": {
+    "value": "Не удалось запросить добавление плитки (%s). Опустите шторку → изменить плитки → перетащите Hapai вручную."
   },
   "Couldn't load new source — keeping current subscription": {
     "value": "Не удалось загрузить новый источник — текущая подписка сохранена"
@@ -2118,8 +2118,8 @@
   "Drop existing detours — every node connects through this outbound": {
     "value": "Сбросить существующие detour — каждый узел подключается через этот исходящий канал"
   },
-  "Each source signs the app with its own key, so builds from different sources do not install over each other. To switch: back up your settings, uninstall L×Box, install it from the new source and restore the backup.": {
-    "value": "Каждый источник подписывает приложение своим ключом, поэтому сборки из разных источников не ставятся друг поверх друга. Чтобы перейти: сделайте резервную копию настроек, удалите L×Box, установите из нового источника и восстановите копию."
+  "Each source signs the app with its own key, so builds from different sources do not install over each other. To switch: back up your settings, uninstall Hapai, install it from the new source and restore the backup.": {
+    "value": "Каждый источник подписывает приложение своим ключом, поэтому сборки из разных источников не ставятся друг поверх друга. Чтобы перейти: сделайте резервную копию настроек, удалите Hapai, установите из нового источника и восстановите копию."
   },
   "Edit": {
     "value": "Изменить"
@@ -2190,8 +2190,8 @@
   "Enabled directions appear in the selector on the home screen. Tap a direction to edit its nodes, filter and auto twin.": {
     "value": "Включённые Направления появляются в селекторе на главном экране. Нажмите на Направление, чтобы настроить его узлы, фильтр и auto-двойник."
   },
-  "Enabling this category lets other apps receive L×Box events.\n\nEvents do NOT contain subscription / config secrets — only labels (node tags, group names, status).": {
-    "value": "Если включить эту категорию, другие приложения смогут получать события L×Box.\n\nСобытия НЕ содержат секретов подписок и конфига — только метки (теги узлов, имена групп, статус)."
+  "Enabling this category lets other apps receive Hapai events.\n\nEvents do NOT contain subscription / config secrets — only labels (node tags, group names, status).": {
+    "value": "Если включить эту категорию, другие приложения смогут получать события Hapai.\n\nСобытия НЕ содержат секретов подписок и конфига — только метки (теги узлов, имена групп, статус)."
   },
   "Endpoint": {
     "value": "Адрес"
@@ -2747,8 +2747,8 @@
   "In packet order: the first position is the hop closest to you, the last one is what the destination sees.": {
     "value": "В порядке пакета: первая позиция — ближайший к вам хоп, последнюю видит цель."
   },
-  "In the next screen (system App info) look for:\n\n• Autostart / Startup manager — allow\n• Background activity / Allow in background — allow\n• Battery / Power usage → \"Don't optimize\" or \"No restrictions\"\n• Battery saver exceptions — add L×Box\n\nLocation of these toggles varies by OEM (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel). Some are under Battery, others under App permissions.": {
-    "value": "На следующем экране (системный «О приложении») найдите:\n\n• Автозапуск / Startup manager — разрешить\n• Фоновая активность / Разрешить в фоне — разрешить\n• Батарея / Энергопотребление → «Не оптимизировать» или «Без ограничений»\n• Исключения энергосбережения — добавьте L×Box\n\nРасположение зависит от производителя (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel): что-то в разделе «Батарея», что-то в «Разрешениях приложений»."
+  "In the next screen (system App info) look for:\n\n• Autostart / Startup manager — allow\n• Background activity / Allow in background — allow\n• Battery / Power usage → \"Don't optimize\" or \"No restrictions\"\n• Battery saver exceptions — add Hapai\n\nLocation of these toggles varies by OEM (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel). Some are under Battery, others under App permissions.": {
+    "value": "На следующем экране (системный «О приложении») найдите:\n\n• Автозапуск / Startup manager — разрешить\n• Фоновая активность / Разрешить в фоне — разрешить\n• Батарея / Энергопотребление → «Не оптимизировать» или «Без ограничений»\n• Исключения энергосбережения — добавьте Hapai\n\nРасположение зависит от производителя (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel): что-то в разделе «Батарея», что-то в «Разрешениях приложений»."
   },
   "Include (regex)": {
     "value": "Включить (regex)"
@@ -3004,20 +3004,20 @@
   "Log": {
     "value": "Лог"
   },
-  "Long-press the L×Box icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.": {
-    "value": "Долгое нажатие на иконку L×Box на главном экране → «Подключить», когда VPN выключен, «Отключить», когда включён. Android 11 и новее."
+  "Long-press the Hapai icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.": {
+    "value": "Долгое нажатие на иконку Hapai на главном экране → «Подключить», когда VPN выключен, «Отключить», когда включён. Android 11 и новее."
   },
-  "LxBox (default)": {
-    "value": "LxBox (по умолчанию)"
+  "Hapai (default)": {
+    "value": "Hapai (по умолчанию)"
   },
-  "L×Box %1$s available (you have v%2$s)": {
-    "value": "Доступна L×Box %1$s (у вас v%2$s)"
+  "Hapai %1$s available (you have v%2$s)": {
+    "value": "Доступна Hapai %1$s (у вас v%2$s)"
   },
-  "L×Box can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.": {
-    "value": "L×Box может раз в сутки обращаться к github.com и смотреть, не вышла ли новая версия. Само ничего не устанавливается — вы получите ссылку на страницу релиза.\n\nЕсли приложение установлено из магазина, его клиент уже следит за обновлениями, и этот пункт можно пропустить."
+  "Hapai can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.": {
+    "value": "Hapai может раз в сутки обращаться к github.com и смотреть, не вышла ли новая версия. Само ничего не устанавливается — вы получите ссылку на страницу релиза.\n\nЕсли приложение установлено из магазина, его клиент уже следит за обновлениями, и этот пункт можно пропустить."
   },
-  "L×Box runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.": {
-    "value": "Пока VPN активен, L×Box работает как foreground-сервис. Android требует для него постоянное уведомление — по нему видно, что VPN включён, и система не закрывает туннель в фоне.\n\nРекламных и прочих оповещений не будет."
+  "Hapai runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.": {
+    "value": "Пока VPN активен, Hapai работает как foreground-сервис. Android требует для него постоянное уведомление — по нему видно, что VPN включён, и система не закрывает туннель в фоне.\n\nРекламных и прочих оповещений не будет."
   },
   "MASQUE registration failed": {
     "value": "Не удалось зарегистрировать MASQUE"
@@ -4724,8 +4724,8 @@
   "Support": {
     "value": "Поддержка"
   },
-  "Support L×Box": {
-    "value": "Поддержать L×Box"
+  "Support Hapai": {
+    "value": "Поддержать Hapai"
   },
   "Support the project": {
     "value": "Поддержать проект"
@@ -5023,8 +5023,8 @@
   "Title": {
     "value": "Название"
   },
-  "To keep the VPN running in background, also disable battery restrictions for L×Box. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF": {
-    "value": "Чтобы VPN работал в фоне, отключите для L×Box и ограничения батареи. Откроется экран настроек — найдите и переключите:\n\n• «Использование батареи» → «Не оптимизировать» или «Разрешить фоновую активность»\n\n• На OnePlus / OPPO / Realme также:\n  «Останавливать при бездействии» → выкл."
+  "To keep the VPN running in background, also disable battery restrictions for Hapai. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF": {
+    "value": "Чтобы VPN работал в фоне, отключите для Hapai и ограничения батареи. Откроется экран настроек — найдите и переключите:\n\n• «Использование батареи» → «Не оптимизировать» или «Разрешить фоновую активность»\n\n• На OnePlus / OPPO / Realme также:\n  «Останавливать при бездействии» → выкл."
   },
   "Token": {
     "value": "Токен"
@@ -5151,6 +5151,9 @@
   },
   "Upload": {
     "value": "Отдача"
+  },
+  "Upstream project by Leadaxe (GPL-3.0)": {
+    "value": "Проект-первоисточник: Leadaxe (GPL-3.0)"
   },
   "Usage region": {
     "value": "Регион использования"
@@ -5292,8 +5295,8 @@
   "When to pause the tunnel to save battery. Takes effect on next VPN connect.": {
     "value": "Когда приостанавливать туннель ради экономии батареи. Вступает в силу при следующем подключении VPN."
   },
-  "Where to get L×Box": {
-    "value": "Где взять L×Box"
+  "Where to get Hapai": {
+    "value": "Где взять Hapai"
   },
   "Which direction carries DNS queries to this server. Direct — no detour key in the config.": {
     "value": "Какое Направление несёт DNS-запросы к этому серверу. «Напрямую» — без ключа detour в конфиге."
@@ -5669,8 +5672,8 @@
   "yesterday": {
     "value": "вчера"
   },
-  "Your Android version doesn't support an in-app prompt. Pull down the status bar → edit tiles → drag L×Box to active tiles.": {
-    "value": "Ваша версия Android не поддерживает запрос из приложения. Опустите шторку → изменить плитки → перетащите L×Box в активные."
+  "Your Android version doesn't support an in-app prompt. Pull down the status bar → edit tiles → drag Hapai to active tiles.": {
+    "value": "Ваша версия Android не поддерживает запрос из приложения. Опустите шторку → изменить плитки → перетащите Hapai в активные."
   },
   "— (default DNS)": {
     "value": "— (DNS по умолчанию)"

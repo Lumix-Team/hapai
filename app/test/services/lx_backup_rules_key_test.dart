@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/services/backup_merge.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/services/backup_merge.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
 
 import '../parser/engine_test_setup.dart';
 
@@ -14,7 +14,7 @@ import '../parser/engine_test_setup.dart';
 // целиком, и снятые называются одним `backup_rules_replaced {count}` — только
 // при `count > 0`.
 //
-// Режим Merge у LxBox — слияние документа хранения (§633,
+// Режим Merge у Hapai — слияние документа хранения (§633,
 // [mergeStorageDoc]); импорт LX Backup режимов не имеет. Строки Merge таблицы
 // проверяются на нём: ничего не снимается, кодов нет.
 

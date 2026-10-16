@@ -8,9 +8,9 @@ import 'dart:io';
 void ensureAppCwd() {
   final pubspec = File('pubspec.yaml');
   if (!pubspec.existsSync() ||
-      !pubspec.readAsStringSync().contains('name: lxbox')) {
+      !pubspec.readAsStringSync().contains('name: hapai')) {
     stderr.writeln(
-        'Run from the app/ directory (pubspec.yaml with "name: lxbox" not found in CWD).');
+        'Run from the app/ directory (pubspec.yaml with "name: hapai" not found in CWD).');
     exit(2);
   }
 }

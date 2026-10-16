@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/stop_reason.dart';
+import 'package:hapai/models/stop_reason.dart';
 
 // §279 Phase 0 — разбор строкового native-протокола stop-событий в typed
 // StopReason. Инвариант миграции: message() воспроизводит дословно те же

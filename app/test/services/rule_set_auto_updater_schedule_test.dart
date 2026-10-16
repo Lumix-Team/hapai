@@ -2,7 +2,7 @@
 
 import 'package:fake_async/fake_async.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/rule_set_auto_updater.dart';
+import 'package:hapai/services/rule_set_auto_updater.dart';
 
 /// 004-ROUTING · P10 — расписание автообновления наборов: проход
 /// планируется через 30 с после старта приложения или подъёма туннеля и

@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'engine_test_setup.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 import 'parse_link_as.dart';
-import 'package:lxbox/models/node_spec.dart';
+import 'package:hapai/models/node_spec.dart';
 
 /// Round-trip §4 спеки 026: `parseUri(spec.toUri()) ≈ spec`. Сравнение без
 /// `id`, `rawSource`, `warnings` — это ephemeral поля, не связанные со значением

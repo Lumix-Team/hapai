@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/subscriptions_screen/clipboard_analysis.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
+import 'package:hapai/screens/subscriptions_screen/clipboard_analysis.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
 
 import '../parser/engine_test_setup.dart';
 

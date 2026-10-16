@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/services/rule_transfer.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/services/rule_transfer.dart';
 
 /// §439 §3.4 — файл правил (§396): экспорт пишет `format: 2` — записи хранения
-/// 1.0 со всеми полями LxBox (`verbatim`, `update_interval_hours`,
+/// 1.0 со всеми полями Hapai (`verbatim`, `update_interval_hours`,
 /// `description`, `vars` сервера); `format: 1` (форма хранения 2.23.2) читают
 /// замороженные читатели `legacy_form_v0.dart`. Какой читатель берётся, решает
 /// `format` конверта, а не вид элемента.
@@ -154,7 +154,7 @@ void main() {
           720);
     });
 
-    test('DNS-серверы и правила — те же модели со всеми полями LxBox', () {
+    test('DNS-серверы и правила — те же модели со всеми полями Hapai', () {
       expect(
           [for (final e in contents.rawDnsServers) _server(e, contents.format).item],
           dnsServers);

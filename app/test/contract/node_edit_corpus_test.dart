@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/screens/node_settings/node_document.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/contract/body_edit.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/contract/warning_codes.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/screens/node_settings/node_document.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/contract/body_edit.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/contract/warning_codes.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import '../contract_paths.dart';
 import '../parser/engine_test_setup.dart';
@@ -149,12 +149,12 @@ void main() {
         final expected = jsonDecode(File('$base.expected.json')
             .readAsStringSync()) as Map<String, dynamic>;
         expect((expected['meta'] as Map?)?['container'], 'own');
-        // §582 (контракт 1.1.96) — кейс схемы, которой у LxBox нет по
+        // §582 (контракт 1.1.96) — кейс схемы, которой у Hapai нет по
         // контракту (`meta.extension: desktop` — hysteria v1), пропускается,
         // как в раннере корпуса body.
         final ext = (expected['meta'] as Map?)?['extension'];
         if (ext is String && ext.isNotEmpty && ext != 'lxbox') {
-          markTestSkipped('meta.extension=$ext — схемы у LxBox нет');
+          markTestSkipped('meta.extension=$ext — схемы у Hapai нет');
           return;
         }
         expect(isAuthoredNodeSource(text), isTrue,

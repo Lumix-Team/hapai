@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/rule_order.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/rule_order.dart';
 
 void main() {
   group('markRuleOrder (§370 разметка)', () {

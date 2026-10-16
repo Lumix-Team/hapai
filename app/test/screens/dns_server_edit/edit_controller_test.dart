@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/screens/dns_server_edit/edit_controller.dart';
-import 'package:lxbox/screens/dns_settings_screen/resolved_server.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/screens/dns_server_edit/edit_controller.dart';
+import 'package:hapai/screens/dns_settings_screen/resolved_server.dart';
 
 /// §117 задача 4 — `DnsServerEditController`: snapshot/isDirty по kind,
 /// inline-detour (`body['detour']`, locked decision №10), JSON-валидация

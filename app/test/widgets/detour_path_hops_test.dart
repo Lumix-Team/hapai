@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/selector_info.dart';
-import 'package:lxbox/widgets/detour_target_picker.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/selector_info.dart';
+import 'package:hapai/widgets/detour_target_picker.dart';
 
 import '../parser/engine_test_setup.dart';
 

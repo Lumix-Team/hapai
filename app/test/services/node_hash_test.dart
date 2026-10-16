@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 import '../parser/parse_link_as.dart';

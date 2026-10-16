@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/automation/automation_dispatcher.dart';
-import 'package:lxbox/services/debug/contract/errors.dart';
+import 'package:hapai/services/automation/automation_dispatcher.dart';
+import 'package:hapai/services/debug/contract/errors.dart';
 
 /// §290 — symmetric request-response: маппинг исключения handler'а в
 /// `(code, message)` для outgoing VPN_ERROR. Контролируемые DebugError отдаём

@@ -3,8 +3,8 @@
 // вглубь, строка и число — разные. Info-код без изменения значения по пути
 // идёт без `applied: false`, особых кодов (прежде `awg_mtu_high`) нет.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/contract/body_edit.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/contract/body_edit.dart';
 
 import '../parser/engine_test_setup.dart';
 

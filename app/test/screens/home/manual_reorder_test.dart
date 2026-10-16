@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/manual_reorder.dart';
+import 'package:hapai/screens/home/manual_reorder.dart';
 
 /// §606 — перетаскивание под фильтром двигает только перетащенный узел;
 /// скрытые узлы остаются на своих местах, а не уезжают в хвост.

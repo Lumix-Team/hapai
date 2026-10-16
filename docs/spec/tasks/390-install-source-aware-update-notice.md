@@ -147,8 +147,8 @@ GitHub-ссылка валидна. Он попадает в `github`, несм�
 | Канал | URL | Фолбэк |
 |---|---|---|
 | GitHub | `ProjectLinks.releaseTag(tag)` — страница релиза | — |
-| Play | `market://details?id=com.leadaxe.lxbox` | `https://play.google.com/store/apps/details?id=com.leadaxe.lxbox` при `ActivityNotFoundException` |
-| F-Droid | `https://f-droid.org/packages/com.leadaxe.lxbox/` | — (обычный https) |
+| Play | `market://details?id=studio.creater120.hapai` | `https://play.google.com/store/apps/details?id=studio.creater120.hapai` при `ActivityNotFoundException` |
+| F-Droid | `https://f-droid.org/packages/studio.creater120.hapai/` | — (обычный https) |
 
 ⚠ `market://` без установленного Play роняет `startActivity` — а устройства без
 GMS ровно наша аудитория. Нужен `try/catch` в `MainActivity.openUrl`.
@@ -204,7 +204,7 @@ enum InstallSource { github, play, fdroid }
 
 Дефолт при любой ошибке — `github` + `AppLog.warning`.
 
-### 2. `MainActivity.kt` — метод `installSource` в канале `com.leadaxe.lxbox/utils`
+### 2. `MainActivity.kt` — метод `installSource` в канале `studio.creater120.hapai/utils`
 
 Канал существует (`openUrl`, `hasCamera`, `canSaveToDownloads`, …), добавляется
 один `when`-кейс + хелпер:
@@ -234,7 +234,7 @@ private fun installerPackageName(): String? = try {
 ### 4. `project_links.dart`
 
 `playPage` (`market://…`), `playPageWeb` (`https://play.google.com/…`),
-`fdroidPage` (`https://f-droid.org/packages/com.leadaxe.lxbox/`).
+`fdroidPage` (`https://f-droid.org/packages/studio.creater120.hapai/`).
 
 ### 5. `home_dialogs.dart` — `maybeShowUpdateSnackbar`
 

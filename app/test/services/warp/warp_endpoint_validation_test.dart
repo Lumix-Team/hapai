@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
+import 'package:hapai/services/warp/warp_account.dart';
 
 /// §606 — свой endpoint WARP проверяется на форму `host:port` до регистрации.
 void main() {

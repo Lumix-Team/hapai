@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/debug/profiling_tab.dart';
+import 'package:hapai/screens/debug/profiling_tab.dart';
 
 /// §013-DIAGNOSTICS P24 — профилировочный снимок берётся только при живом
 /// ядре: без поднятого туннеля `_capture` не должен дёргать native
@@ -12,7 +12,7 @@ import 'package:lxbox/screens/debug/profiling_tab.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const channel = MethodChannel('com.leadaxe.lxbox/methods');
+  const channel = MethodChannel('studio.creater120.hapai/methods');
   final messenger =
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   final calls = <MethodCall>[];

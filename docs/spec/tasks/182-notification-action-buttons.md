@@ -185,7 +185,7 @@ builder
 
 | Файл | Изменение |
 |---|---|
-| [`BoxVpnService.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/BoxVpnService.kt) | + `const val ACTION_RECONNECT = "com.leadaxe.lxbox.ACTION_RECONNECT"`. + companion `reconnectScope` + `@Volatile reconnecting` + `fun reconnect(context)` (см. snippet). |
+| [`BoxVpnService.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/BoxVpnService.kt) | + `const val ACTION_RECONNECT = "studio.creater120.hapai.ACTION_RECONNECT"`. + companion `reconnectScope` + `@Volatile reconnecting` + `fun reconnect(context)` (см. snippet). |
 | [`BoxService.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/BoxService.kt) | В `receiver.onReceive` `when`: + ветка `BoxVpnService.ACTION_RECONNECT -> runCatching { BoxVpnService.reconnect(service.applicationContext) }` (через companion — reconnect переживает stopSelf). В `onStartCommand` `IntentFilter`: + `addAction(BoxVpnService.ACTION_RECONNECT)`. |
 | [`ServiceNotification.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/ServiceNotification.kt) | + два `addAction` + helper `broadcastPI` — строго в `init` (не в `show`). |
 

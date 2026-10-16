@@ -289,7 +289,7 @@ curl -s -H "Authorization: Bearer $TOKEN" $BASE/state/wifi | jq
 # expected: ssid: null, bssid: null, rssi: <int>, permission_granted: false
 
 # 2) wifi state — connected to wifi, после ручного grant permission'а через adb
-adb shell pm grant com.leadaxe.lxbox android.permission.ACCESS_FINE_LOCATION
+adb shell pm grant studio.creater120.hapai android.permission.ACCESS_FINE_LOCATION
 curl -s -H "Authorization: Bearer $TOKEN" $BASE/state/wifi | jq
 # expected: ssid: "<реальный SSID>", bssid: "<MAC>", permission_granted: true
 

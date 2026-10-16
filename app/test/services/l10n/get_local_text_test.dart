@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/l10n/get_local_text.dart';
-import 'package:lxbox/services/l10n/plural_resolver.dart';
+import 'package:hapai/services/l10n/get_local_text.dart';
+import 'package:hapai/services/l10n/plural_resolver.dart';
 
 /// §285 — движок getLocalText: fallback на ключ, простые/особые формы, плюрал
 /// через RuPluralResolver, printf (%s/%d/%1$s/%%), защита от промахов.

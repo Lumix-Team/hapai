@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/diagnostics/node_diagnostics_runner.dart';
-import 'package:lxbox/services/platform_channels.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/diagnostics/node_diagnostics_runner.dart';
+import 'package:hapai/services/platform_channels.dart';
 
 import '../parser/engine_test_setup.dart';
 

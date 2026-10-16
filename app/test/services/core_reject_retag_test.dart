@@ -9,21 +9,21 @@
 // Хост здесь — поддельное ядро поверх НАСТОЯЩЕЙ сборки (`buildConfig`), чтобы
 // динамика тегов была та же, что на устройстве, а не придуманная в тесте.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/parser_config.dart'
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/parser_config.dart'
     show
         WizardTemplate,
         GroupTemplates,
         DirectionTemplate,
         AutoTemplate,
         DefaultDirection;
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 

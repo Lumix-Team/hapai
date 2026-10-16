@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/validation.dart';
-import 'package:lxbox/services/builder/post_steps.dart'
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/validation.dart';
+import 'package:hapai/services/builder/post_steps.dart'
     show healDanglingDnsResolvers;
-import 'package:lxbox/services/builder/validator.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/record_vars.dart';
+import 'package:hapai/services/builder/validator.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/record_vars.dart';
 
 // §643 (контракт 1.1.119, TEMPLATE_LANG §2.1, §6.9, D-132) — поля объявления
 // `wizard_ui: internal` и `unique` вокруг движка (хранение, экспорт, импорт

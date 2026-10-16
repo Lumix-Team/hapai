@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/services/parser/ini_parser.dart';
-import 'package:lxbox/services/warp/masquerade_params.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
-import 'package:lxbox/services/warp/warp_client.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/services/parser/ini_parser.dart';
+import 'package:hapai/services/warp/masquerade_params.dart';
+import 'package:hapai/services/warp/warp_account.dart';
+import 'package:hapai/services/warp/warp_client.dart';
 
 import '../parser/engine_test_setup.dart';
 

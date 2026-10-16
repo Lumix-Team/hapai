@@ -548,7 +548,7 @@ Future<DebugResponse> _clearSrs(DebugRequest req, DebugContext ctx) async {
 }
 
 /// Native platform channel для Toast. Расширяет существующий
-/// `com.leadaxe.lxbox/methods` (см. `VpnPlugin.kt`) методом `showToast`.
+/// `studio.creater120.hapai/methods` (см. `VpnPlugin.kt`) методом `showToast`.
 /// Сообщение обрезается до 200 символов (Android Toast всё равно больше
 /// не показывает).
 const _methodChannel = MethodChannel(PlatformChannels.methods);

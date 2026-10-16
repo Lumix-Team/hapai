@@ -47,7 +47,7 @@ void tcpKeepAliveToSingbox(Map<String, dynamic> out, TcpKeepAliveSpec? s) {
 }
 
 /// share-URI query → spec. Имена параметров = имена ключей sing-box.
-/// Стандарта у share-URI нет, это расширение L×Box по прецеденту AnyTLS
+/// Стандарта у share-URI нет, это расширение Hapai по прецеденту AnyTLS
 /// (§269): чужие клиенты неизвестные параметры игнорируют, а без URI-формы
 /// поле терялось бы на любом пересохранении узла через `toUri()`.
 TcpKeepAliveSpec? tcpKeepAliveFromQuery(Map<String, String> q) {

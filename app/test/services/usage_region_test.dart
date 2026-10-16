@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/usage_region.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/usage_region.dart';
 
 /// §425 — регион использования: настройка + автодетект.
 void main() {

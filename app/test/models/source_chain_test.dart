@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/source_chain.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/source_chain.dart';
 
 import '../contract_paths.dart';
 

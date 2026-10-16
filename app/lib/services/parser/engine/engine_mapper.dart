@@ -18,7 +18,7 @@ import 'interpreter.dart';
 import 'section_loader.dart';
 
 /// Имя этой стороны в поле `extension` протокола реестра
-/// (`registry.schema.json`: `desktop` — лаунчер, `mobile` — LxBox).
+/// (`registry.schema.json`: `desktop` — лаунчер, `mobile` — Hapai).
 const _kThisSideExtension = 'mobile';
 
 /// Контракт 1.1.118 (§591 п.4) — тип тела, который реестр объявляет

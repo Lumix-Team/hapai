@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/screens/subscription_detail_screen/tag_prefix_cascade.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/screens/subscription_detail_screen/tag_prefix_cascade.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §393 A6 — каскад смены `tag_prefix` подписки/папки на regex-фильтры
 /// Направлений НА УРОВНЕ STORAGE: однозначное вхождение обязано доехать до

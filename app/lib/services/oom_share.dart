@@ -31,7 +31,7 @@ Future<bool> shareOomReport(OomReportFile report) async {
     // ignore: deprecated_member_use
     await Share.shareXFiles(
       files,
-      subject: 'L×Box core OOM report — ${report.mtime.toIso8601String()}',
+      subject: 'Hapai core OOM report — ${report.mtime.toIso8601String()}',
     );
     return true;
   } catch (_) {

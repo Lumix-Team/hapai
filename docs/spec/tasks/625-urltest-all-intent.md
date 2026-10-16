@@ -13,14 +13,14 @@
 телефон → отправить интент в LxBox» и хочет этим жестом перепроверить **все**
 Направления разом, когда сеть «подтухла».
 
-Сейчас в Intent API есть только `com.leadaxe.lxbox.URLTEST_GROUP` с
+Сейчас в Intent API есть только `studio.creater120.hapai.URLTEST_GROUP` с
 обязательным extra `group`. Один интент = одна группа. Чтобы перепроверить все
 Направления, нужно по действию на каждую группу и знание их тегов
 (`vpn-1-auto`, `vpn-2-auto`, …), которые меняются при добавлении Направлений.
 
 ## Решение
 
-Новое действие **`com.leadaxe.lxbox.URLTEST_ALL`** без extras и симметричная
+Новое действие **`studio.creater120.hapai.URLTEST_ALL`** без extras и симметричная
 ему команда `urltest-all` во всех трёх каналах автоматизации (§290: один
 обработчик, три входа).
 
@@ -128,7 +128,7 @@ Future<int> actionUrltestAll(DebugContext ctx) async {
 - Запускать **только** затронутый тестовый файл, не каталог.
 - Ручная проверка не требуется до слияния: интент проверит владелец на
   эмуляторе командой
-  `adb shell am broadcast -a com.leadaxe.lxbox.URLTEST_ALL -p com.leadaxe.lxbox`
+  `adb shell am broadcast -a studio.creater120.hapai.URLTEST_ALL -p studio.creater120.hapai`
   (точную форму с компонентом взять из `docs/AUTOMATION.md`).
 
 ## Нерешённое

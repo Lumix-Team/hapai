@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/contract/registry_warning.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/contract/registry_warning.dart';
 
 // §511 l1 — маска секретов стоит в общем компоненте карточки, а не только на
 // пути отказа ввода. Ни один код реестра сейчас не подставляет `{value}`,

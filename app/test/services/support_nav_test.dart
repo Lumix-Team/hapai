@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/support/support_nav.dart';
+import 'package:hapai/services/support/support_nav.dart';
 
 /// §357 — парсер `lxbox://action:payload` и резолвабельность действий.
 void main() {

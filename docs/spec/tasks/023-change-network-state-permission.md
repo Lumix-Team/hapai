@@ -11,10 +11,10 @@
 VPN валит процесс с `REASON_CRASH` в ApplicationExitInfo сразу после OK на consent на Android 9-11; на Android 12+ — работает. Stacktrace через канал D §038 (logcat tail):
 
 ```
-java.lang.SecurityException: com.leadaxe.lxbox was not granted either of these permissions:
+java.lang.SecurityException: studio.creater120.hapai was not granted either of these permissions:
   android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_SETTINGS.
 at android.net.ConnectivityManager.requestNetwork(ConnectivityManager.java:4344)
-at com.leadaxe.lxbox.vpn.DefaultNetworkListener.requestDefaultNetwork(...)
+at studio.creater120.hapai.vpn.DefaultNetworkListener.requestDefaultNetwork(...)
 ```
 
 В [`DefaultNetworkListener`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/DefaultNetworkListener.kt):

@@ -3,21 +3,21 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/warp/masque_account.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
-import 'package:lxbox/services/warp/warp_backup.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/warp/masque_account.dart';
+import 'package:hapai/services/warp/warp_account.dart';
+import 'package:hapai/services/warp/warp_backup.dart';
 
 import '../parser/engine_test_setup.dart';
 
-// LX Backup v1, сторона LxBox (SPEC 103, фаза 4).
+// LX Backup v1, сторона Hapai (SPEC 103, фаза 4).
 //
 // Парные тесты к core/backup/*_test.go в лаунчере: перенос настроек между
 // приложениями имеет смысл ровно настолько, насколько обе стороны одинаково
@@ -338,7 +338,7 @@ void main() {
   // ════════════════════════════════════════════════════════════════════════
   //
   // Поля `directions[].ping_url` / `ping_timeout_ms` объявлены в схеме
-  // (контракт 0.12.6, D-096), применяет их только LxBox. Смысл переноса — та
+  // (контракт 0.12.6, D-096), применяет их только Hapai. Смысл переноса — та
   // же кнопка «Ping» на новой машине: Направление, у которого бюджет был
   // задан вручную, обязано приехать с ним, а не на глобальном умолчании.
   group('LX Backup: бюджет теста узла у Направления (§409)', () {
@@ -510,7 +510,7 @@ void main() {
     test('поля НЕ дают ложный backup_unknown_field на своём же экспорте',
         () async {
       // `_directionKeys` — default-deny на всю глубину файла (§401): ключ,
-      // не объявленный известным, ловится общим обходом, и LxBox ругался бы
+      // не объявленный известным, ловится общим обходом, и Hapai ругался бы
       // на собственный экспорт.
       final raw = (await buildLxBackup(
         lists: const [],
@@ -880,7 +880,7 @@ void main() {
 
   group('LX Backup: секции обмена', () {
     // §393 B7 — самый дорогой из инвариантов: блоб чужого приложения обязан
-    // пережить круг launcher→LxBox→launcher БАЙТ В БАЙТ. Обеднение здесь
+    // пережить круг launcher→Hapai→launcher БАЙТ В БАЙТ. Обеднение здесь
     // молчаливое — мобила о содержимом ничего не знает и предъявить
     // пользователю не может.
     test('подписка: disabled-хеши, tag и период обновления едут', () async {
@@ -904,7 +904,7 @@ void main() {
       final sub = _sourcesOf(raw, 'subscription').single;
       expect(sub['url'], 'https://example-1.com/sub');
       expect(sub['name'], 'Main');
-      // §438 — у контракта разделитель — часть префикса, у LxBox — пробел.
+      // §438 — у контракта разделитель — часть префикса, у Hapai — пробел.
       expect((sub['tag_policy'] as Map)['prefix'], 'MN ');
       expect((sub['update'] as Map)['interval_hours'], 6);
       // §4 BACKUP.md — значения в unix seconds, а не в ISO-8601 мобилы.
@@ -1538,7 +1538,7 @@ void main() {
       });
 
       test('label Направления ПРИМЕНЯЕТСЯ и warning не поднимает', () {
-        // §405 — поле объявлено в схеме, применяет его LxBox: терять нечего.
+        // §405 — поле объявлено в схеме, применяет его Hapai: терять нечего.
         final raw = jsonEncode({
           'lx_backup': 1,
           'directions': [

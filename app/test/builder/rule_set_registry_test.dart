@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/builder/rule_set_registry.dart';
+import 'package:hapai/services/builder/rule_set_registry.dart';
 
 void main() {
   group('RuleSetRegistry', () {

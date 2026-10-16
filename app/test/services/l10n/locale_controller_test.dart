@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/l10n/get_local_text.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/services/l10n/get_local_text.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/template_loader.dart';
 
 /// §279 — LocaleController: set() персистит + нотифицирует; невалидное
 /// хранимое значение → 'system'; reloadFromStorage идемпотентен.

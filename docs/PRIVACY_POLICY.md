@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Application:** L×Box (`com.leadaxe.lxbox`)
+**Application:** L×Box (`studio.creater120.hapai`)
 **Last updated:** 14 August 2026
 
 > Русская версия: [PRIVACY_POLICY.ru.md](PRIVACY_POLICY.ru.md)

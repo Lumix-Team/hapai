@@ -83,7 +83,7 @@ const int kLxBackupVersion = kLxBackupFormat10;
 
 /// Значения `exported_by.app`. §401 — только они: ключами карманов
 /// `extensions.<приложение>` эти имена больше не служат, механизм упразднён.
-const String kLxAppLxBox = 'lxbox';
+const String kLxAppHapai = 'lxbox';
 const String kLxAppLauncher = 'launcher';
 
 /// Коды предупреждений (общие с Go-стороной, реестр —
@@ -126,7 +126,7 @@ const String kWarnExtensionsDropped = 'backup_extensions_dropped';
 /// продолжается.
 ///
 /// Отдельный код, а не [kWarnUnknownField]: ключ-то знакомый, разошёлся его
-/// тип (`subscriptions[].skip` — boolean у LxBox 0.10.x, список фильтров
+/// тип (`subscriptions[].skip` — boolean у Hapai 0.10.x, список фильтров
 /// отсева у лаунчера), и пользователю важно различать «такого поля тут нет»
 /// и «поле есть, но значение записано по-другому». Уронить файл целиком
 /// из-за одного поля значило бы потерять всё прочее молча, вопреки П6.
@@ -143,7 +143,7 @@ const String kWarnSourceFlagDropped = 'backup_source_flag_dropped';
 /// §401 (D-082) — `label` одиночного сервера разошёлся с тегом и применён не
 /// будет: у канона имени, кроме тега, нет (SPEC 112 контракта, «идентичность
 /// узла = тег»). §405 — цепочки этот код больше не касается: их `label`
-/// применяет LxBox, оно читается и пишется.
+/// применяет Hapai, оно читается и пишется.
 ///
 /// У сервера БЕЗ `node_tag` подпись ещё может стать именем записи — тогда
 /// потери нет и предупреждения тоже.
@@ -209,14 +209,14 @@ const String kSectionDropReasonNotAllowed = 'not_allowed';
 
 /// §438 — запись `sources[]` вида, которому на этой стороне нет места:
 /// корневые `auto`/`unsupported` (union 1.0 их не выражает, BACKUP.md §2),
-/// незнакомый `kind`, а у LxBox ещё члены папки `chain` — цепочка здесь
+/// незнакомый `kind`, а у Hapai ещё члены папки `chain` — цепочка здесь
 /// только корневой источник. Член папки `auto` — узел автовыбора (§439 N2).
 /// [LxBackupWarning.kind] — вид записи. Запись не применяется.
 const String kWarnSourceKindUnsupported = 'backup_source_kind_unsupported';
 
 /// Контракт 1.0.1 — провайдерская группа (`kind: auto`) приехала в форме,
 /// которую сторона не выражает, и ввезена упрощённой. Detail — тег группы,
-/// [LxBackupWarning.reason] — что не выразилось. §565 — `selector` LxBox
+/// [LxBackupWarning.reason] — что не выразилось. §565 — `selector` Hapai
 /// исполняет, упрощения рода больше нет; код остаётся за членами старых
 /// autogroup-текстов, которые не нашлись.
 const String kWarnGroupDegraded = 'backup_group_degraded';
@@ -276,7 +276,7 @@ const Set<String> _reservedOutbounds = {
 };
 
 /// D-117 — служебные теги приёмника, когда шаблона нет (корпус, разбор без
-/// состояния): прямой канал и тег блокировки LxBox. У приёмника с шаблоном их
+/// состояния): прямой канал и тег блокировки Hapai. У приёмника с шаблоном их
 /// называет сам шаблон.
 const Set<String> kLxImportDefaultSystemTags = {
   kDirectOutboundTag,
@@ -347,7 +347,7 @@ class LxSubscription {
   /// У 0.x `null` и [fullSettings] ложно: своя ссылка остаётся.
   final NodeLink? detour;
 
-  /// §439 Л2 — настройки LxBox записи 1.0, которые контракт объявил
+  /// §439 Л2 — настройки Hapai записи 1.0, которые контракт объявил
   /// (`declared` в `lx_backup_slice.dart`) и которые в записи есть. `null` —
   /// поля в файле нет (сторона его не носит или контракт не объявил): у
   /// совпавшей подписки остаётся своё, у новой — умолчание.
@@ -426,7 +426,7 @@ class LxServer {
   /// составу даёт слияние ([mergeBackupServers]). Текста у такого члена нет.
   final AutoSelectSpec? autoGroup;
 
-  /// §439 Л2 — объявленные контрактом настройки LxBox корневого узла 1.0
+  /// §439 Л2 — объявленные контрактом настройки Hapai корневого узла 1.0
   /// (флаги `detour_policy`, префикс `tag_policy`); `null` — поля в файле нет,
   /// см. [LxSubscription.detourPolicy]. У членов папки их нет.
   final DetourPolicy? detourPolicy;
@@ -436,7 +436,7 @@ class LxServer {
   /// [LxSubscription.position]); член папки идёт местом своей папки.
   final int position;
 
-  /// §438 — личный detour узла 1.0 (`detour{folder_id?, tag}`): у LxBox это
+  /// §438 — личный detour узла 1.0 (`detour{folder_id?, tag}`): у Hapai это
   /// `overrideDetour` одиночного сервера и `detour` члена папки. Тег конфига
   /// из ссылки получает слияние ([mergeBackupServers]).
   final NodeLink? detour;
@@ -478,7 +478,7 @@ class LxServer {
 /// идентичность и собственные настройки. Состав едет записями [LxServer] с
 /// [LxServer.folderRef] == [key].
 ///
-/// Применяются настройки, у которых в модели LxBox есть дом: `enabled`,
+/// Применяются настройки, у которых в модели Hapai есть дом: `enabled`,
 /// префикс `tag_policy`, общий `detour` и свёртка `replace` (фича 565 фаза B).
 /// `postfix` — поле лаунчера (колонка «Поддержка» BACKUP.md §2).
 class LxFolder {
@@ -507,7 +507,7 @@ class LxFolder {
   /// §439 — общий `detour` папки (BACKUP.md §9 п. 3): ссылка файла как есть.
   final NodeLink? detour;
 
-  /// §439 Л2 — объявленные контрактом настройки LxBox папки 1.0 (флаги
+  /// §439 Л2 — объявленные контрактом настройки Hapai папки 1.0 (флаги
   /// `detour_policy`, `ping_url`, `ping_timeout_ms`); `null` — поля в файле
   /// нет, см. [LxSubscription.detourPolicy].
   final DetourPolicy? detourPolicy;
@@ -570,7 +570,7 @@ class LxDns {
 /// приложении. Поля разные по адресату, и слить их значило бы менять
 /// поведение ядра правкой кнопки «Ping».
 ///
-/// Поля объявлены в схеме, применяет их только LxBox (колонка «Поддержка»
+/// Поля объявлены в схеме, применяет их только Hapai (колонка «Поддержка»
 /// `docs/BACKUP.md` §2); лаунчер игнорирует молча.
 ///
 /// `null` у поля = override этой половины нет.
@@ -782,11 +782,11 @@ class LxBackupExport {
   final List<LxBackupWarning> warnings;
 }
 
-/// Собирает LX Backup формата 1.0 (`lx_backup: 2`) из настроек LxBox.
+/// Собирает LX Backup формата 1.0 (`lx_backup: 2`) из настроек Hapai.
 ///
 /// §439 — файл = срез хранения плюс тонкий слой (BACKUP.md §1). Записи
 /// `sources[]` (подписки, одиночные узлы, папки и цепочки в порядке списка
-/// источников) и `rules[]` пишет кодек хранения (`models/codec/`); поля LxBox
+/// источников) и `rules[]` пишет кодек хранения (`models/codec/`); поля Hapai
 /// срезает таблица `lx_backup_slice.dart`. Тонкий слой — `directions[]`,
 /// переносимые `vars`, `route.final`, `warp[]` — той же формы, что в 0.12.
 ///
@@ -804,7 +804,7 @@ class LxBackupExport {
 /// корневая ссылка `{tag}`; ссылку без `folder_id` на член папки лаунчер
 /// нормализует на импорте (BACKUP.md §6, ответ Л1).
 ///
-/// Предупреждения: срезанные настройки LxBox — [kWarnLocalOnlyDropped], одно
+/// Предупреждения: срезанные настройки Hapai — [kWarnLocalOnlyDropped], одно
 /// на сущность (П6).
 ///
 /// [recordVars] — §441, объявления шаблона этой стороны: `vars`
@@ -869,7 +869,7 @@ Future<LxBackupExport> buildLxBackup({
   final out = <String, dynamic>{
     'lx_backup': kLxBackupVersion,
     'exported_by': {
-      'app': kLxAppLxBox,
+      'app': kLxAppHapai,
       'version': appVersion,
       'platform': 'android',
     },
@@ -1534,7 +1534,7 @@ const Set<String> _serverKeys = {
   'exclude_from_global',
   // §435 / контракт ## 13 — `sections` объявлено схемой (BACKUP.md §2,
   // сторона launcher): до контракта 1.0 ни одна сторона его не пишет, а
-  // 0.12-форму записей (`match`/`value`) LxBox не разбирает — второй парсер.
+  // 0.12-форму записей (`match`/`value`) Hapai не разбирает — второй парсер.
   // Чужое объявленное игнорируется МОЛЧА (BACKUP.md §1): в allowlist ради
   // тишины, без ветки в `_serverFromJson`.
   'sections',
@@ -1555,7 +1555,7 @@ const Set<String> _chainKeys = {
 const Set<String> _directionKeys = {
   'tag',
   // §405 — `label` Направления объявлен в схеме, и применяет его только
-  // LxBox (колонка «Поддержка» `docs/BACKUP.md` §2, D-094): читается в модель
+  // Hapai (колонка «Поддержка» `docs/BACKUP.md` §2, D-094): читается в модель
   // и пишется обратно; лаунчер не применяет и провозит молча.
   'label',
   'enabled',
@@ -1567,9 +1567,9 @@ const Set<String> _directionKeys = {
   'include',
   'interrupt_exist_connections',
   // §409 — бюджет теста узла у Направления (`ping_options.groups[tag]`,
-  // §040). Поля объявлены в схеме, применяет их только LxBox (колонка
+  // §040). Поля объявлены в схеме, применяет их только Hapai (колонка
   // «Поддержка» `docs/BACKUP.md` §2); лаунчер не применяет и провозит молча.
-  // Без них файл LxBox ловил бы `backup_unknown_field` на собственном
+  // Без них файл Hapai ловил бы `backup_unknown_field` на собственном
   // экспорте.
   'ping_url',
   'ping_timeout_ms',
@@ -1955,7 +1955,7 @@ const List<String> _identityKeyOrder = [
   'hash_device_model',
 ];
 
-/// То, что LxBox умеет применить. Остальное (включая незнакомое) — в
+/// То, что Hapai умеет применить. Остальное (включая незнакомое) — в
 /// [kWarnSourceIdentityDropped].
 const Set<String> _identityAppliedKeys = {
   'user_agent',
@@ -2091,7 +2091,7 @@ String _body0x(LxServer s) => s.uri.isNotEmpty
 
 /// §393 B9 — секция `dns` файла 0.12 → модели DNS.
 ///
-/// Канон знает три происхождения (`template|preset|user`), модель LxBox —
+/// Канон знает три происхождения (`template|preset|user`), модель Hapai —
 /// своё имя пользовательской записи (`inline`) и ещё `srs` у правил.
 ///
 /// §401 — запись, которой в каноне места нет, ОТБРАСЫВАЕТСЯ с
@@ -2238,7 +2238,7 @@ DnsRuleRef? _dnsRule0x(Map<String, dynamic> e, String kind) {
 /// §401 — неизвестные ключи здесь больше не пересчитываются: их называет
 /// общий обход [_scanUnknown] полным путём.
 ///
-/// §405 — `label` читается В МОДЕЛЬ: это поле применяет LxBox (колонка
+/// §405 — `label` читается В МОДЕЛЬ: это поле применяет Hapai (колонка
 /// «Поддержка» `docs/BACKUP.md` §2, D-094). Отсутствие ключа — пустое имя, и
 /// показан будет тег ([Direction.displayLabel]).
 Direction _directionFromCanon(Map<String, dynamic> j, String tag) {
@@ -2321,7 +2321,7 @@ LxDirectionPing _directionPingFromCanon(
 /// `@urltest_tolerance` лаунчера) нет вовсе — экспортируется то, что лежит.
 ///
 /// §405 — `label` пишется, когда он непустой И отличается от тега. Поле
-/// объявлено в схеме, применяет его только LxBox (колонка «Поддержка»
+/// объявлено в схеме, применяет его только Hapai (колонка «Поддержка»
 /// `docs/BACKUP.md` §2, D-094), лаунчер не применяет и провозит молча.
 /// `label == tag` не пишем: там нет имени, там повтор тега, и на той стороне
 /// он был бы неотличим от осознанно введённого имени.
@@ -2578,7 +2578,7 @@ LxBackupFile gateLxBackupTargets(LxBackupFile file, Set<String>? known) {
   );
 }
 
-/// Запись схемы → правила LxBox (вид `json` — по записи на тело, D-111).
+/// Запись схемы → правила Hapai (вид `json` — по записи на тело, D-111).
 ///
 /// Цель здесь не сверяется: ссылку в никуда выключает [gateLxBackupTargets]
 /// после слияния.
@@ -2641,7 +2641,7 @@ CustomRule? _ruleBodyFromJson(
         // из файла не приезжают: дома в общей схеме им нет, и провозить их
         // больше нечем. Правило собирается из того, что в схеме есть.
         outbound: outbound.isEmpty ? kDirectOutboundTag : outbound,
-        // `dns`/`resolve` — наши поля таблицы §2 BACKUP.md: круг LxBox→LxBox
+        // `dns`/`resolve` — наши поля таблицы §2 BACKUP.md: круг Hapai→Hapai
         // возвращает их на место, лаунчер отбрасывает у себя с warning'ом.
         dns: RuleDns.fromJson(j['dns']),
         resolve: RuleResolve.fromJson(j['resolve']),
@@ -2692,7 +2692,7 @@ CustomRule? _ruleBodyFromJson(
 
 /// §439 (D-111) — сырое правило `kind: json` формата 0.x: тело в `match`,
 /// объект или массив тел. Процедура одна с записью 1.0 ([_splitRuleBodies]);
-/// каждая часть — правило вида json с телом как есть (у LxBox это запись
+/// каждая часть — правило вида json с телом как есть (у Hapai это запись
 /// `inline` + `verbatim`, сборка кладёт тело в конфиг без переписи). Тело не
 /// объект и не массив — запись отбрасывается с [kWarnUnknownField].
 List<CustomRule> _jsonRule0x(
@@ -2731,7 +2731,7 @@ List<String> _strList(Object? v) {
 //
 // Записи файла 1.0 — записи состояния, и разбирает их кодек хранения
 // (`models/codec/`): источники — `sourceFromRecord`, цепочки —
-// `chainFromRecord`, правила и DNS — свои кодеки записей. Поля LxBox, которых
+// `chainFromRecord`, правила и DNS — свои кодеки записей. Поля Hapai, которых
 // контракт не объявил, сняты до кодека (`stripUndeclaredBackupFields`): их
 // назвал обход неизвестных ключей. Итог — те же промежуточные записи, что даёт
 // декодер 0.x ([LxSubscription], [LxServer], [LxFolder], [SourceChain],
@@ -2771,7 +2771,7 @@ String _source10Label(Map<String, dynamic> j) {
 }
 
 /// Запись источника для кодека хранения: без не объявленных контрактом полей
-/// LxBox и с `id` (см. [_kNoFileId]).
+/// Hapai и с `id` (см. [_kNoFileId]).
 Map<String, dynamic> _sourceForCodec(
   BackupRecord kind,
   Map<String, dynamic> j,
@@ -2784,7 +2784,7 @@ Map<String, dynamic> _sourceForCodec(
       'id': fileId.isEmpty ? _kNoFileId : fileId,
     };
 
-/// §439 Л2 — есть ли в записи файла поле LxBox, которое контракт объявил:
+/// §439 Л2 — есть ли в записи файла поле Hapai, которое контракт объявил:
 /// только такое поле применяется, его отсутствие оставляет значение
 /// приёмника. Необъявленное снято до кодека и не применяется никогда.
 bool _carries(BackupRecord kind, Map<String, dynamic> j, String key) =>
@@ -2933,7 +2933,7 @@ void _dropForeignSections(
 ///
 /// Тело для дедупа и хранения — ИСХОДНИК (`origin.raw`), материализованное
 /// `body` — только у узла без исходника (BACKUP.md §9 п. 2). Исходник `json`
-/// и тело без исходника получают тег записи: у LxBox имя узла читается из его
+/// и тело без исходника получают тег записи: у Hapai имя узла читается из его
 /// JSON, а тег записи и есть идентичность. Текст URI и WG-INI едет как есть:
 /// имя у share-ссылки в разных схемах лежит в разных местах, и переписывать
 /// его импорт не берётся.
@@ -3009,10 +3009,10 @@ LxServer? _server10(
   );
 }
 
-/// Член папки 1.0. `server` — узел; `unsupported` с исходником — у LxBox
+/// Член папки 1.0. `server` — узел; `unsupported` с исходником — у Hapai
 /// есть дом: нечитаемый член папки хранит текст и виден в списке (§234);
 /// `auto` — узел автовыбора кодеком хранения (§439 N2, род `selector` —
-/// как записан, §565); `chain` папка LxBox не держит —
+/// как записан, §565); `chain` папка Hapai не держит —
 /// [kWarnSourceKindUnsupported].
 LxServer? _folderMember10(
   Map<String, dynamic> node,
@@ -3062,7 +3062,7 @@ LxServer? _folderMember10(
   return null;
 }
 
-/// Подписка 1.0 кодеком хранения. Применяется то, у чего у LxBox есть дом:
+/// Подписка 1.0 кодеком хранения. Применяется то, у чего у Hapai есть дом:
 /// имя, `enabled`, префикс `tag_policy`, интервал `update`, `disabled`,
 /// `identity`, `detour`. Поля лаунчера (`postfix`, `fold`/`fold_tag`, `skip`,
 /// `max_nodes`, `relays_in_directions`, `update.auto_refresh`) игнорируются
@@ -3176,7 +3176,7 @@ LxFolder _folder10(Map<String, dynamic> j, int position) {
 /// элементу-объекту в порядке массива, как если бы массив был развёрнут в
 /// файле подряд: имена `name`, `name #2`… по порядку получившихся записей
 /// (безымянная остаётся безымянной), `enabled` общий, `id` только у первой.
-/// `num` общий: номера файла LxBox сохраняет ([renumberBackupAxis]), и
+/// `num` общий: номера файла Hapai сохраняет ([renumberBackupAxis]), и
 /// стабильная сортировка оси держит части подряд на месте исходной записи.
 ///
 /// Элемент не объект — [kWarnUnknownField] ([where] называет место), прочие
@@ -3211,7 +3211,7 @@ List<Map<String, dynamic>> _splitRuleBodies(
   return parts;
 }
 
-/// Правило 1.0 → правила LxBox через кодек записей (массив тел — D-111).
+/// Правило 1.0 → правила Hapai через кодек записей (массив тел — D-111).
 ///
 /// `inline` с ключами тела, которых типизированное правило не держит
 /// (`method: drop`, самостоятельный `action`, незнакомый матчер), переносится
@@ -3278,7 +3278,7 @@ CustomRule? _ruleRecord10(
       ));
       return null;
     }
-    // `dns`/`resolve` — поля LxBox у типизированного правила; у правила вида
+    // `dns`/`resolve` — поля Hapai у типизированного правила; у правила вида
     // json им места нет, и молча они не теряются.
     for (final key in const ['dns', 'resolve']) {
       if (j[key] is Map && (j[key] as Map).isNotEmpty) {
@@ -3345,7 +3345,7 @@ LxDns? _dns10(
     final e = _obj(item);
     if (e == null) continue;
     final kind = _str(e['kind']);
-    // Виды LxBox (`srs`, `template`) читаются, только когда контракт их
+    // Виды Hapai (`srs`, `template`) читаются, только когда контракт их
     // объявит (таблица среза).
     final readable = kind == 'user' ||
         kind == 'preset' ||
@@ -3386,7 +3386,7 @@ LxDns? _dns10(
 // `backup.schema.json`), написанные руками по той же причине, что у 0.x:
 // контракт — это документ, а не форма наших классов. Списки 0.x и 1.0
 // разные: у 0.x правило несёт `match`/`outbound`, у 1.0 — `body`/`refs`.
-// §439 — к ним добавляются поля LxBox, объявленные контрактом (флаг Л2 таблицы
+// §439 — к ним добавляются поля Hapai, объявленные контрактом (флаг Л2 таблицы
 // среза `lx_backup_slice.dart`).
 
 const Set<String> _root10Keys = {
@@ -3452,7 +3452,7 @@ const Set<String> _group10Keys = {
   'default',
   'members',
   'strategy',
-  // Поля стороны LxBox (контракт 1.0.1).
+  // Поля стороны Hapai (контракт 1.0.1).
   'members_rule',
   'pool_badge',
 };
@@ -3688,7 +3688,7 @@ BackupSubscriptionMerge mergeBackupSubscriptions(
         // override'а не переносилось бы вовсе.
         identity: sub.identity,
         clearIdentity: sub.identity == null,
-        // §439 Л2 — объявленные настройки LxBox: приехали — применяются, нет
+        // §439 Л2 — объявленные настройки Hapai: приехали — применяются, нет
         // в файле — свои (сторона их не носит). Ссылку detour ставит слияние
         // узлов по [detours].
         detourPolicy: sub.detourPolicy?.copyWith(
@@ -3856,7 +3856,7 @@ String canonicalNodeBody(String body) {
 /// берётся из её записи, у подписки — из [sourceDetours]
 /// ([mergeBackupSubscriptions]); тег конфига — по той же карте контейнеров,
 /// что у ссылок узлов. Флаги политики detour, `ping_*` папки и префикс
-/// одиночного узла — настройки LxBox: пока контракт их не объявил (Л2), в файл
+/// одиночного узла — настройки Hapai: пока контракт их не объявил (Л2), в файл
 /// они не едут и остаются своими; объявленные применяются, когда приехали.
 BackupServerMerge mergeBackupServers(
   List<ServerList> lists,
@@ -4054,7 +4054,7 @@ BackupServerMerge mergeBackupServers(
       final hit = singleBodies[key];
       if (hit != null) {
         final local = merged[hit] as UserServer;
-        // §439 Л2 — объявленные настройки LxBox узла: поле есть — замещает,
+        // §439 Л2 — объявленные настройки Hapai узла: поле есть — замещает,
         // нет — своё остаётся. Ссылку detour совпавший узел держит.
         final flags = srv.detourPolicy
             ?.copyWith(overrideDetour: local.detourPolicy.overrideDetour);
@@ -4310,10 +4310,10 @@ List<NodeSpec> _nodesOf(String raw) {
 }
 
 /// Финальные формы тега [raw] члена папки файла с префиксом модели [prefix]
-/// для сопоставления ссылок файла (NODE_LINK §7.3, S3): форма LxBox
+/// для сопоставления ссылок файла (NODE_LINK §7.3, S3): форма Hapai
 /// «префикс, пробел, тег» и форма контракта «префикс + тег» — у префикса
 /// файла без хвостового пробела (`"d:"`) финальный тег стороны-экспортёра
-/// `d:G`, а модель LxBox хранит `d:` и показывает `d: G` (§439 п. 9).
+/// `d:G`, а модель Hapai хранит `d:` и показывает `d: G` (§439 п. 9).
 Set<String> _fileFinalForms(String prefix, String raw) => {
       TagResolver.displayTag(prefix, raw),
       if (prefix.isNotEmpty) '$prefix$raw',
@@ -4509,13 +4509,13 @@ NodeLink _remapLink(NodeLink link, Map<String, String> ids) {
 
 /// §438 — ось порядка импорта (BACKUP.md §9 п. 7): корневые правила [rules].
 ///
-/// Номера у LxBox — свои, и относительный порядок обязан сохраниться; при
+/// Номера у Hapai — свои, и относительный порядок обязан сохраниться; при
 /// этом ось у сторон одна по раскладке шаблона (голова 0, пресеты 950–990,
 /// пользовательская зона 1000–1100, широкие перехватчики 1110–1150), и
-/// LxBox номер из файла сохраняет. Порядок правил от этого не меняется: он и
+/// Hapai номер из файла сохраняет. Порядок правил от этого не меняется: он и
 /// задан номерами, а при равных корневое правило стоит раньше узлового, как у
 /// сборки. Перенумерация подряд от 1000 (так делает лаунчер) сохранила бы
-/// порядок самого импорта, но у LxBox сломала бы то, что идёт после:
+/// порядок самого импорта, но у Hapai сломала бы то, что идёт после:
 /// правило, добавленное руками, встаёт по `nextUserRuleNum` за максимум
 /// пользовательской зоны — за бывшие перехватчики 1110+, — а пресет,
 /// включённый позже со своим номером из шаблона (950–990), — перед бывшей

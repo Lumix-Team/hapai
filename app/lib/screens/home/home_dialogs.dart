@@ -97,7 +97,7 @@ Future<bool?> showForeignVpnDialog(BuildContext context) {
     context: context,
     builder: (ctx) => AlertDialog.adaptive(
       title: Text(getLocalText.s("Another VPN is active")),
-      content: Text(getLocalText.s("Another VPN app is currently running. Switch to L×Box?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.")),
+      content: Text(getLocalText.s("Another VPN app is currently running. Switch to Hapai?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.")),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(ctx).pop(false),
@@ -238,7 +238,7 @@ class _UpdateSnackContent extends StatelessWidget {
         // кликабельна была бы только строка глифов, а не вся область.
         width: double.infinity,
         child: Text(
-          getLocalText.s("L×Box %1\$s available (you have v%2\$s)", info.tag,
+          getLocalText.s("Hapai %1\$s available (you have v%2\$s)", info.tag,
               VersionInfo.I.version),
         ),
       ),
@@ -280,7 +280,7 @@ Future<void> maybeShowNotificationPermissionDialog(BuildContext context) async {
     barrierDismissible: false,
     builder: (ctx) => AlertDialog.adaptive(
       title: Text(getLocalText.s("Allow notifications")),
-      content: Text(getLocalText.s("L×Box runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.")),
+      content: Text(getLocalText.s("Hapai runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.")),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(ctx).pop(false),
@@ -325,7 +325,7 @@ Future<void> maybeShowBatteryOptimizationDialog(
     context: context,
     builder: (ctx) => AlertDialog.adaptive(
       title: Text(getLocalText.s("Allow background activity")),
-      content: Text(getLocalText.s("Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen L×Box.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".")),
+      content: Text(getLocalText.s("Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen Hapai.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".")),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(ctx).pop(),
@@ -367,7 +367,7 @@ Future<void> showOemBatteryFollowupDialog(
     context: context,
     builder: (ctx) => AlertDialog.adaptive(
       title: Text(getLocalText.s("Disable battery restrictions")),
-      content: Text(getLocalText.s("To keep the VPN running in background, also disable battery restrictions for L×Box. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF")),
+      content: Text(getLocalText.s("To keep the VPN running in background, also disable battery restrictions for Hapai. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF")),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(ctx).pop(),
@@ -430,7 +430,7 @@ Future<void> maybeShowUpdateCheckPrompt(BuildContext context) async {
     barrierDismissible: false,
     builder: (ctx) => AlertDialog.adaptive(
       title: Text(getLocalText.s("Check for updates?")),
-      content: Text(getLocalText.s("L×Box can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.")),
+      content: Text(getLocalText.s("Hapai can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.")),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(ctx).pop(false),

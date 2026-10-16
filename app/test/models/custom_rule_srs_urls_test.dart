@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
 
 /// ## 12 контракта (D-100) — несколько `.srs`-наборов в одном правиле.
 void main() {

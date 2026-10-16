@@ -327,5 +327,5 @@ Shortcut'ы на home screen Android создаёт юзер сам (long-press 
 
 - **Per-group shortcut'ы** — "Connect to vpn-1", "Connect to vpn-2" — динамические shortcut'ы с extras `{action: connect, group: vpn-2}`. Требует UI для выбора какие группы выставлять. Не в работе.
 - **Homescreen widget** с трафик-графиком + selector группы. Отдельный спек, не в работе.
-- **Tasker / automation broadcast intents** — ✅ **реализовано** в [`047 public intent api`](../047F-public-intent-api/spec.md): `com.leadaxe.lxbox.{START_VPN, STOP_VPN, TOGGLE_VPN, SWITCH_NODE, SET_GROUP, …}` + Locale/Tasker plugin. Те же actions через broadcast вместо tile/shortcut, общий бизнес-слой с [`031 debug api`](../031F-debug-api/spec.md). Setup и рецепты — [`docs/AUTOMATION.md`](../../../AUTOMATION.md).
+- **Tasker / automation broadcast intents** — ✅ **реализовано** в [`047 public intent api`](../047F-public-intent-api/spec.md): `studio.creater120.hapai.{START_VPN, STOP_VPN, TOGGLE_VPN, SWITCH_NODE, SET_GROUP, …}` + Locale/Tasker plugin. Те же actions через broadcast вместо tile/shortcut, общий бизнес-слой с [`031 debug api`](../031F-debug-api/spec.md). Setup и рецепты — [`docs/AUTOMATION.md`](../../../AUTOMATION.md).
 - **Wear OS companion** — отдельная история, не в работе.

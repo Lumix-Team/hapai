@@ -118,7 +118,7 @@ The profile stays active while the condition holds. The host polls periodically.
 
 ## Incoming actions (commands → L×Box)
 
-All of them are broadcast intents. The prefix is `com.leadaxe.lxbox.`.
+All of them are broadcast intents. The prefix is `studio.creater120.hapai.`.
 
 | Action | Extra | Effect |
 |---|---|---|
@@ -146,7 +146,7 @@ All of them are broadcast intents. The prefix is `com.leadaxe.lxbox.`.
 
 ## Outgoing events (L×Box → outside)
 
-The prefix is `com.leadaxe.lxbox.event.`. They are emitted only if the
+The prefix is `studio.creater120.hapai.event.`. They are emitted only if the
 corresponding category is enabled in the Emit settings.
 
 | Event | Extras | Category | When |
@@ -234,11 +234,11 @@ Wait Event.
 
 ### 1. Auto-disable the VPN on the home Wi-Fi
 - Profile: Wi-Fi connected = `MyHomeWiFi`
-- Task: Send Intent `com.leadaxe.lxbox.STOP_VPN` (Broadcast)
+- Task: Send Intent `studio.creater120.hapai.STOP_VPN` (Broadcast)
 
 ### 2. Auto-enable on any other Wi-Fi
 - Profile: Wi-Fi connected = NOT `MyHomeWiFi`
-- Task: Send Intent `com.leadaxe.lxbox.START_VPN`
+- Task: Send Intent `studio.creater120.hapai.START_VPN`
 
 ### 3. Switch to a Russia node when a bank app starts (with confirmation)
 - Profile: App launched = `ru.bank.app`
@@ -248,7 +248,7 @@ Wait Event.
   3. If matched → Vibrate(50); otherwise → Notify the error
 
 ### 4. Notification when a subscription fails
-- Profile: Event Received `com.leadaxe.lxbox.event.SUB_REFRESH_FAILED`
+- Profile: Event Received `studio.creater120.hapai.event.SUB_REFRESH_FAILED`
 - Task: Notify “📡 Sub %sub_id failed: %error”
 
 ### 5. Periodic mass ping every 30 minutes
@@ -263,7 +263,7 @@ Wait Event.
 - Trigger: Shake Device; Action: Send Intent `URLTEST_ALL`
 
 ### 7. Watch notification when the VPN drops
-- Profile: Event Received `com.leadaxe.lxbox.event.VPN_ERROR`
+- Profile: Event Received `studio.creater120.hapai.event.VPN_ERROR`
 - Task: Notify Wear “❌ VPN: %code — %message”
 
 ---
@@ -273,7 +273,7 @@ Wait Event.
 | Symptom | Cause | Fix |
 |---|---|---|
 | The command never arrives | The master toggle is OFF | Enable it in App Settings → Automation |
-| Same, but the toggle is ON | Wrong action, the target is not a Broadcast Receiver, or a typo in `com.leadaxe.lxbox.…` | Check against the command list; the fact of receipt is in logcat, `adb logcat -s LxBoxIntent` (the `received <action>` line); command results are under the `automation` log filter |
+| Same, but the toggle is ON | Wrong action, the target is not a Broadcast Receiver, or a typo in `studio.creater120.hapai.…` | Check against the command list; the fact of receipt is in logcat, `adb logcat -s LxBoxIntent` (the `received <action>` line); command results are under the `automation` log filter |
 | **An event never arrives** (for example `ACTIVE_NODE_CHANGED` is not caught) | **The event's category is OFF** — check this first | Enable the right category (for `ACTIVE_NODE_CHANGED` / `NODE_ALREADY_ACTIVE` that is **State**) in App Settings → Automation → Outbound events. While the category is off, the event is not emitted at all |
 | The event arrives but the variables (`%new_tag` and friends) are empty | The extras are not declared in Tasker | Add the extra variable names by hand in `Event → System → Intent Received` (see below) — Tasker does not pick them up automatically |
 | `SWITCH_NODE` does not select the node | The tag does not exist, or a typo | Check the `automation` log filter |
@@ -286,7 +286,7 @@ Wait Event.
 > but Tasker does not turn them into variables by itself — the names have to be
 > written by hand in `Event → System → Intent Received` (the action filter is the
 > event's full name, for example
-> `com.leadaxe.lxbox.event.ACTIVE_NODE_CHANGED`), after which they are available
+> `studio.creater120.hapai.event.ACTIVE_NODE_CHANGED`), after which they are available
 > as `%new_tag` and so on. The keys, per event:
 > - `ACTIVE_NODE_CHANGED` — `old_tag`, `new_tag`, `group`, `reason`;
 > - `NODE_ALREADY_ACTIVE` — `tag`, `group`;

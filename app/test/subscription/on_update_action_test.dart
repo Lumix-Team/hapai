@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
 
 /// §323 — реакция подписки на авто-обновление: персист поля, агрегация
 /// действий за проход апдейтера и гейт «состав не изменился» в

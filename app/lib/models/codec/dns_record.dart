@@ -6,7 +6,7 @@
 /// `inline`), тело — `body`; preset-сервер адресуется `ref` формы
 /// `<preset_id>:<тег внутри пресета>` — это тег конфига сервера
 /// ([dnsServerPresetRef]); значения переменных template-сервера — `vars`.
-/// Виды LxBox (`srs`, `template` у правил) пишутся в форме модели.
+/// Виды Hapai (`srs`, `template` у правил) пишутся в форме модели.
 ///
 /// Тег DNS-сервера — поле записи, в `body` его нет. Строки (`tag`, `name`,
 /// `description`) не режутся: путь хранения переносит их как есть.
@@ -20,7 +20,7 @@ import 'record_read.dart';
 
 // ─── DNS-серверы ─────────────────────────────────────────────────────────────
 
-/// Ref DNS-сервера LxBox → запись 1.0.
+/// Ref DNS-сервера Hapai → запись 1.0.
 Map<String, dynamic> dnsServerToRecord(DnsServerRef s) => switch (s) {
       DnsServerInline() => {
           'kind': 'user',
@@ -47,7 +47,7 @@ Map<String, dynamic> dnsServerToRecord(DnsServerRef s) => switch (s) {
         },
     };
 
-/// Запись 1.0 → ref DNS-сервера LxBox.
+/// Запись 1.0 → ref DNS-сервера Hapai.
 RecordRead<DnsServerRef> dnsServerFromRecord(Map<String, dynamic> j) {
   final kind = j['kind'];
   if (kind is! String || kind.isEmpty) {
@@ -154,7 +154,7 @@ String _presetLocalTag(String presetId, String tag) {
 
 // ─── DNS-правила ─────────────────────────────────────────────────────────────
 
-/// Ref DNS-правила LxBox → запись 1.0. Пользовательская запись — `kind: user`,
+/// Ref DNS-правила Hapai → запись 1.0. Пользовательская запись — `kind: user`,
 /// тело — правило sing-box целиком (`server` внутри), `enabled` пишется всегда.
 /// `srs` — форма модели: поля §033 (`srsUrl`, `server`, `rule`) верхнего
 /// уровня сборка читает раньше `body`.
@@ -188,7 +188,7 @@ Map<String, dynamic> dnsRuleToRecord(DnsRuleRef r) => switch (r) {
         },
     };
 
-/// Запись 1.0 → ref DNS-правила LxBox.
+/// Запись 1.0 → ref DNS-правила Hapai.
 RecordRead<DnsRuleRef> dnsRuleFromRecord(Map<String, dynamic> j) {
   final kind = j['kind'];
   if (kind is! String || kind.isEmpty) {
@@ -234,7 +234,7 @@ RecordRead<DnsRuleRef> dnsRuleFromRecord(Map<String, dynamic> j) {
       if (name.isEmpty) {
         return const RecordRead.drop('dns rule: template without name');
       }
-      // Вид LxBox: без ключа — выключено, как в форме хранения 2.23.2.
+      // Вид Hapai: без ключа — выключено, как в форме хранения 2.23.2.
       return RecordRead.ok(
           DnsRuleTemplate(name: name, enabled: j['enabled'] == true));
     default:

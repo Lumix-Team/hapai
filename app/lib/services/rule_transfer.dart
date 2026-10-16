@@ -30,7 +30,7 @@ import 'storage_migration/legacy_form_v0.dart'
 ///
 /// §439 — `format: 2`: элементы — записи хранения 1.0, их пишет и читает кодек
 /// записей (`models/record_codec.dart`). Файл правил — обмен между
-/// установками LxBox, поэтому поля LxBox (`verbatim`, `update_interval_hours`,
+/// установками Hapai, поэтому поля Hapai (`verbatim`, `update_interval_hours`,
 /// `description`, `vars` сервера) едут все. `format: 1` (форма хранения
 /// 2.23.2) читают замороженные читатели `legacy_form_v0.dart`.
 ///
@@ -118,7 +118,7 @@ RulesImportContents parseRulesImport(String raw) {
     decoded = jsonDecode(raw);
   } catch (_) {
     throw const FormatException(
-        'Not a valid JSON file. Make sure you picked a LxBox rules file.');
+        'Not a valid JSON file. Make sure you picked a Hapai rules file.');
   }
 
   if (decoded is! Map<String, dynamic>) {
@@ -131,10 +131,10 @@ RulesImportContents parseRulesImport(String raw) {
     // kind: backup — самая вероятная путаница: подсказываем, куда его нести.
     if (app == 'lxbox' && kind == 'backup') {
       throw const FormatException(
-          'This is a LxBox backup file — restore it via Settings → Backup.');
+          'This is a Hapai backup file — restore it via Settings → Backup.');
     }
     throw const FormatException(
-        'Not a LxBox rules file (missing or invalid app/kind markers).');
+        'Not a Hapai rules file (missing or invalid app/kind markers).');
   }
 
   final format = decoded['format'];
@@ -143,7 +143,7 @@ RulesImportContents parseRulesImport(String raw) {
   }
   if (format > kRulesExportFormatVersion) {
     throw const FormatException(
-        'Rules file is from a newer app version. Update LxBox and retry.');
+        'Rules file is from a newer app version. Update Hapai and retry.');
   }
 
   final rules = decoded['rules'];

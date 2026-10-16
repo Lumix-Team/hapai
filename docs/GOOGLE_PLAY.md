@@ -4,7 +4,7 @@ Related: [`RELEASE_PROCESS.md`](RELEASE_PROCESS.md), [`FDROID.md`](FDROID.md), [
 
 | What | Where |
 |---|---|
-| Package | `com.leadaxe.lxbox` |
+| Package | `studio.creater120.hapai` |
 | Developer account | `leadaxe` (personal; migration to an organization account is pending a D-U-N-S number) |
 | Console mail | `lxboxvpnclient@gmail.com`, `leadaxe@gmail.com` |
 | Artifact | AAB — `flutter build appbundle`, see [`BUILD.md`](BUILD.md); uploaded by CI, see [CI upload](#ci-upload) |
@@ -40,7 +40,7 @@ keep it on a personal device for the whole test period.
 
 | What | Value |
 |---|---|
-| Opt-in link | `play.google.com/apps/testing/com.leadaxe.lxbox` |
+| Opt-in link | `play.google.com/apps/testing/studio.creater120.hapai` |
 | Group size | 30 testers |
 | Recruiting | A form on 4PDA and in the project channels |
 | Outcome | Production access granted 2026-08-28 |

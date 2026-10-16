@@ -372,7 +372,7 @@ Native VPN flags:
   "abi": "arm64-v8a",
   "app_version": "1.3.1",
   "app_build": 6,
-  "package_name": "com.leadaxe.lxbox",
+  "package_name": "studio.creater120.hapai",
   "locale": "ru_IL",
   "timezone": "MSK",
   "is_ignoring_battery_optimizations": true,
@@ -412,7 +412,7 @@ Native VPN flags:
 #### `GET /config/path`
 Путь на диске (внутренний, для справки):
 ```json
-{"path": "/data/user/0/com.leadaxe.lxbox/files/singbox_config.json"}
+{"path": "/data/user/0/studio.creater120.hapai/files/singbox_config.json"}
 ```
 
 #### `PUT /config` (body: raw sing-box JSON)

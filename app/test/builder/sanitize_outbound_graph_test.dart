@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/builder/validator.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/validator.dart';
 
 /// §393 A4 — финальный граф-санитайзер (порт `outbound_graph_sanitize.go`).
 ///

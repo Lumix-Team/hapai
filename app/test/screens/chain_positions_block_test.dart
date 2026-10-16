@@ -4,8 +4,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/probe/chain_layer_probe.dart';
-import 'package:lxbox/widgets/chain_positions_block.dart';
+import 'package:hapai/services/probe/chain_layer_probe.dart';
+import 'package:hapai/widgets/chain_positions_block.dart';
 
 /// Прогон-заглушка: отдаёт заданный отчёт (или бросает) и позволяет держать
 /// прогон незавершённым, чтобы проверить busy-состояние без сна.

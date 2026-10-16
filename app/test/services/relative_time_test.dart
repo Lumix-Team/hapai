@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/l10n/get_local_text.dart';
-import 'package:lxbox/services/l10n/plural_resolver.dart';
-import 'package:lxbox/services/relative_time.dart';
+import 'package:hapai/services/l10n/get_local_text.dart';
+import 'package:hapai/services/l10n/plural_resolver.dart';
+import 'package:hapai/services/relative_time.dart';
 
 /// §285 — relativeTime через getLocalText. Локализатор инъектируется (DI):
 /// en-группа не передаёт `t` → глобальный fallback печатает английский ключ;

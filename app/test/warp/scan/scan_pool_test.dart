@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/warp/scan/scan_pool.dart';
+import 'package:hapai/services/warp/scan/scan_pool.dart';
 
 /// §284 — пул скана: парс `scan`-блока + CIDR→random IP в границах подсети.
 void main() {

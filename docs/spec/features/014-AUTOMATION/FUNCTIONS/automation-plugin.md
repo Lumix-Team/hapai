@@ -35,7 +35,7 @@ Actions (rows in the plugin list):
 Conditions: **VPN is up**; **Active node =** value; **Active group =** value.
 
 Format of the saved setting (stored by the automation app, a public
-contract): one JSON string under the key `com.leadaxe.lxbox.plugin.CONFIG` —
+contract): one JSON string under the key `studio.creater120.hapai.plugin.CONFIG` —
 action `{"v":1,"cmd":"<command>","args":{…}}`, where the command is
 `start-vpn`, `stop-vpn`, `toggle-vpn`, `switch-node` (`tag`), `set-group`
 (`group`), `urltest-group` (`group`), `urltest-all`, `refresh-subs`, `rebuild-config`,

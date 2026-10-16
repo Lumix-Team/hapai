@@ -146,8 +146,8 @@ State static, методы instance — притворяющийся singleton'�
 ```dart
 class BoxVpnClient {
   BoxVpnClient._({MethodChannel? methods, EventChannel? events})
-    : _methods = methods ?? const MethodChannel('com.leadaxe.lxbox/methods'),
-      _events = events ?? const EventChannel('com.leadaxe.lxbox/status_events');
+    : _methods = methods ?? const MethodChannel('studio.creater120.hapai/methods'),
+      _events = events ?? const EventChannel('studio.creater120.hapai/status_events');
   
   /// Production singleton.
   static final I = BoxVpnClient._();
@@ -534,7 +534,7 @@ Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
 | 3 | Doze pause/wake | `pause()` → `wake()` парами; TUN не сброшен | `adb shell dumpsys deviceidle force-idle` → `force-active` |
 | 4 | WiFi → cellular handoff | `DefaultNetworkMonitor` fires `updateDefaultInterface`; box не перезапускается | `adb shell svc wifi disable` после connect через wifi |
 | 5 | VPN revoke (другое VPN-app) | `onRevoke()` → ordered shutdown | Установить другой VPN, активировать → наш `tunnel: revoked` |
-| 6 | Force-stop из настроек | На следующий запуск Unix socket не залип | `adb shell am force-stop com.leadaxe.lxbox` → reopen app |
+| 6 | Force-stop из настроек | На следующий запуск Unix socket не залип | `adb shell am force-stop studio.creater120.hapai` → reopen app |
 | 7 | `closeService` failure | `setError` пайп срабатывает | (нужен runtime trigger; гипотетический) |
 | 8 | Длительный аптайм | DNS dedup-lock leak отсутствует — пинг работает после 1 часа | Connect → `sleep 3700` → mass ping → все ноды OK (vs текущий bug на 1.12.12 — отказ через 27 мин) |
 | 9 | Rapid start/stop toggling | Нет double-start / double-close | Toggle 10 раз быстро в UI |

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/subscription/user_agent.dart';
-import 'package:lxbox/widgets/user_agent_dialog.dart';
+import 'package:hapai/services/subscription/user_agent.dart';
+import 'package:hapai/widgets/user_agent_dialog.dart';
 
 /// §610 — общий диалог Custom User-Agent с пресетами клиентов.
 void main() {
@@ -17,7 +17,7 @@ void main() {
           body: TextButton(
             onPressed: () async {
               result = await showUserAgentDialog(context,
-                  initial: initial, hint: 'LxBox-android/0.0.0');
+                  initial: initial, hint: 'Hapai-android/0.0.0');
               closed = true;
             },
             child: const Text('open'),
@@ -70,7 +70,7 @@ void main() {
     expect(result, 'MyClient/1.0');
   });
 
-  testWidgets('«LxBox (default)» очищает поле → пустая строка',
+  testWidgets('«Hapai (default)» очищает поле → пустая строка',
       (tester) async {
     await open(tester, initial: 'Happ/3.5.0');
     expect(fieldText(tester), 'Happ/3.5.0');

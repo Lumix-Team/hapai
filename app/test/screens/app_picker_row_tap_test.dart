@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/app_picker_screen.dart';
-import 'package:lxbox/services/app_info_cache.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
+import 'package:hapai/screens/app_picker_screen.dart';
+import 'package:hapai/services/app_info_cache.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
 
 /// §412 — в пикере приложений галочку переключает только тап по самому
 /// чекбоксу. Тап по строке (название/пакет/иконка) выбор не трогает: при
 /// прокрутке длинного списка палец задевал строку и снимал выбор незаметно
 /// (4PDA #1702).
 void main() {
-  const channel = MethodChannel('com.leadaxe.lxbox/methods');
+  const channel = MethodChannel('studio.creater120.hapai/methods');
 
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/screens/home/home_dialogs.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/vpn/box_vpn_client.dart';
+import 'package:hapai/screens/home/home_dialogs.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/vpn/box_vpn_client.dart';
 
 /// Feature 126 — persist-контракт first-run-шагов визарда. Проверяется через
 /// реальный SettingsStorage (mock path_provider) + mock MethodChannel'а
@@ -17,7 +17,7 @@ import 'package:lxbox/vpn/box_vpn_client.dart';
 void main() {
   late Directory tmp;
   const ppChannel = MethodChannel('plugins.flutter.io/path_provider');
-  const vpnChannel = MethodChannel('com.leadaxe.lxbox/methods');
+  const vpnChannel = MethodChannel('studio.creater120.hapai/methods');
   final calls = <MethodCall>[];
 
   setUp(() async {

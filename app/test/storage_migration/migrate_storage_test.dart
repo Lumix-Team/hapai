@@ -4,17 +4,17 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/dns_record.dart';
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/debug_entry.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/services/app_log.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/dns_record.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/debug_entry.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/services/app_log.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

@@ -117,7 +117,7 @@ $ unzip -p app-arm64-v8a-release.apk lib/arm64-v8a/libbox.so | strings -a \
   `DeadObjectException`, то есть умер модуль сетевого стека), затем каскадом
   `com.android.phone`, `com.android.networkstack.process`, `nexuslauncher`,
   `gms`, `googlequicksearchbox` с `DeadSystemException`. Пакет
-  `com.leadaxe.lxbox` в этих трейсах **не встречается ни разу**. После каждого
+  `studio.creater120.hapai` в этих трейсах **не встречается ни разу**. После каждого
   падения `eth0`/`wlan0` поднимались DOWN и без IPv4 (`ping 10.0.2.2` →
   `Network is unreachable`); руками не лечится, потому что сетью в Android
   владеет `ConnectivityService`, а он не инициализировался. Полный рестарт

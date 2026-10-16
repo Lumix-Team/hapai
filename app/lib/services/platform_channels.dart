@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // §141 P2.4e — централизованные имена MethodChannel / EventChannel.
 //
-// Раньше строки каналов (`com.leadaxe.lxbox/methods` и т.д.) дублировались в
+// Раньше строки каналов (`studio.creater120.hapai/methods` и т.д.) дублировались в
 // 6+ Dart-файлах + Kotlin-стороне. Опечатка в одном месте → молчаливо мёртвый
 // канал (вызовы уходят в никуда). Единый источник здесь; Kotlin-зеркало —
 // `MainActivity.kt` / `VpnPlugin.kt` (их строки должны совпадать дословно).
@@ -16,7 +16,7 @@ class PlatformChannels {
   /// native кладёт именно его (`service.packageName` в `buildOverrideOptions`),
   /// и зеркало override сравнивает по этой строке. Публичный, чтобы литерал не
   /// расползался третьей копией.
-  static const packageName = 'com.leadaxe.lxbox';
+  static const packageName = 'studio.creater120.hapai';
 
   static const _ns = packageName;
 

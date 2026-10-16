@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/config_dirty_check.dart';
-import 'package:lxbox/services/platform_channels.dart';
+import 'package:hapai/services/config_dirty_check.dart';
+import 'package:hapai/services/platform_channels.dart';
 
 /// §076F / 003-CONFIG_BUILD · P12 — восстановление флага «конфиг устарел»
 /// после убийства процесса: сравнение mtime `lxbox_settings.json`

@@ -3,18 +3,18 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/post_steps.dart'
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/post_steps.dart'
     show resolveDnsServersBodies;
-import 'package:lxbox/services/builder/if_engine.dart'
+import 'package:hapai/services/builder/if_engine.dart'
     show
         TemplateWarnings,
         collectTemplateWarnings,
         templateWarnFragmentDropped,
         templateWarnRuleUnconditional;
-import 'package:lxbox/services/builder/preset_expand.dart';
+import 'package:hapai/services/builder/preset_expand.dart';
 
 import '../../contract_paths.dart' show loadTestRegistry;
 

@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/services/config_dirty_check.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/workspaces/workspace_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/services/config_dirty_check.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/workspaces/workspace_controller.dart';
 
 import '../parser/engine_test_setup.dart';
 

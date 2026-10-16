@@ -3,17 +3,17 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/parse_warnings.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/ini_parser.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/parse_warnings.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/ini_parser.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/warp/warp_account.dart';
 
 /// §472 шаг 7, раздел 3 спеки — инварианты переезда wireguard/AWG на конвейер.
 ///

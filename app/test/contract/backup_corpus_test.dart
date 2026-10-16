@@ -3,24 +3,24 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/codec/source_replace_record.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/json_clone.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/record_vars.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/codec/source_replace_record.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/json_clone.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/record_vars.dart';
 
 import '../parser/engine_test_setup.dart';
 
-// Конформанс-раннер корпуса LX Backup (SPEC 103, фаза 4), сторона LxBox.
+// Конформанс-раннер корпуса LX Backup (SPEC 103, фаза 4), сторона Hapai.
 // Тот же набор гоняет Go (core/backup/corpus_test.go).
 //
 // Перенос настроек между приложениями имеет смысл ровно настолько, насколько
@@ -105,7 +105,7 @@ void main() {
         // (`<case>.template.json`: `dns_options.servers` и `presets`), одна
         // на ОБА импорта — предсостояния и кейса. Нормы
         // Н2/Н4/Н8 зависят от умолчаний шаблона, а у сторон они разные
-        // (у LxBox `google_dot.outbound` = `vpn-1`), поэтому раннер
+        // (у Hapai `google_dot.outbound` = `vpn-1`), поэтому раннер
         // нормализует по фикстуре кейса, а не по своему шаблону. Нет
         // фикстуры — объявлений нет, нормализации нет.
         final templateFile = File('$base.template.json');
@@ -193,7 +193,7 @@ void main() {
 
         // Фича 565 фаза B (§74) — свёртка `replace` в состоянии и в
         // повторном экспорте. `replace_tags` (дериватив legacy `fold`) не
-        // сверяется: legacy-форма у LxBox не читается (решение владельца
+        // сверяется: legacy-форма у Hapai не читается (решение владельца
         // 26.09.2026, контракт 1.1.79).
         await _checkReplaces(state, expected);
 
@@ -218,7 +218,7 @@ void main() {
 /// `LxBackupImportService`): расхождение раннера и приложения означало бы, что
 /// зелёный корпус ничего не гарантирует. Раннер отличается только тем, что
 /// держит состояние в памяти, а не в storage, и шаблона у его приёмника нет:
-/// служебные теги — умолчания LxBox, пресеты не проверяются.
+/// служебные теги — умолчания Hapai, пресеты не проверяются.
 ///
 /// §441 — объявления переменных записей приёмника — фикстура кейса
 /// ([recordVars]); DNS сливает тот же план импорта.
@@ -384,7 +384,7 @@ void _checkDirections(LxBackupFile file, Map<String, dynamic> expected) {
     final got = byTag[tag];
     expect(got, isNotNull, reason: 'направление $tag не создано импортом');
     // §405 — `label` УКАЗАТЕЛЬНОЙ семантики: поле объявлено в схеме, но
-    // применяет его только LxBox (D-094). Отсутствие ключа в базовом golden
+    // применяет его только Hapai (D-094). Отсутствие ключа в базовом golden
     // значит «сторона его не применяет», а не «имя обязано быть пустым».
     final wantLabel = want['label'];
     if (wantLabel is String) {
@@ -429,7 +429,7 @@ void _checkDirections(LxBackupFile file, Map<String, dynamic> expected) {
 /// и ВКЛЮЧАЯ `null` внутри `rewrite` (RFC 7396).
 ///
 /// §438 — `hops` ожидания — позиции как ССЫЛКИ (тег + имя папки). Позиция
-/// LxBox — NodeLink (D-112): раннер находит контейнер по `folder_id` и сверяет
+/// Hapai — NodeLink (D-112): раннер находит контейнер по `folder_id` и сверяет
 /// пару «сырой тег + папка»: перепись `folder_id` по карте id видна именно
 /// так. Канон сверяется с сырыми тегами строками — так его пишет корпус.
 void _checkChains(_State state, Map<String, dynamic> expected) {
@@ -624,7 +624,7 @@ void _checkFolders(_State state, Map<String, dynamic> expected) {
 /// ИСЧЕРПЫВАЮЩЕЕ: подписка, которой в нём нет, — либо не оставленная
 /// локальная, либо задвоенная.
 ///
-/// `postfix` у LxBox поля не имеет вовсе (тег источника здесь только
+/// `postfix` у Hapai поля не имеет вовсе (тег источника здесь только
 /// префикс), поэтому сверяется с пустой строкой: ожидание с постфиксом
 /// требует override стороны.
 void _checkSubscriptions(_State state, Map<String, dynamic> expected) {
@@ -643,7 +643,7 @@ void _checkSubscriptions(_State state, Map<String, dynamic> expected) {
     expect(got.tagPrefix, want['prefix'] ?? '',
         reason: '${entry.key}: префикс тегов');
     expect('', want['postfix'] ?? '',
-        reason: '${entry.key}: постфикс тегов — поля у LxBox нет');
+        reason: '${entry.key}: постфикс тегов — поля у Hapai нет');
     final wantEnabled = want['enabled'];
     if (wantEnabled is bool) {
       expect(got.enabled, wantEnabled, reason: '${entry.key}: enabled');
@@ -668,7 +668,7 @@ void _checkSubscriptions(_State state, Map<String, dynamic> expected) {
 
 /// §438 — DNS-секция состояния: серверы исчерпывающим списком (вид, тег или
 /// ссылка, включённость, тело deep-equal), число правил и все три скаляра.
-/// «Тело едет байт в байт» — свойство одного кодека; у LxBox оно идёт через
+/// «Тело едет байт в байт» — свойство одного кодека; у Hapai оно идёт через
 /// свой декодер и хранилище, и видно только здесь.
 ///
 /// SPEC 129 §9.1, D-118 (контракт 1.0.2) — `vars` записи сервера deep-equal,
@@ -735,7 +735,7 @@ Matcher _deepEqualsJson(Object? want) =>
 
 /// Фича 565 фаза B (§74) — `replaces`: ключ — имя папки или адрес подписки,
 /// значение — объект `replace` как в файле, `null` — свёртки нет (§76). Сверяется модель после импорта и
-/// запись повторного экспорта. `auto` — по ключам ожидания: LxBox пишет форму
+/// запись повторного экспорта. `auto` — по ключам ожидания: Hapai пишет форму
 /// целиком (умолчания [DirectionAuto] тоже), лишние ключи — не расхождение.
 Future<void> _checkReplaces(_State state, Map<String, dynamic> expected) async {
   final want = (expected['replaces'] as Map?)?.cast<String, dynamic>();

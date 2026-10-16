@@ -107,7 +107,7 @@ Runtime-запрос: `CAMERA` — dangerous permission на всех подде
 
 ### C. Гейт доступности — по образцу §372
 
-Новый метод канала `com.leadaxe.lxbox/utils`, реализация в
+Новый метод канала `studio.creater120.hapai/utils`, реализация в
 [`MainActivity.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/MainActivity.kt)
 рядом с `hasRealFilePicker` (строка 291):
 

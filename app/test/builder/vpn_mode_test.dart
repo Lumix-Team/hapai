@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/if_engine.dart';
-import 'package:lxbox/services/settings_storage.dart' show VpnModeConfig;
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/if_engine.dart';
+import 'package:hapai/services/settings_storage.dart' show VpnModeConfig;
 
 /// §119/§120 — VPN-mode теперь декларативен: tun-in/mixed-in/route-rules
 /// собираются `#if`-walker'ом в substitution-фазе по `@vpn_mode`/`@proxy_*`.

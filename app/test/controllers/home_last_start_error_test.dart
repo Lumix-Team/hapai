@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/services/debug/serializers/home_state.dart';
-import 'package:lxbox/services/haptic_service.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/services/debug/serializers/home_state.dart';
+import 'package:hapai/services/haptic_service.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -31,7 +31,7 @@ void main() {
 
   // Основной native-канал: connected-ветка асинхронно дёргает uptime/CC-методы.
   // Default null достаточно (getTunnelUptimeMs → 0, cc* → no-op).
-  const methods = MethodChannel('com.leadaxe.lxbox/methods');
+  const methods = MethodChannel('studio.creater120.hapai/methods');
   // Control-каналы EventChannel'ов CommandClient: `_startCcStreams` вешает
   // подписки → EventChannel шлёт 'listen'; мокаем, чтобы не сыпать
   // MissingPluginException в консоль.

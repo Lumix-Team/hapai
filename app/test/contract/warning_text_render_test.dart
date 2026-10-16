@@ -27,8 +27,8 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/contract/registry_warning.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/contract/registry_warning.dart';
 
 
 /// Плейсхолдер в тексте реестра: `{path}`, `{with}`, `{method}`.

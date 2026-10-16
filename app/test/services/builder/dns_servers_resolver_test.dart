@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §043 + §117: tests for `resolveDnsServersList` / `resolveDnsServersBodies`
 /// / `resolveTemplateDnsServerBody`.

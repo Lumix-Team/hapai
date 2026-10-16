@@ -168,7 +168,7 @@ platform view. Заглушка — единственный тестовый п
 
 ### Канал Dart ↔ натив
 
-Канал на view: `MethodChannel("com.leadaxe.lxbox/sora_editor_<viewId>")`.
+Канал на view: `MethodChannel("studio.creater120.hapai/sora_editor_<viewId>")`.
 Имена — как в прототипе, новые помечены.
 
 | Направление | Сообщение | Аргументы | Когда |

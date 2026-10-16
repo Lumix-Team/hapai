@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/tag_resolver.dart';
+import 'package:hapai/services/tag_resolver.dart';
 
 /// §085 R1 — unit tests for TagResolver (единый владелец display-tag logic).
 /// Поглощает бывшие consts_test (isDetourDisplayTag → isDetourMarker).

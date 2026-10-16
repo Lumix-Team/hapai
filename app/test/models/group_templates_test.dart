@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/template_loader.dart' show assertMagicNodeMirrors;
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/template_loader.dart' show assertMagicNodeMirrors;
 
 /// §267 — парсинг `group_templates` + `magic_nodes` + `default_directions`,
 /// хелпер `resolveTpl`, инвариант зеркал `assertMagicNodeMirrors`.

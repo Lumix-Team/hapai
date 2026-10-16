@@ -3,12 +3,12 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/parser/uri_utils.dart'
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/parser/uri_utils.dart'
     show kMaxDetourDepth, maxAmneziaLinkLength, maxURILength;
-import 'package:lxbox/services/parser/utls_fingerprint.dart';
+import 'package:hapai/services/parser/utls_fingerprint.dart';
 
-// Sync-тесты реестра контракта (SPEC 103, фаза 2), сторона LxBox.
+// Sync-тесты реестра контракта (SPEC 103, фаза 2), сторона Hapai.
 // Парные к core/config/subscription/registry_sync_test.go.
 //
 // Реестр объявлен нормативным источником словарей (D-020), но нормативность
@@ -41,7 +41,7 @@ void _checkAllowlist(String name, Set<String> code, Map<String, dynamic> reg) {
       reason: '$name: реестр объявляет значения, которых код не принимает');
 }
 
-/// Коды LX Backup, которые эмитит СТОРОНА ЛАУНЧЕРА, а LxBox — нет.
+/// Коды LX Backup, которые эмитит СТОРОНА ЛАУНЧЕРА, а Hapai — нет.
 ///
 /// Список явный, а не «чего нет в коде, то и не наше»: молчаливый пропуск
 /// превратил бы тест в декорацию — забытый на мобиле код выглядел бы ровно
@@ -53,8 +53,8 @@ const _launcherOnlyBackupCodes = <String>{
   'backup_tag_mask_dropped',
   // Локальные Направления ИСТОЧНИКА — упразднённый класс лаунчера.
   'backup_local_direction_dropped',
-  // Контракт 1.0.1, ответ LxBox 5 (TASKS_LXBOX.md §17.8): неизвестную строку
-  // include LxBox хранит и на импорте молчит, предупреждает сборка (кейс
+  // Контракт 1.0.1, ответ Hapai 5 (TASKS_LXBOX.md §17.8): неизвестную строку
+  // include Hapai хранит и на импорте молчит, предупреждает сборка (кейс
   // v10_direction_include.expected.lxbox.json).
   'backup_direction_include_dropped',
 };
@@ -126,7 +126,7 @@ void main() {
           reason: 'коды эмитятся приложением, но реестр их не знает — '
               'внести в registry/backup_warnings.json или убрать из кода');
 
-      // Обратная сторона: реестр объявил код, а LxBox его не эмитит.
+      // Обратная сторона: реестр объявил код, а Hapai его не эмитит.
       // Законно ТОЛЬКО если это сторона лаунчера и она названа явно.
       final missingInCode = registryCodes
           .difference(_codesInCode)
@@ -134,7 +134,7 @@ void main() {
           .toList()
         ..sort();
       expect(missingInCode, isEmpty,
-          reason: 'реестр объявляет коды, которых LxBox не эмитит и которые '
+          reason: 'реестр объявляет коды, которых Hapai не эмитит и которые '
               'не отнесены к стороне лаунчера — либо реализовать, либо '
               'внести в _launcherOnlyBackupCodes с обоснованием');
 
@@ -143,7 +143,7 @@ void main() {
       final staleForeign =
           _launcherOnlyBackupCodes.intersection(_codesInCode).toList()..sort();
       expect(staleForeign, isEmpty,
-          reason: 'код объявлен «стороной лаунчера», но LxBox его эмитит');
+          reason: 'код объявлен «стороной лаунчера», но Hapai его эмитит');
 
       // Каждый чужой код обязан существовать в реестре: опечатка в списке
       // исключений иначе тихо ослабила бы обе сверки.

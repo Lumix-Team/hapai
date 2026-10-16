@@ -64,7 +64,7 @@ void showEntryContextMenu(
               onTap: () async {
                 Navigator.pop(ctx);
                 await SharePlus.instance.share(ShareParams(
-                    text: entry.url, subject: 'LxBox subscription'));
+                    text: entry.url, subject: 'Hapai subscription'));
               },
             ),
           ListTile(

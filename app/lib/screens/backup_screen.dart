@@ -156,7 +156,7 @@ class _BackupScreenState extends State<BackupScreen> with SnackHelper {
           await File(path).writeAsString(json);
           await SharePlus.instance.share(ShareParams(
             files: [XFile(path, mimeType: 'application/json', name: filename)],
-            subject: 'LxBox backup',
+            subject: 'Hapai backup',
           ));
           if (!mounted) return;
           showSnack(getLocalText.s("Backup exported (%d bytes)", bytes));

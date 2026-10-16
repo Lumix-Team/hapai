@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/screens/home/node_filter_view_model.dart';
-import 'package:lxbox/screens/home/node_list_presenter.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/screens/home/node_filter_view_model.dart';
+import 'package:hapai/screens/home/node_list_presenter.dart';
 
 /// §096 — presenter-level тест detour pool-фильтра (бинарный) + контракт
 /// «СИСТЕМНЫЕ control-узлы НИКОГДА не отсеиваются pool'ом». Покрывает wiring

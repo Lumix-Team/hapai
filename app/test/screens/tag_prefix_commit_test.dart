@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscription_detail_screen/detour_mode.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/subscription_settings_tab.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscription_detail_screen/detour_mode.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/subscription_settings_tab.dart';
 
 /// §393 A6 — ЛОВУШКА, из-за которой каскад нельзя вешать на `onChanged`.
 ///

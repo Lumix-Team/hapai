@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/builder/rule_set_registry.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/rule_set_registry.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
 
 /// Правило через запись хранения и обратно — путь `SettingsStorage`.
 CustomRule _storageRoundTrip(CustomRule r) =>

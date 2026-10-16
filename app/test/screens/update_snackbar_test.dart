@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/screens/home/home_dialogs.dart';
-import 'package:lxbox/services/install_source.dart';
-import 'package:lxbox/services/project_links.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/update_checker.dart';
+import 'package:hapai/screens/home/home_dialogs.dart';
+import 'package:hapai/services/install_source.dart';
+import 'package:hapai/services/project_links.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/update_checker.dart';
 
 /// §390 — update-снек: три способа его увести и адрес перехода по каналу.
 ///
@@ -21,7 +21,7 @@ import 'package:lxbox/services/update_checker.dart';
 void main() {
   late Directory tmp;
   const ppChannel = MethodChannel('plugins.flutter.io/path_provider');
-  const utilsChannel = MethodChannel('com.leadaxe.lxbox/utils');
+  const utilsChannel = MethodChannel('studio.creater120.hapai/utils');
   final calls = <MethodCall>[];
 
   const info = UpdateInfo(

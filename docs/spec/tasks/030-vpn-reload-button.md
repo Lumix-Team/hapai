@@ -58,7 +58,7 @@ Companion-method `reload(context)` (зеркало `stop()`):
 
 ```kotlin
 companion object {
-    const val ACTION_RELOAD = "com.leadaxe.lxbox.ACTION_RELOAD"
+    const val ACTION_RELOAD = "studio.creater120.hapai.ACTION_RELOAD"
 
     fun reload(context: Context) {
         Log.d(TAG, "[vpn] companion.reload() current status=${currentStatus.name}")

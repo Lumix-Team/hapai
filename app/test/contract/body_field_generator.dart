@@ -27,7 +27,7 @@
 /// Непокрытое поле ловит тест.
 library;
 
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 /// Выражение реестра, которого генератор не знает. Роняет тест с именем
 /// выражения — молчаливый пропуск вернул бы старение фикстур.

@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/l10n/template_overlay.dart';
+import 'package:hapai/services/l10n/template_overlay.dart';
 
 /// §279 — TemplateOverlay: applier/extractor поверх декодированного
 /// wizard_template.json (схема адресов §3.2 спеки 279).

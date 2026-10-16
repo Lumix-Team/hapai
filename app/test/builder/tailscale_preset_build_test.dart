@@ -3,14 +3,14 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/builder/core_chain_capability.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/builder/core_chain_capability.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 import '../parser/engine_test_setup.dart';
 

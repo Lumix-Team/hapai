@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/screens/auto_group_edit_screen.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/screens/auto_group_edit_screen.dart';
 
 // §442 — редактор узла автовыбора: та же подсказка, что у Направления.
 // interval больше idle_timeout сохранить можно, сборка поднимет idle_timeout

@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'engine_test_setup.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/tcp_keep_alive_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/tcp_keep_alive_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §453 — TCP keep-alive dial-поля sing-box на узле: sing-box JSON, share-URI,
 /// Xray sockopt.

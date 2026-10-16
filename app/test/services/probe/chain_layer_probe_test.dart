@@ -4,9 +4,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/platform_channels.dart';
-import 'package:lxbox/services/probe/chain_layer_probe.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/platform_channels.dart';
+import 'package:hapai/services/probe/chain_layer_probe.dart';
+import 'package:hapai/services/settings_storage.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

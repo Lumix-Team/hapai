@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/workspaces/workspace_controller.dart';
-import 'package:lxbox/services/workspaces/workspace_store.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/workspaces/workspace_controller.dart';
+import 'package:hapai/services/workspaces/workspace_store.dart';
 
 /// §439 §3.3 — слот Workspaces с файлом настроек формы 2.23.2 (слоты спят и
 /// не мигрируют до загрузки): загрузка мигрирует рабочую копию штатным

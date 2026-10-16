@@ -17,8 +17,8 @@ management, rule-based routing, per-app split tunneling, full DNS control, detou
 chains and load balancing. No ads, no telemetry, no account. English and Russian UI.
 
 <p align="center">
-  <a href="https://f-droid.org/en/packages/com.leadaxe.lxbox/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get L×Box on F-Droid" height="80"></a>
-  <a href="https://play.google.com/store/apps/details?id=com.leadaxe.lxbox"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get L×Box on Google Play" height="80"></a>
+  <a href="https://f-droid.org/en/packages/studio.creater120.hapai/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get L×Box on F-Droid" height="80"></a>
+  <a href="https://play.google.com/store/apps/details?id=studio.creater120.hapai"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get L×Box on Google Play" height="80"></a>
   <a href="https://github.com/Leadaxe/LxBox/releases/latest"><img src="docs/badges/get-it-on-github.png" alt="Download L×Box APK from GitHub" height="80"></a>
 </p>
 
@@ -70,8 +70,8 @@ generates the WireGuard or MASQUE keys on the device. The private key never leav
 phone. WARP+ license keys are supported.
 
 **Where can I download it?** [GitHub Releases](https://github.com/Leadaxe/LxBox/releases/latest),
-[F-Droid](https://f-droid.org/en/packages/com.leadaxe.lxbox/) and
-[Google Play](https://play.google.com/store/apps/details?id=com.leadaxe.lxbox).
+[F-Droid](https://f-droid.org/en/packages/studio.creater120.hapai/) and
+[Google Play](https://play.google.com/store/apps/details?id=studio.creater120.hapai).
 
 ---
 

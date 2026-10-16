@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/post_steps.dart';
 
 /// §246 hotfix — healLegacyDnsStrategy: легаси `strategy` в dns.rules
 /// несовместим с query_type/ip_version (ядро 1.14 отклоняет старт). Снимаем

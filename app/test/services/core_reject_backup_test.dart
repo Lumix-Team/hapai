@@ -4,16 +4,16 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/node_spec.dart' show AutoSelectSpec;
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/core_reject/core_reject_backup.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
-import 'package:lxbox/services/core_reject/core_reject_state.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/lx_backup_slice.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/node_spec.dart' show AutoSelectSpec;
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/core_reject/core_reject_backup.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/services/core_reject/core_reject_state.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/lx_backup_slice.dart';
 
 import '../parser/engine_test_setup.dart';
 

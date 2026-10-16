@@ -1750,10 +1750,10 @@ Broadcast Receiver as the target. Four commands take a parameter:
 
 | Command | Parameter |
 |---|---|
-| `com.leadaxe.lxbox.SWITCH_NODE` | `tag` — the node tag |
-| `com.leadaxe.lxbox.SET_GROUP` | `group` — the group tag, for example `vpn-1` |
-| `com.leadaxe.lxbox.URLTEST_GROUP` | `group` — the group tag, for example `vpn-1` |
-| `com.leadaxe.lxbox.REFRESH_SUBS` | `force` |
+| `studio.creater120.hapai.SWITCH_NODE` | `tag` — the node tag |
+| `studio.creater120.hapai.SET_GROUP` | `group` — the group tag, for example `vpn-1` |
+| `studio.creater120.hapai.URLTEST_GROUP` | `group` — the group tag, for example `vpn-1` |
+| `studio.creater120.hapai.REFRESH_SUBS` | `force` |
 
 The **Outbound events (emit)** section sends L×Box events outward. There
 are three categories, all off by default:

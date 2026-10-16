@@ -1,5 +1,5 @@
-name: lxbox
-description: L×Box — Android VPN client (sing-box / libbox CommandClient).
+name: hapai
+description: Hapai - Android VPN client (sing-box / libbox CommandClient), a GPL-3.0 fork of LxBox by Leadaxe.
 publish_to: 'none'
 
 version: 2.25.15+22515500

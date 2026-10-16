@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/memory_limit_setting.dart';
+import 'package:hapai/models/memory_limit_setting.dart';
 
 /// §271 — wire-протокол memory limit: normalize и состав значений.
 void main() {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/subscription_meta.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/subscription_meta.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import '../parser/engine_test_setup.dart';
 

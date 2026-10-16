@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/uri_utils.dart';
+import 'package:hapai/services/parser/uri_utils.dart';
 
 import 'engine_test_setup.dart';
 import 'parse_link_as.dart';
-import 'package:lxbox/models/node_spec.dart';
+import 'package:hapai/models/node_spec.dart';
 
 // §169 — валидный X25519 public key (43-симв base64url = 32 байта).
 const _validPbk = 'AwoRGB8mLTQ7QklQV15lbHN6gYiPlp2kq7K5wMfO1dw';

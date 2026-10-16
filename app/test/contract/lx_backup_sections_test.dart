@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 /// §435 — `servers[].sections` в бэкапе 0.12 игнорируется МОЛЧА. §575
 /// (контракт 1.1.85) — секции узла упразднены: экспорт 1.0 их не пишет ни у

@@ -3,13 +3,13 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/transport_spec.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
-import 'package:lxbox/services/parser/mappers/draft_sections.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/transport_spec.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/parser/mappers/draft_sections.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 /// §472 шаг 2 — страж покрытия секции `mapper` реестра.
 ///
@@ -28,7 +28,7 @@ import 'package:lxbox/services/parser/uri_parsers.dart';
 /// на CI нет вовсе, и под её гейтом тест молча пропускался бы ровно там, где
 /// он нужен. Схема переехала на движок, и без секций она не разбирается.
 
-/// Правила, которые LxBox сегодня НЕ исполняет, с причиной. Пустая причина
+/// Правила, которые Hapai сегодня НЕ исполняет, с причиной. Пустая причина
 /// недопустима: молчаливое расхождение и есть то, что страж ловит.
 ///
 /// Ключ — `id` правила либо `id@схема`: одно и то же правило реестра у разных
@@ -41,13 +41,13 @@ const Map<String, String> _knownGaps = {
   // есть. Включение правила изменило бы тела и identity живых узлов, поэтому
   // оно требует отдельного решения владельца, а не попутной правки.
   'sni_heuristic_falls_back_to_server@trojan':
-      'не реализовано в LxBox ни на одном входе trojan; включение меняет тела '
+      'не реализовано в Hapai ни на одном входе trojan; включение меняет тела '
           'и identity — отдельное решение (спека 472, шаг 2)',
   'sni_heuristic_falls_back_to_server@vless':
-      'не реализовано в LxBox ни на одном входе vless; включение меняет тела '
+      'не реализовано в Hapai ни на одном входе vless; включение меняет тела '
           'и identity — отдельное решение (спека 472, шаг 3)',
   'sni_heuristic_falls_back_to_server@vmess':
-      'не реализовано в LxBox ни на одном входе vmess; включение меняет тела '
+      'не реализовано в Hapai ни на одном входе vmess; включение меняет тела '
           'и identity — отдельное решение (спека 472, шаг 4)',
   // У tuic реализована только ПОЛОВИНА правила: пустой `sni` уступает адресу
   // сервера (так делал и прежний парсер), а проверки написания — точки,

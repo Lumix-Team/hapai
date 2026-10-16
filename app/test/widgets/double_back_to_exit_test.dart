@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/widgets/double_back_to_exit.dart';
+import 'package:hapai/widgets/double_back_to_exit.dart';
 
 /// Задача 583 — выход с главного экрана по двойному нажатию «назад».
 void main() {

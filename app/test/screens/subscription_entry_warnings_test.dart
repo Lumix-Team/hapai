@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscriptions_screen/widgets/subscription_entry_tile.dart';
-import 'package:lxbox/screens/subscriptions_screen/entry_warnings.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warning_row.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscriptions_screen/widgets/subscription_entry_tile.dart';
+import 'package:hapai/screens/subscriptions_screen/entry_warnings.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warning_row.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 

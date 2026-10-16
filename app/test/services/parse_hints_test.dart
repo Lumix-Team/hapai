@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parse_hints.dart';
+import 'package:hapai/services/parse_hints.dart';
 
 void main() {
   group('diagnoseEmptyParse (night T3-3)', () {

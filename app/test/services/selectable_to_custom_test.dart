@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/selectable_to_custom.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/selectable_to_custom.dart';
 
 WizardTemplate _templateWith(Map<String, dynamic> config) => WizardTemplate(
       groupTemplates: GroupTemplates(),

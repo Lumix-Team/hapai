@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/codec/rule_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/codec/rule_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §125 F4.5 + §202 — лечение dangling direction-ссылок в STORAGE (не только в
 /// выхлопе билдера). Когда Направление перестаёт быть валидной route-мишенью

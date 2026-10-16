@@ -34,7 +34,7 @@ Locale/Tasker (Tasker, MacroDroid, Llama, Automate с премиум-блоко�
 Условия: **VPN is up**; **Active node =** значение; **Active group =** значение.
 
 Формат сохранённой настройки (хранится у автоматизатора, публичный контракт):
-одна строка JSON под ключом `com.leadaxe.lxbox.plugin.CONFIG` —
+одна строка JSON под ключом `studio.creater120.hapai.plugin.CONFIG` —
 действие `{"v":1,"cmd":"<команда>","args":{…}}`, где команда — `start-vpn`,
 `stop-vpn`, `toggle-vpn`, `switch-node` (`tag`), `set-group` (`group`),
 `urltest-group` (`group`), `urltest-all`, `refresh-subs`, `rebuild-config`,

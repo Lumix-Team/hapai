@@ -71,12 +71,12 @@ Edge-кейс OEM `requestAddTileService` (API 33+) — на ColorOS / MIUI / Hy
 
 **Автоматическая (через adb)** — пройдена на боевом устройстве 192.168.1.71:5555 (MTK / ColorOS):
 
-1. `dumpsys package com.leadaxe.lxbox` — TileService и MainActivity видны:
+1. `dumpsys package studio.creater120.hapai` — TileService и MainActivity видны:
    ```
-   com.leadaxe.lxbox/.vpn.LxBoxTileService filter ... permission BIND_QUICK_SETTINGS_TILE
+   studio.creater120.hapai/.vpn.LxBoxTileService filter ... permission BIND_QUICK_SETTINGS_TILE
    ```
-2. `dumpsys shortcut` — shortcut `toggle_vpn` зарегистрирован, intent `cmp=com.leadaxe.lxbox/.MainActivity` + `extras={action=toggle}`.
-3. `am start -n com.leadaxe.lxbox/.MainActivity --es action toggle` (имитация shortcut tap), VPN в `Stopped`:
+2. `dumpsys shortcut` — shortcut `toggle_vpn` зарегистрирован, intent `cmp=studio.creater120.hapai/.MainActivity` + `extras={action=toggle}`.
+3. `am start -n studio.creater120.hapai/.MainActivity --es action toggle` (имитация shortcut tap), VPN в `Stopped`:
    ```
    MainActivity: handleQuickAction action=toggle currentStatus=Stopped
    BoxVpnService: companion.start() → startForegroundService

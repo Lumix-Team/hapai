@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/probe/probe_controller.dart';
-import 'package:lxbox/services/probe/probe_runner.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/probe/probe_controller.dart';
+import 'package:hapai/services/probe/probe_runner.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/template_loader.dart';
 
 import '../../parser/engine_test_setup.dart';
 

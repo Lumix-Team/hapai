@@ -139,7 +139,7 @@ Companion-method:
 
 ```kotlin
 companion object {
-    const val ACTION_RESET_NETWORK = "com.leadaxe.lxbox.ACTION_RESET_NETWORK"
+    const val ACTION_RESET_NETWORK = "studio.creater120.hapai.ACTION_RESET_NETWORK"
 
     fun resetNetwork(context: Context) {
         Log.d(TAG, "[vpn] companion.resetNetwork() current status=${currentStatus.name}")

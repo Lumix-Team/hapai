@@ -1,13 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/transport_spec.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/transport_spec.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 import 'engine_test_setup.dart';
-import 'package:lxbox/services/parser/uri_utils.dart';
+import 'package:hapai/services/parser/uri_utils.dart';
 import 'parse_link_as.dart';
-import 'package:lxbox/models/node_spec.dart';
+import 'package:hapai/models/node_spec.dart';
 
 // §169 — валидный X25519 public key (43-симв base64url = 32 байта) для тестов.
 // Раньше тут стоял `pbk=PK` (2 символа) — с §169-валидацией это уже не REALITY.

@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/if_engine.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/if_engine.dart';
+import 'package:hapai/services/template_loader.dart';
 
 /// SPEC 393 фаза D (D4) — load-валидация тела `#enable` и симметрия секций.
 ///

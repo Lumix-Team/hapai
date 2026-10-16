@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 /// §624 — язык подсветки по первой непустой строке текста.
 void main() {

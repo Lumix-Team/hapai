@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/screens/home/widgets/nodes_header.dart';
-import 'package:lxbox/services/networks_direction.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
-import 'package:lxbox/widgets/node_row.dart';
-import 'package:lxbox/widgets/node_view_item.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/screens/home/widgets/nodes_header.dart';
+import 'package:hapai/services/networks_direction.dart';
+import 'package:hapai/vpn/cc_channel.dart';
+import 'package:hapai/widgets/node_row.dart';
+import 'package:hapai/widgets/node_view_item.dart';
 
 import '../contract_paths.dart';
 

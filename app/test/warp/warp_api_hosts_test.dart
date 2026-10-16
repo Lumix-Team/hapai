@@ -4,7 +4,7 @@ import 'dart:io' show SocketException;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:lxbox/services/warp/warp_client.dart';
+import 'package:hapai/services/warp/warp_client.dart';
 
 /// §418 — перебор хостов API регистрации WARP. HTTP замокан.
 ///

@@ -92,7 +92,7 @@ class _ConfigScreenState extends State<ConfigScreen> {
       final file = File('${dir.path}/lxbox_config.json');
       await file.writeAsString(text);
       await SharePlus.instance.share(
-        ShareParams(files: [XFile(file.path)], text: 'LxBox config'),
+        ShareParams(files: [XFile(file.path)], text: 'Hapai config'),
       );
     } catch (e) {
       if (!mounted) return;

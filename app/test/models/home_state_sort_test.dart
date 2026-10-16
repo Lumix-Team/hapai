@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/home_state.dart';
+import 'package:hapai/models/home_state.dart';
 
 /// §070 + §071 + §125 — sort options + manual mode + pin-by-type.
 /// Covers: pin direct/auto toggles (по ТИПУ из конфига — §125, не по тегу),

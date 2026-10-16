@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/rule_order.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/rule_order.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/template_loader.dart';
 
 /// BACKUP.md §9 п. 7 — крайние случаи оси порядка импорта (форма лаунчера
 /// `5cbcc436`): файл без номеров размечает загрузка (`markRuleOrder`) — пресеты

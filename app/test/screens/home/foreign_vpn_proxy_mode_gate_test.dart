@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/home_dialogs.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/screens/home/home_dialogs.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §528 — issue #126: диалог «Another VPN is active» (§211) показывался и в
 /// proxy-режиме, где чужой туннель наш старт не трогает вовсе —

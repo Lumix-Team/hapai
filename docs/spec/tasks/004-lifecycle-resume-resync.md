@@ -101,7 +101,7 @@ Future<void> _resyncOnResume() async {
 **Manual test (pending):**
 1. Открыть L×Box, запустить VPN, свернуть app.
 2. Через Developer Options → «Don't keep activities» — force-kill Flutter процесс.
-   Альтернативно: `adb shell am kill com.leadaxe.lxbox` — убить процесс.
+   Альтернативно: `adb shell am kill studio.creater120.hapai` — убить процесс.
 3. Открыть app обратно. Ожидание:
    - Ранее (до [001 keep-on-exit fix]) tunnel показывался Disconnected хотя native жив.
    - Теперь (init-pull + resume-pull) — Connected, всё синхронизировано.

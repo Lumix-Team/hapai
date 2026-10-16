@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_notifications_view.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 /// §614 — кнопка копирования в карточке уведомления: в буфер уходит код,
 /// заголовок, разбор и параметры записи. Реестр — зеркало `assets/contract`.

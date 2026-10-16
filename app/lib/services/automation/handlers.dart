@@ -154,7 +154,7 @@ Future<int> actionUrltestAll(DebugContext ctx) async {
 /// `POST /action/start-vpn` отвечал бы 409 там, где раньше стартовал (ревью
 /// после v2.25.1, L2). `guard=true` — через [runCoreRejectGuard], которому
 /// подписки нужны для пересборки. Публичный Intent API (§047) этот хелпер не
-/// зовёт — native `LxBoxIntentReceiver` идёт в `BoxVpnService.start` напрямую.
+/// зовёт — native `HapaiIntentReceiver` идёт в `BoxVpnService.start` напрямую.
 Future<void> actionStartVpn(DebugContext ctx, {bool guard = false}) async {
   final home = ctx.requireHome();
   if (!guard) {

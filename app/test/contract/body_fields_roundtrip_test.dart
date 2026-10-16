@@ -25,10 +25,10 @@ library;
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
 
 import 'body_field_generator.dart';
 
@@ -91,9 +91,9 @@ const kNotModelled = <String, String>{
   '*.tcp_fast_open': 'dial-поле ядра: ни в модели, ни в эмиттере',
 
   // kTLS ядро принимает только на Linux; Android им не является в смысле
-  // этого поля — ядро LxBox его не строит.
-  'tls.kernel_tx': 'kTLS: ядро LxBox на Android не поддерживает',
-  'tls.kernel_rx': 'kTLS: ядро LxBox на Android не поддерживает',
+  // этого поля — ядро Hapai его не строит.
+  'tls.kernel_tx': 'kTLS: ядро Hapai на Android не поддерживает',
+  'tls.kernel_rx': 'kTLS: ядро Hapai на Android не поддерживает',
 
   // `private_key` у ssh реестр числит `listable_string` — модель держит
   // строку, и списочная форма схлопывается. Значение не теряется, но круг

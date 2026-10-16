@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/screens/home/source_lookup.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/screens/home/source_lookup.dart';
 
 import '../../parser/engine_test_setup.dart';
 

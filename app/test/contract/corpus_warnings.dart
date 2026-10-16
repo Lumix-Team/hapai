@@ -3,8 +3,8 @@ import '../contract_paths.dart';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/contract/warning_codes.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/contract/warning_codes.dart';
 
 // §470 — общая часть двух конформанс-раннеров корпуса: URI
 // (`contract_test.dart`) и тел подписки (`body_contract_test.dart`).

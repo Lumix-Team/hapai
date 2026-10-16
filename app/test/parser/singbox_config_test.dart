@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/node_identity.dart';
-import 'package:lxbox/services/contract/warning_codes.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
-import 'package:lxbox/services/parser/singbox_config.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/node_identity.dart';
+import 'package:hapai/services/contract/warning_codes.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
+import 'package:hapai/services/parser/singbox_config.dart';
 
 /// §368 — разбор sing-box JSON: паритет с Xray-веткой.
 

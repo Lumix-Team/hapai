@@ -1306,7 +1306,7 @@ final class AutoSelectSpec extends NodeSpec {
   static const String kInterruptKey = 'interrupt_exist_connections';
 
   /// §565 — тело для ядра: тело разбора [emitted], дополненное параметрами
-  /// замера, которых источник не объявил (у автовыбора умолчания LxBox, а не
+  /// замера, которых источник не объявил (у автовыбора умолчания Hapai, а не
   /// ядра: `url`/`interval` у сторон разные). Порядок ключей — прежний
   /// полный эмит. У ручного рода дополнять нечего.
   SingboxEntry coreEntry(SingboxEntry emitted) {

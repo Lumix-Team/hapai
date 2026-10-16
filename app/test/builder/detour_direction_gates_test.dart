@@ -1,16 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart'
+import 'package:hapai/controllers/subscription_controller.dart'
     show SubscriptionEntry;
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_warning.dart' show RegistryWarning;
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/validation.dart';
-import 'package:lxbox/screens/subscriptions_screen/entry_warnings.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_warning.dart' show RegistryWarning;
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/validation.dart';
+import 'package:hapai/screens/subscriptions_screen/entry_warnings.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 

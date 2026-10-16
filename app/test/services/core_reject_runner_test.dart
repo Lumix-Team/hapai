@@ -1,7 +1,7 @@
 // Фича 478 — single-flight прогона страховки (ревью №1).
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
-import 'package:lxbox/services/core_reject/core_reject_state.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/services/core_reject/core_reject_state.dart';
 
 void main() {
   setUp(() => CoreRejectState.I.resetForTest());

@@ -58,7 +58,7 @@
 
 ### §2.1. Процессная модель
 
-Приложение **одно-процессное**: `BoxVpnService` объявлен без `android:process`, поэтому VPN-сервис, foreground `BoxService`, Flutter-engine и Go-ядро живут в одном процессе `com.leadaxe.lxbox`. Это — фундамент всей миграции: command-сокет, его сервер и его клиент находятся в одной памяти, разделены только границей JNI.
+Приложение **одно-процессное**: `BoxVpnService` объявлен без `android:process`, поэтому VPN-сервис, foreground `BoxService`, Flutter-engine и Go-ядро живут в одном процессе `studio.creater120.hapai`. Это — фундамент всей миграции: command-сокет, его сервер и его клиент находятся в одной памяти, разделены только границей JNI.
 
 Четыре актора в этом процессе:
 
@@ -67,10 +67,10 @@
 - **`BoxVpnService`** — реализует `PlatformInterface`, владеет статическими sink'ами Flutter-каналов (`coreLogSink` и новый эмиттер).
 - **Flutter-engine** (`VpnPlugin`) — потребитель: `EventChannel`-стримы и `MethodChannel`-команды.
 
-Сокет: `command.sock` в `filesDir` = `/data/data/com.leadaxe.lxbox/files/command.sock`.
+Сокет: `command.sock` в `filesDir` = `/data/data/studio.creater120.hapai/files/command.sock`.
 
 ```
-   ┌──────────────────────── процесс com.leadaxe.lxbox ─────────────────────────┐
+   ┌──────────────────────── процесс studio.creater120.hapai ─────────────────────────┐
    │                                                                            │
    │   ┌─── Go-ядро (sing-box-lx) ───┐                                          │
    │   │  CommandServer              │                                          │

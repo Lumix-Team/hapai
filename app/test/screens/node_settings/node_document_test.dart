@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/node_settings/node_document.dart';
+import 'package:hapai/screens/node_settings/node_document.dart';
 
 /// §435 — подготовка текста JSON-вкладки редактора узла. §576 — в источник
 /// уходит только тело узла: голое тело как набрано, из документа — первый

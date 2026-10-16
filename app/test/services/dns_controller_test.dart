@@ -3,11 +3,11 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/preset_expand.dart' show PresetNode;
-import 'package:lxbox/services/dns/dns_controller.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/preset_expand.dart' show PresetNode;
+import 'package:hapai/services/dns/dns_controller.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §300 — DnsController.stage(): byte-identical staged-запись DNS-секции
 /// (замена stageChanges). Пишет dns_servers/dns_rules/dns-vars c flush:false;

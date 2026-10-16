@@ -14,7 +14,7 @@
 
 Галка **«Require permission»** (`automation_require_permission`) обещает
 ограничить приём automation-broadcast'ов приложениями, держащими
-`com.leadaxe.lxbox.permission.AUTOMATION`. Реализована через
+`studio.creater120.hapai.permission.AUTOMATION`. Реализована через
 `context.checkCallingPermission(PERMISSION_AUTOMATION)` внутри `onReceive`
 broadcast-receiver'а — **и это не работает детерминированно**.
 

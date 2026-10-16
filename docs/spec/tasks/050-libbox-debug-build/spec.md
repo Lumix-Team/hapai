@@ -165,12 +165,12 @@ adb -s 192.168.1.71:5555 install -r app/build/app/outputs/flutter-apk/app-releas
 
 ```bash
 # Force-stop для clean cold start
-adb -s 192.168.1.71:5555 shell "am force-stop com.leadaxe.lxbox"
+adb -s 192.168.1.71:5555 shell "am force-stop studio.creater120.hapai"
 sleep 2
 
 # Запустить app + VPN через Debug API
 TOKEN="357f5aacdf154419d2787ec61e3ad9f2"
-adb -s 192.168.1.71:5555 shell "am start -n com.leadaxe.lxbox/.MainActivity"
+adb -s 192.168.1.71:5555 shell "am start -n studio.creater120.hapai/.MainActivity"
 sleep 5
 adb -s 192.168.1.71:5555 forward tcp:9270 tcp:9269
 curl -sf -X POST -H "Authorization: Bearer $TOKEN" "http://localhost:9270/action/start-vpn"

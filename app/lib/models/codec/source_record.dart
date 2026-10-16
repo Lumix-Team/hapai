@@ -1,7 +1,7 @@
 /// Кодек записей `sources[]` контракта 1.0 для подписки, одиночного сервера
 /// и папки с членами (§439 §1.2). Цепочка — `chain_record.dart`.
 ///
-/// Запись = поля контракта (К) и рядом поля LxBox (L, ONE_NAMESPACE §1).
+/// Запись = поля контракта (К) и рядом поля Hapai (L, ONE_NAMESPACE §1).
 /// Кэш и производное не пишутся: `nodes[]` подписки живёт в `sub_cache/`,
 /// узлы сервера и члена папки перечитываются из `origin.raw`. Член-группа
 /// папки (`kind: auto`) — запись `codec/auto_group_record.dart`.
@@ -43,7 +43,7 @@ const String kMemberUnparsedReason =
 
 // ─── запись ─────────────────────────────────────────────────────────────────
 
-/// Источник LxBox → запись `sources[]`.
+/// Источник Hapai → запись `sources[]`.
 Map<String, dynamic> sourceToRecord(ServerList list) => switch (list) {
       SubscriptionServers() => _subscriptionToRecord(list),
       UserServer() => _serverToRecord(list),
@@ -72,7 +72,7 @@ Map<String, dynamic> _subscriptionToRecord(SubscriptionServers s) => {
       ..._detourLinkToRecord(s.detourPolicy),
       // Фича 565 фаза B — свёртка в группу (К, §74).
       if (s.replace != null) 'replace': sourceReplaceToRecord(s.replace!),
-      // L — настройки LxBox.
+      // L — настройки Hapai.
       ..._detourPolicyToRecord(s.detourPolicy),
       ..._tlsToRecord(s.tls),
       // §565 / задача 570 — выбор члена групп ручного рода: сырой тег группы
@@ -112,7 +112,7 @@ Map<String, dynamic> _serverToRecord(UserServer u) {
     ..._detourLinkToRecord(u.detourPolicy),
     // §578 — пишется только `true`; отсутствие = `false`.
     if (u.skipPresets) 'skip_presets': true,
-    // L — настройки LxBox.
+    // L — настройки Hapai.
     ..._detourPolicyToRecord(u.detourPolicy),
     ..._tlsToRecord(u.tls),
     if (u.tagPrefix.isNotEmpty) 'tag_policy': _tagPolicyToRecord(u.tagPrefix),
@@ -128,7 +128,7 @@ Map<String, dynamic> _folderToRecord(FolderServers f) => {
       ..._detourLinkToRecord(f.detourPolicy),
       // Фича 565 фаза B — свёртка в группу (К, §74).
       if (f.replace != null) 'replace': sourceReplaceToRecord(f.replace!),
-      // L — настройки LxBox.
+      // L — настройки Hapai.
       ..._detourPolicyToRecord(f.detourPolicy),
       ..._tlsToRecord(f.tls),
       if (f.pingUrl != null) 'ping_url': f.pingUrl,
@@ -352,7 +352,7 @@ const Set<String> _identityKeys = {
   'user_agent', 'send_hwid', 'hwid', 'device_os', 'ver_os', 'device_model',
 };
 
-/// Запись `sources[]` → источник LxBox. Запись цепочки читает
+/// Запись `sources[]` → источник Hapai. Запись цепочки читает
 /// `chainFromRecord`; здесь она, как и запись без `id`, — отброс с причиной.
 ///
 /// §575 — ключ `sections` у своего сервера и у члена папки читается только
@@ -516,7 +516,7 @@ FolderServers _folderFromRecord(
 
 /// Член папки. Вид записи на чтении не решает (текст побеждает): `server`
 /// и `unsupported` читаются одинаково, запись без вида — тоже. `auto` —
-/// член-группа; `chain` папка LxBox не держит — отброс с строкой в [notes].
+/// член-группа; `chain` папка Hapai не держит — отброс с строкой в [notes].
 FolderMember? _memberFromRecord(
   Object? raw,
   String folderId,

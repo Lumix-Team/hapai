@@ -11,7 +11,7 @@
 
 > ⚠️ **Изменение (§157, 2026-06-22):** галка «Требовать пропуск»
 > (`automation_require_permission`) и custom-permission
-> `com.leadaxe.lxbox.permission.AUTOMATION` **удалены** — `checkCallingPermission`
+> `studio.creater120.hapai.permission.AUTOMATION` **удалены** — `checkCallingPermission`
 > в broadcast-`onReceive` недетерминирован (broadcast не несёт caller-identity),
 > реальной защиты не давал. Единственный барьер приёма — мастер-toggle (receiver
 > `enabled=false` по умолчанию); outgoing-события идут открытым `sendBroadcast`.
@@ -59,7 +59,7 @@ Profile: "Office Wi-Fi"
 
 Task: "Disable VPN"
   → Send Intent
-      Action: com.leadaxe.lxbox.STOP_VPN
+      Action: studio.creater120.hapai.STOP_VPN
       Target: Broadcast Receiver
 ```
 
@@ -78,7 +78,7 @@ Tasker умеет тригериться от десятков event'ов: Wi-Fi
 
 ### Безопасность — почему default OFF
 
-Любая установленная app может отправить `Intent("com.leadaxe.lxbox.STOP_VPN")` через `sendBroadcast`. Если receiver `exported=true` всегда listening — потенциально malicious app может выключать VPN без юзера. Mitigation:
+Любая установленная app может отправить `Intent("studio.creater120.hapai.STOP_VPN")` через `sendBroadcast`. Если receiver `exported=true` всегда listening — потенциально malicious app может выключать VPN без юзера. Mitigation:
 
 1. **Toggle в App Settings → Automation API** (default OFF). Receiver регистрируется только когда toggle ON.
 2. **Юзер видит при включении** explainer dialog с warning "Любая app сможет управлять VPN. Включайте только если используете Tasker/Macrodroid".
@@ -129,15 +129,15 @@ Tasker умеет тригериться от десятков event'ов: Wi-Fi
     android:enabled="false">          <!-- runtime-toggled -->
     <intent-filter>
       <!-- Incoming control actions -->
-      <action android:name="com.leadaxe.lxbox.START_VPN" />
-      <action android:name="com.leadaxe.lxbox.STOP_VPN" />
-      <action android:name="com.leadaxe.lxbox.TOGGLE_VPN" />
-      <action android:name="com.leadaxe.lxbox.SWITCH_NODE" />
-      <action android:name="com.leadaxe.lxbox.SET_GROUP" />
-      <action android:name="com.leadaxe.lxbox.REBUILD_CONFIG" />
-      <action android:name="com.leadaxe.lxbox.REFRESH_SUBS" />
-      <action android:name="com.leadaxe.lxbox.RESET_NETWORK" />
-      <action android:name="com.leadaxe.lxbox.URLTEST_GROUP" />
+      <action android:name="studio.creater120.hapai.START_VPN" />
+      <action android:name="studio.creater120.hapai.STOP_VPN" />
+      <action android:name="studio.creater120.hapai.TOGGLE_VPN" />
+      <action android:name="studio.creater120.hapai.SWITCH_NODE" />
+      <action android:name="studio.creater120.hapai.SET_GROUP" />
+      <action android:name="studio.creater120.hapai.REBUILD_CONFIG" />
+      <action android:name="studio.creater120.hapai.REFRESH_SUBS" />
+      <action android:name="studio.creater120.hapai.RESET_NETWORK" />
+      <action android:name="studio.creater120.hapai.URLTEST_GROUP" />
     </intent-filter>
   </receiver>
 
@@ -147,15 +147,15 @@ Tasker умеет тригериться от десятков event'ов: Wi-Fi
        рантаймом, а защита у нас опциональна (галка). Enforcement —
        в коде (`onReceive`), см. ниже. -->
   <permission
-    android:name="com.leadaxe.lxbox.permission.AUTOMATION"
+    android:name="studio.creater120.hapai.permission.AUTOMATION"
     android:protectionLevel="normal" />
 </application>
 ```
 
 **Notes:**
 - `android:enabled="false"` — receiver выключен в манифесте по умолчанию. Включается через `PackageManager.setComponentEnabledSetting(...)` runtime когда юзер toggle'ит "Принимать команды автоматизации".
-- **Permission НЕ задаётся через `android:permission` на receiver.** Защита пропуском — опциональна (галка «Требовать пропуск», default OFF), а манифест-атрибут статичен и рантаймом не переключается. Поэтому enforcement делается **в коде**: если галка включена, `onReceive` сам проверяет, что отправитель держит `com.leadaxe.lxbox.permission.AUTOMATION`, и иначе игнорит intent. Когда галка выключена — принимаем от любого caller'а (gate здесь — сам мастер-toggle, без него receiver вообще disabled).
-- **Outgoing events** отправляются `sendBroadcast(intent, permission?)`: в строгом режиме — с `com.leadaxe.lxbox.permission.AUTOMATION` (получат только apps с granted permission), иначе — без permission (получит любой подписчик). Симметрично incoming-галке.
+- **Permission НЕ задаётся через `android:permission` на receiver.** Защита пропуском — опциональна (галка «Требовать пропуск», default OFF), а манифест-атрибут статичен и рантаймом не переключается. Поэтому enforcement делается **в коде**: если галка включена, `onReceive` сам проверяет, что отправитель держит `studio.creater120.hapai.permission.AUTOMATION`, и иначе игнорит intent. Когда галка выключена — принимаем от любого caller'а (gate здесь — сам мастер-toggle, без него receiver вообще disabled).
+- **Outgoing events** отправляются `sendBroadcast(intent, permission?)`: в строгом режиме — с `studio.creater120.hapai.permission.AUTOMATION` (получат только apps с granted permission), иначе — без permission (получит любой подписчик). Симметрично incoming-галке.
 
 ### LxBoxIntentReceiver.kt
 
@@ -164,21 +164,21 @@ class LxBoxIntentReceiver : BroadcastReceiver() {
     companion object {
         private const val TAG = "LxBoxIntent"
 
-        const val ACTION_START_VPN = "com.leadaxe.lxbox.START_VPN"
-        const val ACTION_STOP_VPN = "com.leadaxe.lxbox.STOP_VPN"
-        const val ACTION_TOGGLE_VPN = "com.leadaxe.lxbox.TOGGLE_VPN"
-        const val ACTION_SWITCH_NODE = "com.leadaxe.lxbox.SWITCH_NODE"
-        const val ACTION_SET_GROUP = "com.leadaxe.lxbox.SET_GROUP"
-        const val ACTION_REBUILD_CONFIG = "com.leadaxe.lxbox.REBUILD_CONFIG"
-        const val ACTION_REFRESH_SUBS = "com.leadaxe.lxbox.REFRESH_SUBS"
-        const val ACTION_RESET_NETWORK = "com.leadaxe.lxbox.RESET_NETWORK"
-        const val ACTION_URLTEST_GROUP = "com.leadaxe.lxbox.URLTEST_GROUP"
+        const val ACTION_START_VPN = "studio.creater120.hapai.START_VPN"
+        const val ACTION_STOP_VPN = "studio.creater120.hapai.STOP_VPN"
+        const val ACTION_TOGGLE_VPN = "studio.creater120.hapai.TOGGLE_VPN"
+        const val ACTION_SWITCH_NODE = "studio.creater120.hapai.SWITCH_NODE"
+        const val ACTION_SET_GROUP = "studio.creater120.hapai.SET_GROUP"
+        const val ACTION_REBUILD_CONFIG = "studio.creater120.hapai.REBUILD_CONFIG"
+        const val ACTION_REFRESH_SUBS = "studio.creater120.hapai.REFRESH_SUBS"
+        const val ACTION_RESET_NETWORK = "studio.creater120.hapai.RESET_NETWORK"
+        const val ACTION_URLTEST_GROUP = "studio.creater120.hapai.URLTEST_GROUP"
 
         const val EXTRA_TAG = "tag"
         const val EXTRA_GROUP = "group"
         const val EXTRA_FORCE = "force"
 
-        const val PERMISSION_AUTOMATION = "com.leadaxe.lxbox.permission.AUTOMATION"
+        const val PERMISSION_AUTOMATION = "studio.creater120.hapai.permission.AUTOMATION"
 
         /// Прокси к native-кешу галки «Требовать пропуск». Кеш —
         /// SharedPreferences-зеркало storage-key `automation_require_permission`
@@ -364,16 +364,16 @@ Future<void> _handleAutomationAction(String name, Map<String, dynamic> args) asy
 
 | Event action | Extras | Когда emit'ится | Use case |
 |---|---|---|---|
-| `com.leadaxe.lxbox.event.VPN_CONNECTED` | — | `HomeController._handleStatusEvent(connected)` | "Vibe телефона", "пометить notification зелёным", запуск cron task проверки IP |
-| `com.leadaxe.lxbox.event.VPN_DISCONNECTED` | `reason: "user"\|"error"\|"revoked"\|"idle"` | TunnelStatus.disconnected | Notification на часы если непланово |
-| `com.leadaxe.lxbox.event.VPN_ERROR` | `code: String`, `message: String` | Любой error path в `_handleStatusEvent` или `_startInternal/_stopInternal` | **Главное** — Tasker ждёт ERROR после своего START_VPN и реагирует (notification, retry, switch profile, SMS) |
-| `com.leadaxe.lxbox.event.VPN_REVOKED` | — | TunnelStatus.revoked | Notification "другая VPN-app перехватила" |
-| `com.leadaxe.lxbox.event.ACTIVE_NODE_CHANGED` | `old_tag: String?`, `new_tag: String`, `group: String`, `reason: "user"\|"urltest"\|"automation"` | `HomeController.switchNode` + Clash callback | "Лог в Google Sheet когда меняется нода"; "уведомить если автомат переключился на нежелательный регион" |
-| `com.leadaxe.lxbox.event.ACTIVE_GROUP_CHANGED` | `old_group: String?`, `new_group: String`, `reason: String` | `HomeController.setActiveGroup` | Аналогично |
-| `com.leadaxe.lxbox.event.SUB_REFRESHED` | `sub_id: String`, `nodes_count: Int`, `delta_count: Int` | `SubscriptionController.refreshEntry` (success path) | Notification если в подписке появились новые сервера |
-| `com.leadaxe.lxbox.event.SUB_REFRESH_FAILED` | `sub_id: String`, `error: String` | `SubscriptionController.refreshEntry` (failure path, после 5 fails) | Подписки fail тихо, через 5 неудач юзер узнаёт только из лога — этим event'ом можно поднять системную нотификацию |
-| `com.leadaxe.lxbox.event.UPDATE_AVAILABLE` | `version: String`, `url: String` | После `UpdateChecker` обнаружения новой версии | "Сообщить через Tasker канал в Telegram" |
-| `com.leadaxe.lxbox.event.PERMISSION_NEEDED` | `permission: String` | После §050 wifi-rules → требуется `NEARBY_WIFI_DEVICES` | Vibe + notification |
+| `studio.creater120.hapai.event.VPN_CONNECTED` | — | `HomeController._handleStatusEvent(connected)` | "Vibe телефона", "пометить notification зелёным", запуск cron task проверки IP |
+| `studio.creater120.hapai.event.VPN_DISCONNECTED` | `reason: "user"\|"error"\|"revoked"\|"idle"` | TunnelStatus.disconnected | Notification на часы если непланово |
+| `studio.creater120.hapai.event.VPN_ERROR` | `code: String`, `message: String` | Любой error path в `_handleStatusEvent` или `_startInternal/_stopInternal` | **Главное** — Tasker ждёт ERROR после своего START_VPN и реагирует (notification, retry, switch profile, SMS) |
+| `studio.creater120.hapai.event.VPN_REVOKED` | — | TunnelStatus.revoked | Notification "другая VPN-app перехватила" |
+| `studio.creater120.hapai.event.ACTIVE_NODE_CHANGED` | `old_tag: String?`, `new_tag: String`, `group: String`, `reason: "user"\|"urltest"\|"automation"` | `HomeController.switchNode` + Clash callback | "Лог в Google Sheet когда меняется нода"; "уведомить если автомат переключился на нежелательный регион" |
+| `studio.creater120.hapai.event.ACTIVE_GROUP_CHANGED` | `old_group: String?`, `new_group: String`, `reason: String` | `HomeController.setActiveGroup` | Аналогично |
+| `studio.creater120.hapai.event.SUB_REFRESHED` | `sub_id: String`, `nodes_count: Int`, `delta_count: Int` | `SubscriptionController.refreshEntry` (success path) | Notification если в подписке появились новые сервера |
+| `studio.creater120.hapai.event.SUB_REFRESH_FAILED` | `sub_id: String`, `error: String` | `SubscriptionController.refreshEntry` (failure path, после 5 fails) | Подписки fail тихо, через 5 неудач юзер узнаёт только из лога — этим event'ом можно поднять системную нотификацию |
+| `studio.creater120.hapai.event.UPDATE_AVAILABLE` | `version: String`, `url: String` | После `UpdateChecker` обнаружения новой версии | "Сообщить через Tasker канал в Telegram" |
+| `studio.creater120.hapai.event.PERMISSION_NEEDED` | `permission: String` | После §050 wifi-rules → требуется `NEARBY_WIFI_DEVICES` | Vibe + notification |
 
 ### Future events (когда §042 health watchdog)
 
@@ -381,9 +381,9 @@ Future<void> _handleAutomationAction(String name, Map<String, dynamic> args) asy
 
 | Event action | Когда |
 |---|---|
-| `com.leadaxe.lxbox.event.HEARTBEAT_FAILED` | После N consecutive heartbeat fails |
-| `com.leadaxe.lxbox.event.LATENCY_DEGRADED` | Когда активная нода стала >500ms baseline-relative |
-| `com.leadaxe.lxbox.event.UNATTRIBUTED_BURST` | §044 banner active (DPI режет attribution) |
+| `studio.creater120.hapai.event.HEARTBEAT_FAILED` | После N consecutive heartbeat fails |
+| `studio.creater120.hapai.event.LATENCY_DEGRADED` | Когда активная нода стала >500ms baseline-relative |
+| `studio.creater120.hapai.event.UNATTRIBUTED_BURST` | §044 banner active (DPI режет attribution) |
 
 ### Эмиттер — где и как
 
@@ -448,7 +448,7 @@ class AutomationEventEmitter {
 ```kotlin
 // VpnPlugin.kt — handler "sendAutomationBroadcast"
 fun sendAutomationBroadcast(ctx: Context, action: String, extras: Bundle) {
-    val intent = Intent("com.leadaxe.lxbox.event.$action").apply {
+    val intent = Intent("studio.creater120.hapai.event.$action").apply {
         putExtras(extras)
         // setPackage намеренно не выставляем — broadcast открыт всем
         // подписчикам. Если юзер задал whitelist (future v2) —
@@ -534,7 +534,7 @@ Granular toggles — каждая категория управляется от
 │      ▸ default OFF. Команды/события только   │
 │        от приложений с пропуском.            │
 │      ┌── виден только когда галка ON ──┐     │
-│      │ com.leadaxe.lxbox.permission.    │ 📋  │
+│      │ studio.creater120.hapai.permission.    │ 📋  │
 │      │ AUTOMATION                       │     │
 │      │ Впишите этот пропуск в           │     │
 │      │ permissions вашего Tasker.       │     │
@@ -543,9 +543,9 @@ Granular toggles — каждая категория управляется от
 │  ── Команды (intent actions) ───────────    │
 │  Скопируйте в «Send Intent» вашего          │
 │  automation-приложения. Target: Broadcast.  │
-│   • com.leadaxe.lxbox.START_VPN        📋   │
-│   • com.leadaxe.lxbox.STOP_VPN         📋   │
-│   • com.leadaxe.lxbox.TOGGLE_VPN       📋   │
+│   • studio.creater120.hapai.START_VPN        📋   │
+│   • studio.creater120.hapai.STOP_VPN         📋   │
+│   • studio.creater120.hapai.TOGGLE_VPN       📋   │
 │   • …SWITCH_NODE (extra tag)           📋   │
 │   • …SET_GROUP (extra group)          📋   │
 │   • …REBUILD_CONFIG · REFRESH_SUBS ·  📋   │
@@ -575,7 +575,7 @@ Granular toggles — каждая категория управляется от
 
 **Поведение галки «Требовать пропуск»:**
 - **OFF (default)** — receiver принимает команды от любого приложения; события emit'ятся без permission. Gate здесь — сам мастер-toggle (без него receiver disabled). Работает «из коробки», ничего настраивать в Tasker не нужно.
-- **ON** — `onReceive` проверяет, что отправитель держит `com.leadaxe.lxbox.permission.AUTOMATION`, иначе игнорит (лог `[automation] rejected … no permission`). Outgoing-события шлются permission-gated. Юзеру нужно один раз вписать строку пропуска (показана с кнопкой 📋) в permissions своего Tasker/Macrodroid.
+- **ON** — `onReceive` проверяет, что отправитель держит `studio.creater120.hapai.permission.AUTOMATION`, иначе игнорит (лог `[automation] rejected … no permission`). Outgoing-события шлются permission-gated. Юзеру нужно один раз вписать строку пропуска (показана с кнопкой 📋) в permissions своего Tasker/Macrodroid.
 - Переключение галки вызывает `LxBoxIntentReceiver.setRequirePermission(ctx, value)` → пишет в native-кеш (`lxbox_automation` SharedPreferences), который синхронно читают и receiver, и emitter.
 - Строка пропуска и кнопка 📋 видны только когда галка ON (когда OFF — пропуск не нужен, не путаем юзера).
 
@@ -603,7 +603,7 @@ Granular toggles — каждая категория управляется от
 
 ## Setup (Tasker example)
 1. Tasker → Properties → Permissions → Add → declare
-   `com.leadaxe.lxbox.permission.AUTOMATION`
+   `studio.creater120.hapai.permission.AUTOMATION`
 2. L×Box → App Settings → Automation API → enable
    нужные категории (incoming + emit)
 3. Restart Tasker (некоторые версии cache permissions)
@@ -613,34 +613,34 @@ Granular toggles — каждая категория управляется от
 
 ### Recipe 1: Auto-disable VPN на домашнем Wi-Fi
 Profile: Wi-Fi connected = "MyHomeWiFi"
-Task: Send Intent (com.leadaxe.lxbox.STOP_VPN)
+Task: Send Intent (studio.creater120.hapai.STOP_VPN)
 
 ### Recipe 2: Auto-enable на любом другом Wi-Fi
 Profile: Wi-Fi connected = NOT "MyHomeWiFi" AND NOT mobile
-Task: Send Intent (com.leadaxe.lxbox.START_VPN)
+Task: Send Intent (studio.creater120.hapai.START_VPN)
 
 ### Recipe 3: Switch на Russia-node при запуске банка (с подтверждением)
 Profile: App launched = "ru.banki.app"
 Task:
-  1. Send Intent (com.leadaxe.lxbox.SWITCH_NODE, extra tag="🇷🇺Россия")
+  1. Send Intent (studio.creater120.hapai.SWITCH_NODE, extra tag="🇷🇺Россия")
   2. Wait Event: ACTIVE_NODE_CHANGED matches new_tag="🇷🇺.*" OR VPN_ERROR
      timeout 10s
   3. If matched → Vibrate(50ms), else → Notify error
 
 ### Recipe 4: Уведомление при падении подписки
-Profile: Event Received com.leadaxe.lxbox.event.SUB_REFRESH_FAILED
+Profile: Event Received studio.creater120.hapai.event.SUB_REFRESH_FAILED
 Task: Notify("📡 Sub %sub_id failed: %error")
 
 ### Recipe 5: Periodic mass-ping каждые 30 минут
 Profile: Time = every 30 minutes
-Task: Send Intent (com.leadaxe.lxbox.URLTEST_GROUP, extra group="vpn-1")
+Task: Send Intent (studio.creater120.hapai.URLTEST_GROUP, extra group="vpn-1")
 
 ### Recipe 6: Auto-resetNetwork если ping узла > 1s
 Profile: Variable %CURR_PING > 1000  (set externally, e.g. by /clash polling)
-Task: Send Intent (com.leadaxe.lxbox.RESET_NETWORK)
+Task: Send Intent (studio.creater120.hapai.RESET_NETWORK)
 
 ### Recipe 7: Notification на часы при VPN падении
-Profile: Event Received com.leadaxe.lxbox.event.VPN_ERROR
+Profile: Event Received studio.creater120.hapai.event.VPN_ERROR
 Task: Notify Wear "❌ VPN: %code — %message"
 
 ## Troubleshooting
@@ -668,8 +668,8 @@ Task: Notify Wear "❌ VPN: %code — %message"
 
 ```
 [Tasker / external app]
-  sendBroadcast(Intent("com.leadaxe.lxbox.SWITCH_NODE")
-                .setPackage("com.leadaxe.lxbox")        ← обязательно для security
+  sendBroadcast(Intent("studio.creater120.hapai.SWITCH_NODE")
+                .setPackage("studio.creater120.hapai")        ← обязательно для security
                 .putExtra("tag", "🇷🇺Россия"))
   ↓
 [Android system]
@@ -692,7 +692,7 @@ Task: Notify Wear "❌ VPN: %code — %message"
 | Симптом | Причина | Что делать |
 |---|---|---|
 | Tasker action sent но ничего не происходит | Automation API toggle OFF | Включить в App Settings |
-| Тоже но toggle ON | Галка «Требовать пропуск» ON, а Tasker не declare'ил permission | Либо выключить галку, либо добавить `com.leadaxe.lxbox.permission.AUTOMATION` в permissions Tasker (лог: `[automation] rejected … no permission`) |
+| Тоже но toggle ON | Галка «Требовать пропуск» ON, а Tasker не declare'ил permission | Либо выключить галку, либо добавить `studio.creater120.hapai.permission.AUTOMATION` в permissions Tasker (лог: `[automation] rejected … no permission`) |
 | `SWITCH_NODE` отрабатывает, но другая нода не выбирается | Tag не существует или typo | Check log в App Settings → Diagnostics → log filter "automation" |
 | `START_VPN` не работает первый раз | VPN consent ещё не давали | Юзер должен один раз запустить из app, дальше automation работает |
 
@@ -778,9 +778,9 @@ Estimated work: **~3 дня** (manifest + receiver + bridge + emitter + 5 contro
 
 - [ ] App Settings → Automation API блок: мастер-toggle "Принимать команды автоматизации" (default OFF) + explainer.
 - [ ] Включение мастер-toggle активирует receiver через `PackageManager.setComponentEnabledSetting`. Выключение — обратно.
-- [ ] Галка "Требовать пропуск" (default OFF) под мастер-toggle. При ON показывается строка `com.leadaxe.lxbox.permission.AUTOMATION` с кнопкой копирования; при OFF — скрыта.
+- [ ] Галка "Требовать пропуск" (default OFF) под мастер-toggle. При ON показывается строка `studio.creater120.hapai.permission.AUTOMATION` с кнопкой копирования; при OFF — скрыта.
 - [ ] При галке OFF — команды принимаются от любого caller'а (gate = мастер-toggle).
-- [ ] При галке ON — caller без granted `com.leadaxe.lxbox.permission.AUTOMATION` отклоняется в `onReceive` (лог `[automation] rejected … no permission`), action не выполняется.
+- [ ] При галке ON — caller без granted `studio.creater120.hapai.permission.AUTOMATION` отклоняется в `onReceive` (лог `[automation] rejected … no permission`), action не выполняется.
 - [ ] Смена галки синкается в native-кеш (`LxBoxIntentReceiver.setRequirePermission`); receiver и emitter читают его синхронно.
 - [ ] Tasker (или `am broadcast` через ADB) с правильным action → VPN реагирует:
   - [ ] `START_VPN` → VPN connect (если не already up)
@@ -824,7 +824,7 @@ Estimated work: **~3 дня** (manifest + receiver + bridge + emitter + 5 contro
 
 ### Зачем — чего не хватает Шагу 1
 
-Шаг 1 даёт **raw broadcast actions** (`com.leadaxe.lxbox.START_VPN` и т.д.). Их минус: юзер должен руками настроить «Send Intent» и знать строку action. L×Box **не появляется** в списке плагинов Tasker/Macrodroid.
+Шаг 1 даёт **raw broadcast actions** (`studio.creater120.hapai.START_VPN` и т.д.). Их минус: юзер должен руками настроить «Send Intent» и знать строку action. L×Box **не появляется** в списке плагинов Tasker/Macrodroid.
 
 Locale plugin-стандарт ([twofortyfouram](https://github.com/twofortyfouram/android-plugin-api-for-locale)) — де-факто протокол, который Tasker / Macrodroid / Llama понимают из коробки. Реализовав его, L×Box попадает в **Tasker → Action → Plugin → L×Box** (для действий) и **Profile → State → Plugin → L×Box** (для условий) с **нативным экраном выбора** — массовый юзер кликает, а не пишет интенты руками.
 
@@ -832,7 +832,7 @@ Locale plugin-стандарт ([twofortyfouram](https://github.com/twofortyfour
 
 | | Шаг 1 — raw actions | Шаг 2 — Locale plugin |
 |---|---|---|
-| Транспорт | `com.leadaxe.lxbox.START_VPN` broadcast | `…FIRE_SETTING` + `EXTRA_BUNDLE` |
+| Транспорт | `studio.creater120.hapai.START_VPN` broadcast | `…FIRE_SETTING` + `EXTRA_BUNDLE` |
 | Настройка | руками Send Intent | UI плагина в Tasker (Spinner) |
 | Видимость в Tasker | нет (raw) | да (список плагинов) |
 | Для кого | `am broadcast`, shell, ADB, не-Locale-apps | массовый юзер через UI |
@@ -874,7 +874,7 @@ object LocaleApi {
 
 ### Формат нашего bundle
 
-`EXTRA_BUNDLE` содержит один ключ `com.leadaxe.lxbox.plugin.CONFIG` (String) с JSON:
+`EXTRA_BUNDLE` содержит один ключ `studio.creater120.hapai.plugin.CONFIG` (String) с JSON:
 
 **Setting:**
 ```json

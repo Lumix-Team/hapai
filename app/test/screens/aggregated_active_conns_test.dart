@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/per_app_trace_tab/widgets/aggregate_axis.dart';
-import 'package:lxbox/screens/per_app_trace_tab/widgets/aggregated_view.dart';
-import 'package:lxbox/services/traffic_profiler.dart';
+import 'package:hapai/screens/per_app_trace_tab/widgets/aggregate_axis.dart';
+import 'package:hapai/screens/per_app_trace_tab/widgets/aggregated_view.dart';
+import 'package:hapai/services/traffic_profiler.dart';
 
 // §160 — активные соединения в Aggregated = open − close по ключу.
 void main() {

@@ -1,17 +1,17 @@
 /// §439 §1.3 — срез записи хранения для LX Backup 1.0: одна таблица полей.
 ///
 /// Экспорт берёт запись хранения кодеком (`models/codec/`) и пропускает её
-/// через [sliceBackupRecord]: поле контракта едет как есть, настройка LxBox
+/// через [sliceBackupRecord]: поле контракта едет как есть, настройка Hapai
 /// без дома в 1.0 срезается и называется, рантайм и служебные маркеры
 /// срезаются молча. Импорт снимает те же поля с приехавшей записи
 /// ([stripUndeclaredBackupFields]) до кодека: их называет обход неизвестных
 /// ключей (`backup_unknown_field`), в состояние они не попадают.
 ///
-/// Флаг [BackupField.declared] — ответ лаунчера Л2 (§439 §6.4): поле LxBox,
-/// объявленное схемой с поддержкой «LxBox», едет в файл как есть, импорт его
+/// Флаг [BackupField.declared] — ответ лаунчера Л2 (§439 §6.4): поле Hapai,
+/// объявленное схемой с поддержкой «Hapai», едет в файл как есть, импорт его
 /// применяет, а обход ключей его знает ([declaredBackupKeys]). Снять срез с
 /// поля — правка флага в [kBackupFields], ничего больше. Контракт 1.0.1
-/// объявил поля `BACKUP.md` §2 «Поля стороны LxBox»; не объявлено DNS-правило
+/// объявил поля `BACKUP.md` §2 «Поля стороны Hapai»; не объявлено DNS-правило
 /// `kind: srs`.
 ///
 /// Таблица перечисляет ВСЕ ключи записей хранения: ключ, которого в ней нет,
@@ -62,7 +62,7 @@ final class BackupField {
   final String key;
   final BackupFieldFate fate;
 
-  /// Л2 — поле объявлено схемой контракта с поддержкой «LxBox».
+  /// Л2 — поле объявлено схемой контракта с поддержкой «Hapai».
   final bool declared;
 
   /// Едет ли поле в файл.
@@ -164,7 +164,7 @@ const List<BackupField> kBackupFields = [
   BackupField(BackupRecord.folderNode, 'tls', _s,
       declared: true), // §636
   // Член-группа `kind: auto` (§439 N2): состав и стратегия — `group`; поля
-  // стороны LxBox `members_rule` и `pool_badge` лежат внутри `group`
+  // стороны Hapai `members_rule` и `pool_badge` лежат внутри `group`
   // (контракт 1.0.1) и едут вместе с ним.
   BackupField(BackupRecord.folderNode, 'group', _c),
 
@@ -237,7 +237,7 @@ void overrideBackupFieldsForTesting(List<BackupField>? fields) {
   _byRecord = _index(fields ?? kBackupFields);
 }
 
-/// Ключи полей LxBox, объявленных контрактом (Л2): обход неизвестных ключей
+/// Ключи полей Hapai, объявленных контрактом (Л2): обход неизвестных ключей
 /// импорта знает их наравне с полями контракта.
 Set<String> declaredBackupKeys(BackupRecord record) => {
       for (final f in _byRecord[record]!.values)
@@ -296,7 +296,7 @@ BackupSlice sliceBackupRecord(
   return (record: out, dropped: dropped);
 }
 
-/// Импорт: приехавшая запись без полей LxBox, которых контракт не объявил, —
+/// Импорт: приехавшая запись без полей Hapai, которых контракт не объявил, —
 /// вглубь членов папки. Прочее не трогается.
 Map<String, dynamic> stripUndeclaredBackupFields(
   BackupRecord record,

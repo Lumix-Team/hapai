@@ -498,7 +498,7 @@ reproducible builds не включить сразу, APK подпишут их 
    обязательная строка `--build-id=none` (`27dbf8a14`).
    Решение за §375; для RB годится только замена на FOSS-сканер.
 6. ~~Вернуть naive в рецепт~~ — **написано 05.08**, коммит `fbbd05024` в
-   ветке `com.leadaxe.lxbox`: srclib `cronet-go@4185d471b2e4`, блок сборки
+   ветке `studio.creater120.hapai`: srclib `cronet-go@4185d471b2e4`, блок сборки
    через `cmd/build-naive` + `diff` с prebuilt, `ninja-build`, `CPUS_MAX=16`,
    три блока-сплита. `fdroid lint` = 0, `rewritemeta`
    идемпотентен. **Не проверено сборкой** — падает на шаге 5.

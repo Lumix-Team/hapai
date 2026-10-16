@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/error_format.dart';
+import 'package:hapai/services/error_format.dart';
 
 // §279 Phase 4 — форматтер возвращает UiMsg; тесты ассертят пиненный
 // английский рендер (renderEn), инвариант «строки те же, что до миграции».

@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/tailscale_state/state_store.dart';
-import 'package:lxbox/services/workspaces/workspace_store.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/tailscale_state/state_store.dart';
+import 'package:hapai/services/workspaces/workspace_store.dart';
 
 /// §445 — Workspaces × каталоги состояния Tailscale: Save as копирует набор
 /// записей индекса (каталоги общие, без копирования), Load каталоги не

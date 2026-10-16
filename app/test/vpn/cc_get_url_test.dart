@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/platform_channels.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
+import 'package:hapai/services/platform_channels.dart';
+import 'package:hapai/vpn/cc_channel.dart';
 
 /// §392 — `CcGetUrlResult` (GetURLViaOutbound, kernel SPEC 058) и проброс
 /// параметров вызова через MethodChannel.

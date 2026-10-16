@@ -1,6 +1,6 @@
 /// Кодек записи цепочки `sources[]` контракта 1.0 (§439 §1.2): настройки
 /// маршрута в `body` (канон `source_chain.schema.json` без позиций), позиции —
-/// ссылками в `hops[]`, `label` — поле LxBox рядом.
+/// ссылками в `hops[]`, `label` — поле Hapai рядом.
 ///
 /// Места в списке у записи нет: порядок записей `sources[]` и есть порядок
 /// источников, цепочки стоят среди них (§509).
@@ -31,7 +31,7 @@ const Set<String> _chainBodyKeys = {
   'rewrite',
 };
 
-/// Цепочка LxBox → запись `sources[]`.
+/// Цепочка Hapai → запись `sources[]`.
 Map<String, dynamic> chainToRecord(SourceChain c) => {
       'kind': kSourceKindChain,
       'tag': c.tag,
@@ -47,7 +47,7 @@ Map<String, dynamic> chainToRecord(SourceChain c) => {
       'hops': [for (final h in c.hops) nodeLinkToRecord(h)],
     };
 
-/// Запись `sources[]` вида `chain` → цепочка LxBox. Без тега цепочка не
+/// Запись `sources[]` вида `chain` → цепочка Hapai. Без тега цепочка не
 /// адресуема — отброс с причиной.
 RecordRead<SourceChain> chainFromRecord(
   Map<String, dynamic> j, {

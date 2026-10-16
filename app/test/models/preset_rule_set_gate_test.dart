@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/preset_rule_set.dart';
-import 'package:lxbox/screens/routing_screen/routing_screen_helpers.dart'
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/preset_rule_set.dart';
+import 'package:hapai/screens/routing_screen/routing_screen_helpers.dart'
     show RoutingHelpers;
-import 'package:lxbox/services/builder/preset_expand.dart';
+import 'package:hapai/services/builder/preset_expand.dart';
 
 /// §534 — гейт `rule_set` пресета на пути скачивания/UI (`isRuleSetEnabledFor`,
 /// `remoteRuleSetsOfPreset`) — та же семантика, что у билдера

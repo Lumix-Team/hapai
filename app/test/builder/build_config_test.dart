@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
-import 'package:lxbox/models/node_spec.dart';
+import 'package:hapai/models/node_spec.dart';
 import '../parser/parse_link_as.dart';
 
 void main() {

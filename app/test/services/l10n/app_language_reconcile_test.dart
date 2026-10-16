@@ -2,7 +2,7 @@
 // reconciliation app_language ↔ LocaleManager. Ветки нумерованы по спеке.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/l10n/app_language_reconcile.dart';
+import 'package:hapai/services/l10n/app_language_reconcile.dart';
 
 AppLanguageReconcileDecision _run(
   String stored,

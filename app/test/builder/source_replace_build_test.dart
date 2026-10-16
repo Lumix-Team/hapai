@@ -1,15 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_replace.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/builder/source_replace_build.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_replace.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/builder/source_replace_build.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
 
 import '../parser/engine_test_setup.dart';
 

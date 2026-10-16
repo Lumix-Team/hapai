@@ -514,8 +514,8 @@
   "2. Paste it into the field above, or tap ⋮ → «Paste from clipboard», «Scan QR code».": {
     "value": "2. 把它粘贴到上方输入框，或点 ⋮ →「从剪贴板粘贴」「扫描二维码」。"
   },
-  "3. Hit «+». L×Box will fetch, parse and configure — and you can connect from the Home tab.": {
-    "value": "3. 点「+」。L×Box 会自动抓取、解析并配置好——然后在首页即可连接。"
+  "3. Hit «+». Hapai will fetch, parse and configure — and you can connect from the Home tab.": {
+    "value": "3. 点「+」。Hapai 会自动抓取、解析并配置好——然后在首页即可连接。"
   },
   "A chain is a route through several hops in a row. It joins the pool as a node, so directions can pick it like any server.": {
     "value": "链路是依次经过多跳的路由。它会作为一个节点加入连接池，因此「方向」可以像普通服务器一样选中它。"
@@ -775,14 +775,14 @@
   "Android did not report the network name. Check that Location permission is set to \"Precise\" and \"Allow all the time\".": {
     "value": "Android 未返回网络名称。请检查位置信息权限是否设为“精确”和“始终允许”。"
   },
-  "Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen L×Box.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".": {
-    "value": "Android 为省电会限制后台活动。若未加入例外，熄屏后 VPN 隧道可能被终止——在重新打开 L×Box 之前连接会中断。\n\n请打开系统设置并选择「无限制」/「不优化」。"
+  "Android restricts background activity to save battery. Without an exception, the VPN tunnel may be killed when the screen turns off — your connection drops until you reopen Hapai.\n\nOpen system settings and choose \"Unrestricted\" / \"Not optimized\".": {
+    "value": "Android 为省电会限制后台活动。若未加入例外，熄屏后 VPN 隧道可能被终止——在重新打开 Hapai 之前连接会中断。\n\n请打开系统设置并选择「无限制」/「不优化」。"
   },
   "Announce a local HTTP proxy to the VPN network (Android 10+).": {
     "value": "向 VPN 网络声明本地 HTTP 代理（Android 10+）。"
   },
-  "Another VPN app is currently running. Switch to L×Box?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.": {
-    "value": "另一个 VPN 应用正在运行。是否切换到 L×Box？\n\n想查看是哪个应用，请打开 VPN 设置——处于连接状态的即为当前 VPN。"
+  "Another VPN app is currently running. Switch to Hapai?\n\nTo see which app it is, open VPN settings — the active VPN is marked as connected.": {
+    "value": "另一个 VPN 应用正在运行。是否切换到 Hapai？\n\n想查看是哪个应用，请打开 VPN 设置——处于连接状态的即为当前 VPN。"
   },
   "Another VPN app took the system VPN slot (e.g. an always-on VPN). Start again to reconnect.": {
     "value": "另一个 VPN 应用占用了系统 VPN 通道（例如常驻 VPN）。请重新启动以连接。"
@@ -1404,8 +1404,8 @@
   "Continue": {
     "value": "继续"
   },
-  "Control L×Box from Tasker / Macrodroid / Llama and other automation apps via Android broadcast intents.": {
-    "value": "通过 Android 广播 intent，用 Tasker / MacroDroid / Llama 等自动化应用控制 L×Box。"
+  "Control Hapai from Tasker / Macrodroid / Llama and other automation apps via Android broadcast intents.": {
+    "value": "通过 Android 广播 intent，用 Tasker / MacroDroid / Llama 等自动化应用控制 Hapai。"
   },
   "Control URL (optional)": {
     "value": "Control URL（可选）"
@@ -1491,8 +1491,8 @@
   "Could not read file.": {
     "value": "无法读取文件。"
   },
-  "Could not request tile add (%s). Pull down the status bar → edit tiles → drag L×Box manually.": {
-    "value": "无法请求添加磁贴（%s）。下拉状态栏 → 编辑磁贴 → 手动拖入 L×Box。"
+  "Could not request tile add (%s). Pull down the status bar → edit tiles → drag Hapai manually.": {
+    "value": "无法请求添加磁贴（%s）。下拉状态栏 → 编辑磁贴 → 手动拖入 Hapai。"
   },
   "Couldn't load new source — keeping current subscription": {
     "value": "无法加载新来源——保留当前订阅"
@@ -1890,8 +1890,8 @@
   "Drop existing detours — every node connects through this outbound": {
     "value": "清除已有 detour —— 所有节点都经此出站连接"
   },
-  "Each source signs the app with its own key, so builds from different sources do not install over each other. To switch: back up your settings, uninstall L×Box, install it from the new source and restore the backup.": {
-    "value": "每个来源用自己的密钥签名，所以不同来源的安装包无法互相覆盖安装。切换方法：先备份设置，卸载 L×Box，从新来源安装后再恢复备份。"
+  "Each source signs the app with its own key, so builds from different sources do not install over each other. To switch: back up your settings, uninstall Hapai, install it from the new source and restore the backup.": {
+    "value": "每个来源用自己的密钥签名，所以不同来源的安装包无法互相覆盖安装。切换方法：先备份设置，卸载 Hapai，从新来源安装后再恢复备份。"
   },
   "Edit": {
     "value": "编辑"
@@ -1962,8 +1962,8 @@
   "Enabled directions appear in the selector on the home screen. Tap a direction to edit its nodes, filter and auto twin.": {
     "value": "已启用的方向会出现在首页选择器中。点击方向可编辑其节点、筛选与 auto 副本。"
   },
-  "Enabling this category lets other apps receive L×Box events.\n\nEvents do NOT contain subscription / config secrets — only labels (node tags, group names, status).": {
-    "value": "开启此分类后，其他应用可以接收 L×Box 事件。\n\n事件不包含订阅/配置机密——只有标签（节点标签、分组名、状态）。"
+  "Enabling this category lets other apps receive Hapai events.\n\nEvents do NOT contain subscription / config secrets — only labels (node tags, group names, status).": {
+    "value": "开启此分类后，其他应用可以接收 Hapai 事件。\n\n事件不包含订阅/配置机密——只有标签（节点标签、分组名、状态）。"
   },
   "Endpoint": {
     "value": "地址"
@@ -2504,8 +2504,8 @@
   "In packet order: the first position is the hop closest to you, the last one is what the destination sees.": {
     "value": "按数据包顺序：第一个位置是离你最近的一跳，最后一个才是目标端看到的。"
   },
-  "In the next screen (system App info) look for:\n\n• Autostart / Startup manager — allow\n• Background activity / Allow in background — allow\n• Battery / Power usage → \"Don't optimize\" or \"No restrictions\"\n• Battery saver exceptions — add L×Box\n\nLocation of these toggles varies by OEM (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel). Some are under Battery, others under App permissions.": {
-    "value": "在接下来的界面（系统「应用信息」）里找：\n\n• 自启动 / Startup manager —— 允许\n• 后台活动 / 允许后台运行 —— 允许\n• 电池 / 耗电管理 →「不优化」或「无限制」\n• 省电例外 —— 把 L×Box 加进去\n\n这些开关的位置因厂商而异（小米/MIUI、三星/One UI、OPPO/ColorOS、华为、Google Pixel）：有的在「电池」里，有的在「应用权限」里。"
+  "In the next screen (system App info) look for:\n\n• Autostart / Startup manager — allow\n• Background activity / Allow in background — allow\n• Battery / Power usage → \"Don't optimize\" or \"No restrictions\"\n• Battery saver exceptions — add Hapai\n\nLocation of these toggles varies by OEM (Xiaomi/MIUI, Samsung/One UI, Oppo/ColorOS, Huawei, Google Pixel). Some are under Battery, others under App permissions.": {
+    "value": "在接下来的界面（系统「应用信息」）里找：\n\n• 自启动 / Startup manager —— 允许\n• 后台活动 / 允许后台运行 —— 允许\n• 电池 / 耗电管理 →「不优化」或「无限制」\n• 省电例外 —— 把 Hapai 加进去\n\n这些开关的位置因厂商而异（小米/MIUI、三星/One UI、OPPO/ColorOS、华为、Google Pixel）：有的在「电池」里，有的在「应用权限」里。"
   },
   "Include (regex)": {
     "value": "包含（正则）"
@@ -2761,20 +2761,20 @@
   "Log": {
     "value": "日志"
   },
-  "Long-press the L×Box icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.": {
-    "value": "长按桌面上的 L×Box 图标 → VPN 关闭时选「连接」，开启时选「断开」。需 Android 11 及以上。"
+  "Long-press the Hapai icon on your home screen → \"Connect\" when the VPN is off, \"Disconnect\" when it is on. Android 11 and newer.": {
+    "value": "长按桌面上的 Hapai 图标 → VPN 关闭时选「连接」，开启时选「断开」。需 Android 11 及以上。"
   },
-  "LxBox (default)": {
-    "value": "LxBox（默认）"
+  "Hapai (default)": {
+    "value": "Hapai（默认）"
   },
-  "L×Box %1$s available (you have v%2$s)": {
-    "value": "有 L×Box %1$s 可用（当前 v%2$s）"
+  "Hapai %1$s available (you have v%2$s)": {
+    "value": "有 Hapai %1$s 可用（当前 v%2$s）"
   },
-  "L×Box can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.": {
-    "value": "L×Box 每天可访问一次 github.com，检查是否发布了新版本。不会自动安装——只给你一个发布页链接。\n\n如果你是从应用商店安装的，商店客户端本身就会处理更新，可以跳过此项。"
+  "Hapai can ping github.com once a day to see whether a new version is out. Nothing installs by itself — you get a link to the release page.\n\nIf you installed from an app store, its client already handles updates and you can skip this.": {
+    "value": "Hapai 每天可访问一次 github.com，检查是否发布了新版本。不会自动安装——只给你一个发布页链接。\n\n如果你是从应用商店安装的，商店客户端本身就会处理更新，可以跳过此项。"
   },
-  "L×Box runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.": {
-    "value": "VPN 开启期间 L×Box 以前台服务运行。Android 要求显示常驻通知——它能让你一眼看到 VPN 已开启，也能避免系统在后台杀掉隧道。\n\n不会发送任何推广或提示通知。"
+  "Hapai runs as a foreground service while VPN is active. A persistent notification is required by Android — it lets you see at a glance that VPN is on, and prevents the system from killing the tunnel in the background.\n\nNo promotional or alert notifications will be sent.": {
+    "value": "VPN 开启期间 Hapai 以前台服务运行。Android 要求显示常驻通知——它能让你一眼看到 VPN 已开启，也能避免系统在后台杀掉隧道。\n\n不会发送任何推广或提示通知。"
   },
   "MASQUE registration failed": {
     "value": "MASQUE 注册失败"
@@ -4457,8 +4457,8 @@
   "Support": {
     "value": "支持"
   },
-  "Support L×Box": {
-    "value": "支持 L×Box"
+  "Support Hapai": {
+    "value": "支持 Hapai"
   },
   "Support the project": {
     "value": "支持本项目"
@@ -4753,8 +4753,8 @@
   "Title": {
     "value": "标题"
   },
-  "To keep the VPN running in background, also disable battery restrictions for L×Box. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF": {
-    "value": "若要 VPN 在后台持续运行，还需为 L×Box 关闭电池限制。会打开设置界面——找到并切换：\n\n•「电池用量」→「不优化」或「允许后台活动」\n\n• 在 OnePlus / OPPO / Realme 上还要：\n  「空闲时停止活动」→ 关闭"
+  "To keep the VPN running in background, also disable battery restrictions for Hapai. The settings screen will open — find and toggle:\n\n• \"Battery usage\" → \"Don't optimize\" or \"Allow background activity\"\n\n• On OnePlus / OPPO / Realme also:\n  \"Stop activity when idle\" → OFF": {
+    "value": "若要 VPN 在后台持续运行，还需为 Hapai 关闭电池限制。会打开设置界面——找到并切换：\n\n•「电池用量」→「不优化」或「允许后台活动」\n\n• 在 OnePlus / OPPO / Realme 上还要：\n  「空闲时停止活动」→ 关闭"
   },
   "Token": {
     "value": "令牌"
@@ -4881,6 +4881,9 @@
   },
   "Upload": {
     "value": "上传"
+  },
+  "Upstream project by Leadaxe (GPL-3.0)": {
+    "value": "上游项目：Leadaxe（GPL-3.0）"
   },
   "Usage region": {
     "value": "使用地区"
@@ -5022,8 +5025,8 @@
   "When to pause the tunnel to save battery. Takes effect on next VPN connect.": {
     "value": "何时暂停隧道以省电。下次 VPN 连接时生效。"
   },
-  "Where to get L×Box": {
-    "value": "在哪里获取 L×Box"
+  "Where to get Hapai": {
+    "value": "在哪里获取 Hapai"
   },
   "Which direction carries DNS queries to this server. Direct — no detour key in the config.": {
     "value": "由哪个方向把 DNS 查询送到该服务器。「直连」——配置中不写 detour 键。"
@@ -5396,8 +5399,8 @@
   "yesterday": {
     "value": "昨天"
   },
-  "Your Android version doesn't support an in-app prompt. Pull down the status bar → edit tiles → drag L×Box to active tiles.": {
-    "value": "您的 Android 版本不支持应用内提示。下拉状态栏 → 编辑磁贴 → 将 L×Box 拖入已启用的磁贴。"
+  "Your Android version doesn't support an in-app prompt. Pull down the status bar → edit tiles → drag Hapai to active tiles.": {
+    "value": "您的 Android 版本不支持应用内提示。下拉状态栏 → 编辑磁贴 → 将 Hapai 拖入已启用的磁贴。"
   },
   "— (default DNS)": {
     "value": "—（默认 DNS）"

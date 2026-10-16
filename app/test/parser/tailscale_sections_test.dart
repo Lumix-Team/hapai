@@ -2,15 +2,15 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart'
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart'
     show exitCapableByRegistry;
-import 'package:lxbox/services/node_identity.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/services/node_identity.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 /// §435 — узел Tailscale; §575 — из целого конфига берутся только узлы.
 void main() {

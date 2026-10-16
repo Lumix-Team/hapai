@@ -1389,7 +1389,7 @@ curl -X PUT -H "$HDR" -H "Content-Type: application/json" \
 
 # Применить — полный рестарт процесса (stop/start VPN НЕ помогает:
 # Libbox.setup читает флаг один раз за жизнь процесса)
-adb shell am force-stop com.leadaxe.lxbox
+adb shell am force-stop studio.creater120.hapai
 # ... затем relaunch приложения (или UI: App Settings → Diagnostics → Quit & reopen)
 
 # Теперь sing-box logs наполняют /logs/core
@@ -1727,8 +1727,8 @@ curl -s -H "$HDR" "$BASE/state" | jq '.last_error'
 # → "Stopped: alert:permission_location:android.permission.ACCESS_BACKGROUND_LOCATION,android.permission.NEARBY_WIFI_DEVICES"
 
 # Quick test grant permissions через adb (вместо UI)
-adb shell pm grant com.leadaxe.lxbox android.permission.NEARBY_WIFI_DEVICES
-adb shell pm grant com.leadaxe.lxbox android.permission.ACCESS_BACKGROUND_LOCATION
+adb shell pm grant studio.creater120.hapai android.permission.NEARBY_WIFI_DEVICES
+adb shell pm grant studio.creater120.hapai android.permission.ACCESS_BACKGROUND_LOCATION
 
 # Re-start
 curl -X POST -H "$HDR" "$BASE/action/start-vpn"

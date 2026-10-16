@@ -1,13 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/contract/warning_codes.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/subscription/sources.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/contract/warning_codes.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/subscription/sources.dart';
 
 // §169 — валидный X25519 public key (43 символа base64url = 32 байта).
 const _pbk = 'AwoRGB8mLTQ7QklQV15lbHN6gYiPlp2kq7K5wMfO1dw';

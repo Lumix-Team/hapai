@@ -27,7 +27,7 @@ Received") and can wait for it as the answer to its command.
 
 The first enable of any category goes through an explanatory dialog (once).
 
-Events (prefix `com.leadaxe.lxbox.event.`):
+Events (prefix `studio.creater120.hapai.event.`):
 
 | Event | Extras | Category | When |
 |-------|--------|----------|------|

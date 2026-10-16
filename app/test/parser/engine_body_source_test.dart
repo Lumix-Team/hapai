@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/parser/engine/engine_mapper.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/parser/engine/engine_mapper.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
 
 import 'engine_test_setup.dart';
 

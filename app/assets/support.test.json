@@ -14,7 +14,7 @@
           "message": "First message of the test feed, fullscreen mode.\n\n«Got it» unlocks after 3 seconds, records the app version and advances the queue to #2. «Later» snoozes the whole feed (snooze is 0 here — next open shows again). The X in the corner closes without marking anything.",
           "links": [
             {
-              "label": "⭐ L×Box on GitHub",
+              "label": "⭐ Hapai on GitHub",
               "url": "https://github.com/Leadaxe/LxBox"
             }
           ]
@@ -24,7 +24,7 @@
           "message": "Первое сообщение тестовой ленты, полноэкранный режим.\n\n«Прочитал» разблокируется через 3 секунды, записывает версию приложения и двигает очередь к №2. «Позже» откладывает всю ленту (снуз тут 0 — при следующем открытии покажется снова). Крестик в углу закрывает без пометок.",
           "links": [
             {
-              "label": "⭐ L×Box на GitHub",
+              "label": "⭐ Hapai на GitHub",
               "url": "https://github.com/Leadaxe/LxBox"
             }
           ]

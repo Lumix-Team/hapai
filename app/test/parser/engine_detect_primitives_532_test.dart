@@ -17,7 +17,7 @@
 //    молча не сходился ни с чем.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/engine/interpreter.dart';
+import 'package:hapai/services/parser/engine/interpreter.dart';
 
 /// `detect` из JSON-литерала — ровно так его несёт реестр.
 bool matches(Map<String, dynamic> detect, dynamic value) =>

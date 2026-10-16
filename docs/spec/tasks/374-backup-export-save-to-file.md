@@ -105,7 +105,7 @@ await Share.shareXFiles([XFile(path, ...)], subject: 'LxBox backup');
 
 ### Save to Downloads — нативный метод
 
-Новый метод в канале `com.leadaxe.lxbox/utils`
+Новый метод в канале `studio.creater120.hapai/utils`
 ([`MainActivity.kt`](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/MainActivity.kt),
 рядом с `hasRealFilePicker`):
 

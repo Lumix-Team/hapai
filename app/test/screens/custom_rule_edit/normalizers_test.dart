@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/custom_rule_edit/normalizers.dart';
+import 'package:hapai/screens/custom_rule_edit/normalizers.dart';
 
 /// §053 Stage 1 — unit tests для extracted normalizers.
 void main() {

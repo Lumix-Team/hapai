@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/backup_screen/restore_summary.dart';
-import 'package:lxbox/services/backup_service.dart';
+import 'package:hapai/screens/backup_screen/restore_summary.dart';
+import 'package:hapai/services/backup_service.dart';
 
 /// §607 — итог восстановления бэкапа, общий для экрана Backup и главного
 /// экрана. Раньше путь с главного экрана не сообщал о числе ошибок.

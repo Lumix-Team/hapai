@@ -29,7 +29,7 @@ profilerClient продолжают идти. Детектор §259 в итог
 | core-лог | `ERROR dns: lookup failed for cp.cloudflare.com: context deadline exceeded` — ядро резолвит, **пишет в лог** |
 | §180 `dnsFail` для того же домена | **0** — лог есть, структурного события нет |
 | детектор §259 (app-лог) | `[dns-detect] window closed: fail=0 total_direct=0` — поток пуст |
-| logcat | `OplusHansManager: pkg=com.leadaxe.lxbox cannot transition ...`, `LinkPower S_OFF` — ColorOS душит фон |
+| logcat | `OplusHansManager: pkg=studio.creater120.hapai cannot transition ...`, `LinkPower S_OFF` — ColorOS душит фон |
 
 ## Корень (подтверждён кодом)
 

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/donate_methods.dart';
+import 'package:hapai/services/donate_methods.dart';
 
 /// §362 — разбор способов поддержки (`app/assets/donate.json`).
 void main() {

@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/builder/build_config.dart';
-import 'package:lxbox/services/subscription/sources.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/builder/build_config.dart';
+import 'package:hapai/services/subscription/sources.dart';
 
 import 'parser/engine_test_setup.dart';
 

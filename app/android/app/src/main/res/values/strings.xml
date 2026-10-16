@@ -3,11 +3,11 @@
      literals). Wire values (broadcast actions, extras, channel IDs, pref
      names, FGS subtype) intentionally stay in Kotlin/manifest. -->
 <resources>
-    <string name="app_name" translatable="false">L×Box</string>
+    <string name="app_name" translatable="false">Hapai</string>
 
     <!-- Quick Connect (tile / shortcuts consent flow) -->
-    <string name="qc_first_open">Opening L×Box for VPN permission (one-time)</string>
-    <string name="qc_consent_denied">VPN permission denied. Open L×Box to retry.</string>
+    <string name="qc_first_open">Opening Hapai for VPN permission (one-time)</string>
+    <string name="qc_consent_denied">VPN permission denied. Open Hapai to retry.</string>
     <string name="qc_connect_label">Connect</string>
     <string name="qc_disconnect_label">Disconnect</string>
 
@@ -38,15 +38,15 @@
     <string name="tile_status_disconnected">Disconnected</string>
 
     <!-- §047 Locale/Tasker plugin surfaces -->
-    <string name="label_plugin_custom">L×Box: Custom…</string>
-    <string name="label_plugin_start">L×Box: Start VPN</string>
-    <string name="label_plugin_stop">L×Box: Stop VPN</string>
-    <string name="label_plugin_toggle">L×Box: Toggle VPN</string>
+    <string name="label_plugin_custom">Hapai: Custom…</string>
+    <string name="label_plugin_start">Hapai: Start VPN</string>
+    <string name="label_plugin_stop">Hapai: Stop VPN</string>
+    <string name="label_plugin_toggle">Hapai: Toggle VPN</string>
     <string name="automation_blurb_start">Start VPN</string>
     <string name="automation_blurb_stop">Stop VPN</string>
     <string name="automation_blurb_toggle">Toggle VPN</string>
-    <string name="automation_command_prompt">L×Box command:</string>
-    <string name="automation_condition_prompt">L×Box condition:</string>
+    <string name="automation_command_prompt">Hapai command:</string>
+    <string name="automation_condition_prompt">Hapai condition:</string>
     <string name="automation_cmd_switch_node">Switch node</string>
     <string name="automation_cmd_set_group">Set group</string>
     <string name="automation_cmd_urltest_group">URL-test group</string>

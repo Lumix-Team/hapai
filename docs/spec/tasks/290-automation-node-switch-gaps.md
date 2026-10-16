@@ -49,7 +49,7 @@
 2. Ждал переменную с другим именем (напр. `%active_node`) — такого ключа нет.
 3. Tasker не подхватывает экстры из интента автоматически: их надо объявить
    вручную в `Event → System → Intent Received` (фильтр action
-   `com.leadaxe.lxbox.event.ACTIVE_NODE_CHANGED` + имена переменных).
+   `studio.creater120.hapai.event.ACTIVE_NODE_CHANGED` + имена переменных).
 
 Рецепт в `AUTOMATION.md:157-176` показывает `Wait Event … (new_tag ~ …)`, но
 **не объясняет**, что имена экстр надо прописать в Tasker руками, и не даёт

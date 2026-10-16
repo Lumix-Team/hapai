@@ -59,7 +59,7 @@ serviceScope.launch {                    // ← (2) teardown в ОТМЕНЯЕМ
 scope **раньше** дедлайна — leak практически гарантирован.
 
 **Почему система не спасает:** `stopSelf()` демонтирует Android-компонент Service,
-но **не убивает процесс** `com.leadaxe.lxbox` (в нём живёт Flutter UI/Activity —
+но **не убивает процесс** `studio.creater120.hapai` (в нём живёт Flutter UI/Activity —
 юзер на экране). Сокет 63130 открыт Go-кодом sing-box и принадлежит процессу, а
 не сервису. Пока процесс жив, ядро Linux fd не закрывает → закрыть может только
 явный `closeCommandServerAtomic()`.

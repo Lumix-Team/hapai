@@ -2,9 +2,9 @@
 // и выбор подсказки секции Wi-Fi по коду.
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/custom_rule_edit/sections/wifi_section.dart';
-import 'package:lxbox/services/platform_channels.dart';
-import 'package:lxbox/services/url_launcher.dart';
+import 'package:hapai/screens/custom_rule_edit/sections/wifi_section.dart';
+import 'package:hapai/services/platform_channels.dart';
+import 'package:hapai/services/url_launcher.dart';
 
 const _fine = 'android.permission.ACCESS_FINE_LOCATION';
 const _bg = 'android.permission.ACCESS_BACKGROUND_LOCATION';

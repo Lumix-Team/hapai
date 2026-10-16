@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/support_message_screen.dart';
-import 'package:lxbox/services/support/support_message.dart';
-import 'package:lxbox/services/support/support_nav.dart';
+import 'package:hapai/screens/home/support_message_screen.dart';
+import 'package:hapai/services/support/support_message.dart';
+import 'package:hapai/services/support/support_nav.dart';
 
 /// §357 — полноэкранный показ сообщения ленты: таймер «Got it», видимость
 /// кнопок (https / незнакомое действие / route с гейтом), навигация route.

@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/warp/masque_account.dart';
-import 'package:lxbox/services/warp/scan/scan_models.dart';
-import 'package:lxbox/services/warp/scan/scan_node_builder.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/warp/masque_account.dart';
+import 'package:hapai/services/warp/scan/scan_models.dart';
+import 'package:hapai/services/warp/scan/scan_node_builder.dart';
+import 'package:hapai/services/warp/warp_account.dart';
 
 import '../../parser/engine_test_setup.dart';
-import 'package:lxbox/models/node_spec.dart';
+import 'package:hapai/models/node_spec.dart';
 import '../../parser/parse_link_as.dart';
 
 /// §284 — сборка URI-узла кандидата из WARP-аккаунта (переиспользование кредов

@@ -2,8 +2,8 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/traffic_profiler.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
+import 'package:hapai/services/traffic_profiler.dart';
+import 'package:hapai/vpn/cc_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

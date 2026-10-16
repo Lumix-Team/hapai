@@ -138,7 +138,7 @@ sticky-рестарт работает штатно. Порядок недете
 Device (AVD LxBox_test, API 34):
 
 1. Start (`adb root` + `am start-foreground-service -n
-   com.leadaxe.lxbox/.vpn.BoxVpnService -a com.leadaxe.lxbox.ACTION_START`),
+   studio.creater120.hapai/.vpn.BoxVpnService -a studio.creater120.hapai.ACTION_START`),
    дождаться Started, `kill -9 <pid>` (не `force-stop`: force-stop переводит
    пакет в stopped state и глушит любые рестарты по дизайну платформы; `am
    kill` FGS-процесс не трогает). Ожидание: либо sticky-рестарт через ~1 с,
@@ -147,7 +147,7 @@ Device (AVD LxBox_test, API 34):
    Connected.
 2. То же с Always-on в системных настройках: системное «disconnected» не
    зависает.
-3. Ручной Stop → `dumpsys activity services com.leadaxe.lxbox` пуст, через
+3. Ручной Stop → `dumpsys activity services studio.creater120.hapai` пуст, через
    минуту ничего не воскресло.
 4. `keep_vpn_on_exit=false`, свайп приложения → туннель остановлен и не
    вернулся.

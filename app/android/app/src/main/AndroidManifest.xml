@@ -127,11 +127,11 @@
 
         <!-- ⚠ flutter_launcher_icons затирает android:icon этого сервиса на
              @mipmap/ic_launcher при каждом прогоне — после генерации иконок
-             вернуть @drawable/ic_lxbox_tile: тайл обязан быть монохромным. -->
+             вернуть @drawable/ic_hapai_tile: тайл обязан быть монохромным. -->
         <service
             android:name=".vpn.LxBoxTileService"
             android:label="@string/app_name"
-            android:icon="@drawable/ic_lxbox_tile"
+            android:icon="@drawable/ic_hapai_tile"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
@@ -180,21 +180,21 @@
             android:exported="true"
             android:enabled="false">
             <intent-filter>
-                <action android:name="com.leadaxe.lxbox.START_VPN" />
-                <action android:name="com.leadaxe.lxbox.STOP_VPN" />
-                <action android:name="com.leadaxe.lxbox.TOGGLE_VPN" />
-                <action android:name="com.leadaxe.lxbox.SWITCH_NODE" />
-                <action android:name="com.leadaxe.lxbox.SET_GROUP" />
-                <action android:name="com.leadaxe.lxbox.REBUILD_CONFIG" />
-                <action android:name="com.leadaxe.lxbox.REFRESH_SUBS" />
-                <action android:name="com.leadaxe.lxbox.RESET_NETWORK" />
-                <action android:name="com.leadaxe.lxbox.URLTEST_GROUP" />
-                <action android:name="com.leadaxe.lxbox.URLTEST_ALL" />
+                <action android:name="studio.creater120.hapai.START_VPN" />
+                <action android:name="studio.creater120.hapai.STOP_VPN" />
+                <action android:name="studio.creater120.hapai.TOGGLE_VPN" />
+                <action android:name="studio.creater120.hapai.SWITCH_NODE" />
+                <action android:name="studio.creater120.hapai.SET_GROUP" />
+                <action android:name="studio.creater120.hapai.REBUILD_CONFIG" />
+                <action android:name="studio.creater120.hapai.REFRESH_SUBS" />
+                <action android:name="studio.creater120.hapai.RESET_NETWORK" />
+                <action android:name="studio.creater120.hapai.URLTEST_GROUP" />
+                <action android:name="studio.creater120.hapai.URLTEST_ALL" />
             </intent-filter>
         </receiver>
 
         <!-- §047 Шаг 2 — Locale / Tasker plugin-стандарт (twofortyfouram).
-             L×Box виден в Tasker как Plugin (Action + State). Edit-Activity
+             Hapai виден в Tasker как Plugin (Action + State). Edit-Activity
              exported (хост открывает их). Fire/Query receiver'ы БЕЗ
              `android:permission` (стандарт запрещает — хост проверяет права
              сам); `enabled="false"` — включаются мастер-toggle'ом

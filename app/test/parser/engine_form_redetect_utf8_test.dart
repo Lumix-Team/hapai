@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/parser/engine/decoders.dart';
-import 'package:lxbox/services/parser/engine/interpreter.dart';
-import 'package:lxbox/services/parser/engine/section.dart';
-import 'package:lxbox/services/parser/uri_utils.dart' show utf8Lossy;
+import 'package:hapai/services/parser/engine/decoders.dart';
+import 'package:hapai/services/parser/engine/interpreter.dart';
+import 'package:hapai/services/parser/engine/section.dart';
+import 'package:hapai/services/parser/uri_utils.dart' show utf8Lossy;
 
 /// Выбор формы по раскрытому тексту (unwrap → redetect) и серия битых байтов
 /// UTF-8 → один U+FFFD (контракт 1.1.74/1.1.75, MAPPER_ENGINE §1).

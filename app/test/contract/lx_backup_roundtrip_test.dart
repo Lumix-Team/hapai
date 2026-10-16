@@ -2,22 +2,22 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/models/tls_policy.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/json_clone.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/models/tls_policy.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/json_clone.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
 
 import '../contract_paths.dart';
 import '../parser/engine_test_setup.dart';
@@ -27,7 +27,7 @@ import 'json_schema_lite.dart';
 //
 // Инвариант П1 (BACKUP_PRINCIPLES): `import(export(x))` в том же приложении
 // = `x`, а импорт собственного экспорта в то же состояние ничего не
-// добавляет. Состояние собрано из всех видов, которые LxBox умеет выразить в
+// добавляет. Состояние собрано из всех видов, которые Hapai умеет выразить в
 // 1.0: подписка, одиночные узлы (URI и JSON), две папки-тёзки, член папки с
 // секциями и личным detour, нечитаемый член, цепочки с позициями в папку,
 // в подписку и в Направление, правила всех видов (включая json), DNS всех
@@ -431,7 +431,7 @@ void main() {
       expect(state.lists.whereType<FolderServers>().map((f) => f.members.length), [3, 1]);
     });
 
-    test('поля стороны LxBox едут, потеря без дома в 1.0 названа', () async {
+    test('поля стороны Hapai едут, потеря без дома в 1.0 названа', () async {
       final state = _source();
       state.lists = [
         (state.lists[0] as SubscriptionServers).copyWith(
@@ -454,7 +454,7 @@ void main() {
         const DnsRuleSrs(name: 'Geo', id: 's1'),
       ];
       final out = await _export(state);
-      // Контракт 1.0.1 (BACKUP.md §2 «Поля стороны LxBox»): detour_policy,
+      // Контракт 1.0.1 (BACKUP.md §2 «Поля стороны Hapai»): detour_policy,
       // on_update_action и ping_url едут, потерей не
       // называются; json-правило без тела — потеря.
       expect(

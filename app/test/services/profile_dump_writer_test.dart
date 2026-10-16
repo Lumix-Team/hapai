@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/profile_dump_writer.dart';
-import 'package:lxbox/vpn/pprof_profile.dart';
+import 'package:hapai/services/profile_dump_writer.dart';
+import 'package:hapai/vpn/pprof_profile.dart';
 
 /// §207 — `ProfileDumpWriter`: goroutine-дамп → `.txt`, CPU-профиль → `.pb`,
 /// оба в temp с timestamp-именем. Round-trip содержимого.

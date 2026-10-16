@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/about_screen.dart';
+import 'package:hapai/screens/about_screen.dart';
 
 // §361 — кнопка «Руководство пользователя» в About ведёт на документ языка
 // интерфейса. Единственная логика, где можно ошибиться, — сопоставление

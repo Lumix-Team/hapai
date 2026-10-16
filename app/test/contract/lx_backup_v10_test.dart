@@ -2,20 +2,20 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 // §438 — чтение LX Backup 1.0 (`lx_backup: 2`) вместе с 0.x одним слиянием.
 // Корпус `v10_*` проверяет сквозные сценарии; здесь — развилки, которых
 // корпус не касается: версии, тёзки папок, preset-серверы DNS, ось правил,
-// секции совпавшего узла, виды записей без дома в модели LxBox.
+// секции совпавшего узла, виды записей без дома в модели Hapai.
 
 String _file(Map<String, dynamic> body) => jsonEncode({
       'lx_backup': 2,
@@ -406,7 +406,7 @@ void main() {
           .where((w) => w.code == kWarnSourceKindUnsupported)
           .map((w) => w.kind)
           .toList();
-      // §439 N2 — auto в папке ввозится группой; в корне sources[] у LxBox
+      // §439 N2 — auto в папке ввозится группой; в корне sources[] у Hapai
       // группы нет (BACKUP.md §2).
       expect(kinds, ['chain', 'auto']);
       final folder = _apply(const [], file).lists.whereType<FolderServers>().single;
@@ -596,7 +596,7 @@ void main() {
       final folder = state.lists[1] as FolderServers;
       expect(folder.tagPrefix, '[F]');
       expect(folder.members.first.raw, 'ss://Y2hhY2hh@de.example:8388#DE-1',
-          reason: 'исходник члена едет как есть (что LxBox из него разберёт — дело парсера)');
+          reason: 'исходник члена едет как есть (что Hapai из него разберёт — дело парсера)');
       final group = folder.members[1].node as AutoSelectSpec;
       expect(group.tag, 'быстрые');
       expect((group.membership as ExplicitMembers).members,

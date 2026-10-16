@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:lxbox/services/l10n/template_overlay.dart';
+import 'package:hapai/services/l10n/template_overlay.dart';
 
 import 'src/check_common.dart';
 

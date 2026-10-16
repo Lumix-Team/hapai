@@ -133,7 +133,7 @@ class CustomRule {
 2. Если path в map:
    ```json
    // rule_set
-   {"type":"local","tag":"<name>","format":"binary","path":"/data/user/0/com.leadaxe.lxbox/files/rule_sets/<uuid>.srs"}
+   {"type":"local","tag":"<name>","format":"binary","path":"/data/user/0/studio.creater120.hapai/files/rule_sets/<uuid>.srs"}
    // route rule
    {"rule_set":"<name>","port":[443],"protocol":["tls"],"package_name":["…"],"ip_is_private":true,"outbound":"direct-out"}
    ```

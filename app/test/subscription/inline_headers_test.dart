@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/subscription/sources.dart';
+import 'package:hapai/services/subscription/sources.dart';
 
 import '../parser/engine_test_setup.dart';
 

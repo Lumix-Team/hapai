@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/settings_storage.dart' show TunAppsConfig;
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/settings_storage.dart' show TunAppsConfig;
 
 Map<String, dynamic> _configWithTun() => {
       'inbounds': [

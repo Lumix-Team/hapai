@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/direction_mutations.dart';
-import 'package:lxbox/services/record_vars.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
-import 'package:lxbox/services/subscription/http_cache.dart';
+import 'package:hapai/services/direction_mutations.dart';
+import 'package:hapai/services/record_vars.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/services/subscription/http_cache.dart';
 
 import 'golden_harness.dart';
 

@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/import_rule.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/subscription/import_rules.dart';
+import 'package:hapai/models/import_rule.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/subscription/import_rules.dart';
 
 import '../parser/engine_test_setup.dart';
 

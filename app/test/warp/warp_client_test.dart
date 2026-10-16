@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:lxbox/models/node_spec.dart' show Awg, WireguardSpec;
-import 'package:lxbox/services/parser/ini_parser.dart';
-import 'package:lxbox/services/warp/warp_account.dart';
-import 'package:lxbox/services/warp/warp_client.dart';
+import 'package:hapai/models/node_spec.dart' show Awg, WireguardSpec;
+import 'package:hapai/services/parser/ini_parser.dart';
+import 'package:hapai/services/warp/warp_account.dart';
+import 'package:hapai/services/warp/warp_client.dart';
 
 import '../parser/engine_test_setup.dart';
 import '../parser/parse_link_as.dart';

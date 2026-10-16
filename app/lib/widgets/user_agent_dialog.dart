@@ -6,7 +6,7 @@ import '../services/subscription/user_agent.dart';
 /// §610 — общий диалог правки Custom User-Agent (глобальная идентичность §118
 /// и слепок подписки §289). Поле редактируемое; кнопка у поля открывает
 /// список [kUserAgentPresets], выбор пресета подставляет его строку в поле
-/// (дальше её можно править руками), «LxBox (default)» очищает поле.
+/// (дальше её можно править руками), «Hapai (default)» очищает поле.
 ///
 /// Результат: `null` — отмена; иначе обрезанная строка, пустая = дефолтный UA.
 /// [hint] — подсказка в пустом поле, по умолчанию [resolveSubscriptionUserAgent].
@@ -76,7 +76,7 @@ class _UserAgentDialogState extends State<_UserAgentDialog> {
                     dense: true,
                     contentPadding: EdgeInsets.zero,
                     title: p.value.isEmpty
-                        ? Text(getLocalText.s('LxBox (default)'))
+                        ? Text(getLocalText.s('Hapai (default)'))
                         // l10n-exempt: client brand name
                         : Text(p.label),
                     subtitle: p.value.isEmpty

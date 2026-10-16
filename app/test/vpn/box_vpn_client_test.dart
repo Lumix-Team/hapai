@@ -3,9 +3,9 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/background_mode.dart';
-import 'package:lxbox/models/tunnel_status.dart';
-import 'package:lxbox/vpn/box_vpn_client.dart';
+import 'package:hapai/models/background_mode.dart';
+import 'package:hapai/models/tunnel_status.dart';
+import 'package:hapai/vpn/box_vpn_client.dart';
 
 /// Narrow contract tests для MethodChannel'а VpnPlugin.
 /// Рендерить AppSettingsScreen целиком избыточно — он тянет SettingsStorage
@@ -16,7 +16,7 @@ import 'package:lxbox/vpn/box_vpn_client.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const channel = MethodChannel('com.leadaxe.lxbox/methods');
+  const channel = MethodChannel('studio.creater120.hapai/methods');
   final messenger = TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   final calls = <MethodCall>[];
 

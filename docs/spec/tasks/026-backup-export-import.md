@@ -42,7 +42,7 @@ Returns `{"applied": {"config": bool?, "vars": N?, "server_lists": N?, "rebuilt"
 curl -s -H "$HDR" "$BASE/backup/export" > /tmp/backup.json
 
 # Очистить (например adb pm clear) — потестить empty-state, etc.
-adb shell pm clear com.leadaxe.lxbox
+adb shell pm clear studio.creater120.hapai
 
 # Restore
 curl -X POST -H "$HDR" -H "Content-Type: application/json" \

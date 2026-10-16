@@ -257,7 +257,7 @@ class RuleSetDownloader {
         final f = await _file(id);
         final tmp = File('${f.path}.tmp');
 
-        final headers = <String, String>{'User-Agent': 'LxBox'};
+        final headers = <String, String>{'User-Agent': 'Hapai'};
         // Условный GET имеет смысл только когда файл реально лежит: с
         // etag'ом от снесённого кэша сервер ответил бы 304 на пустоту.
         final etag = prev.etag;

@@ -9,8 +9,8 @@
       "min_session_minutes": 5,
       "i18n": {
         "en": {
-          "title": "Glad you picked L×Box",
-          "message": "Hi! I'm the author of L×Box. I can see your VPN is already up and running — great.\n\nIf something didn't set up right, or you just want to get more out of the app, there's a detailed user guide: from first launch to server chains. It always lives on GitHub.\n\nGot questions? The Telegram group answers fast.",
+          "title": "Glad you picked Hapai",
+          "message": "Hi! I'm the author of Hapai. I can see your VPN is already up and running — great.\n\nIf something didn't set up right, or you just want to get more out of the app, there's a detailed user guide: from first launch to server chains. It always lives on GitHub.\n\nGot questions? The Telegram group answers fast.",
           "links": [
             {
               "label": "📖 Open the user guide",
@@ -23,8 +23,8 @@
           ]
         },
         "ru": {
-          "title": "Рад, что ты выбрал L×Box",
-          "message": "Привет! Я автор L×Box. Вижу, VPN у тебя уже работает — отлично.\n\nЕсли что-то настроилось не так или просто интересно, как выжать из приложения больше, — есть подробная инструкция: от первого запуска до цепочек серверов. Она всегда лежит на GitHub, не потеряешь.\n\nПоявятся вопросы — в Telegram-группе отвечаем быстро.",
+          "title": "Рад, что ты выбрал Hapai",
+          "message": "Привет! Я автор Hapai. Вижу, VPN у тебя уже работает — отлично.\n\nЕсли что-то настроилось не так или просто интересно, как выжать из приложения больше, — есть подробная инструкция: от первого запуска до цепочек серверов. Она всегда лежит на GitHub, не потеряешь.\n\nПоявятся вопросы — в Telegram-группе отвечаем быстро.",
           "links": [
             {
               "label": "📖 Открыть инструкцию",
@@ -46,7 +46,7 @@
       "i18n": {
         "en": {
           "title": "Drop by the Telegram group",
-          "message": "L×Box grows together with its community: half the features came from questions and requests in the group. It's also where news, fresh builds and real-world experience live — which nodes hold speed, how to tune things for your carrier.\n\nGot an idea or a question? Post it in the group — I'm around and I read it.",
+          "message": "Hapai grows together with its community: half the features came from questions and requests in the group. It's also where news, fresh builds and real-world experience live — which nodes hold speed, how to tune things for your carrier.\n\nGot an idea or a question? Post it in the group — I'm around and I read it.",
           "links": [
             {
               "label": "👥 Open the group",
@@ -60,7 +60,7 @@
         },
         "ru": {
           "title": "Загляни в Telegram-группу",
-          "message": "L×Box развивается вместе с сообществом: половина фич появилась из вопросов и просьб в группе. Там же — новости, свежие сборки и живой опыт: какие узлы держат скорость, как настроить под своего оператора.\n\nЕсть идея или вопрос — пиши прямо в группу, я там бываю и читаю.",
+          "message": "Hapai развивается вместе с сообществом: половина фич появилась из вопросов и просьб в группе. Там же — новости, свежие сборки и живой опыт: какие узлы держат скорость, как настроить под своего оператора.\n\nЕсть идея или вопрос — пиши прямо в группу, я там бываю и читаю.",
           "links": [
             {
               "label": "👥 Открыть группу",
@@ -82,7 +82,7 @@
       "i18n": {
         "en": {
           "title": "Give the project a star",
-          "message": "L×Box is free, with no ads and no subscriptions — and it will stay that way.\n\nOne thing I'll ask: star the project on GitHub. Stars are how people discover the app, and for me they're the clearest sign this work matters. Takes half a minute.",
+          "message": "Hapai is free, with no ads and no subscriptions — and it will stay that way.\n\nOne thing I'll ask: star the project on GitHub. Stars are how people discover the app, and for me they're the clearest sign this work matters. Takes half a minute.",
           "links": [
             {
               "label": "⭐ Star on GitHub",
@@ -96,7 +96,7 @@
         },
         "ru": {
           "title": "Поставь звезду на GitHub",
-          "message": "L×Box бесплатный, без рекламы и подписок — и таким останется.\n\nПрошу одного: поставь проекту звезду на GitHub. По звёздам люди находят приложение, и для меня это главный знак, что работа нужна. Займёт полминуты.",
+          "message": "Hapai бесплатный, без рекламы и подписок — и таким останется.\n\nПрошу одного: поставь проекту звезду на GitHub. По звёздам люди находят приложение, и для меня это главный знак, что работа нужна. Займёт полминуты.",
           "links": [
             {
               "label": "⭐ Поставить звезду",
@@ -117,12 +117,12 @@
       "min_session_minutes": 5,
       "i18n": {
         "en": {
-          "title": "Tell your friends about L×Box",
+          "title": "Tell your friends about Hapai",
           "message": "If the app helps you out, it will help the people close to you too. Send the link to anyone who could use this client: the fresh APK is always on GitHub, installs in five minutes, no app stores needed.\n\nThe more people use it, the faster the project grows.",
           "links": [
             {
               "label": "📤 Share",
-              "url": "lxbox://share:L×Box @selfLink"
+              "url": "lxbox://share:Hapai @selfLink"
             },
             {
               "label": "📦 Download page",
@@ -131,12 +131,12 @@
           ]
         },
         "ru": {
-          "title": "Расскажи друзьям про L×Box",
+          "title": "Расскажи друзьям про Hapai",
           "message": "Если приложение выручает тебя — оно выручит и твоих близких. Скинь ссылку тому, кому пригодится этот клиент: свежий APK всегда на GitHub, ставится за пять минут, магазины не нужны.\n\nЧем больше людей пользуется, тем быстрее растёт проект.",
           "links": [
             {
               "label": "📤 Поделиться",
-              "url": "lxbox://share:L×Box @selfLink"
+              "url": "lxbox://share:Hapai @selfLink"
             },
             {
               "label": "📦 Страница загрузки",
@@ -154,7 +154,7 @@
       "i18n": {
         "en": {
           "title": "Where do your apps really connect?",
-          "message": "L×Box has a built-in traffic profiler. Start recording — and watch in real time every domain and IP each app on your phone talks to: DNS queries, connections, volumes.\n\nHandy for catching a chatty tracker or figuring out why some app won't work through VPN. The button below opens it right now.",
+          "message": "Hapai has a built-in traffic profiler. Start recording — and watch in real time every domain and IP each app on your phone talks to: DNS queries, connections, volumes.\n\nHandy for catching a chatty tracker or figuring out why some app won't work through VPN. The button below opens it right now.",
           "links": [
             {
               "label": "🔍 Open the profiler",
@@ -168,7 +168,7 @@
         },
         "ru": {
           "title": "Куда ходят твои приложения?",
-          "message": "В L×Box встроен профайлер трафика. Включи запись — и увидишь в реальном времени каждый домен и IP, к которому обращается любое приложение на телефоне: DNS-запросы, соединения, объёмы.\n\nПолезно, чтобы поймать болтливый трекер или понять, почему какое-то приложение не работает через VPN. Кнопка ниже откроет профайлер прямо сейчас.",
+          "message": "В Hapai встроен профайлер трафика. Включи запись — и увидишь в реальном времени каждый домен и IP, к которому обращается любое приложение на телефоне: DNS-запросы, соединения, объёмы.\n\nПолезно, чтобы поймать болтливый трекер или понять, почему какое-то приложение не работает через VPN. Кнопка ниже откроет профайлер прямо сейчас.",
           "links": [
             {
               "label": "🔍 Открыть профайлер",
@@ -190,7 +190,7 @@
       "i18n": {
         "en": {
           "title": "The core was built for the job",
-          "message": "To make L×Box do what it does, I had to take on the core itself — that's how sing-box-lx came about. It adds protocols the base sing-box doesn't have, battery-saving mechanisms when idle, custom DNS modes and load balancing. Take MASQUE to Cloudflare: traffic rides over QUIC/HTTP-3 and looks like plain HTTPS to DPI. All of it stays backward compatible: base sing-box configs work as-is.\n\nThe core is a standalone open project: it builds for Linux, macOS and Windows, and can run on a router. For desktop there's a ready-made Singbox Launcher.\n\nIf you value what's under the hood, star the core project too — it means as much to it as it does to the app itself.",
+          "message": "To make Hapai do what it does, I had to take on the core itself — that's how sing-box-lx came about. It adds protocols the base sing-box doesn't have, battery-saving mechanisms when idle, custom DNS modes and load balancing. Take MASQUE to Cloudflare: traffic rides over QUIC/HTTP-3 and looks like plain HTTPS to DPI. All of it stays backward compatible: base sing-box configs work as-is.\n\nThe core is a standalone open project: it builds for Linux, macOS and Windows, and can run on a router. For desktop there's a ready-made Singbox Launcher.\n\nIf you value what's under the hood, star the core project too — it means as much to it as it does to the app itself.",
           "links": [
             {
               "label": "⭐ Star sing-box-lx",
@@ -204,7 +204,7 @@
         },
         "ru": {
           "title": "Ядро писалось под задачу",
-          "message": "Чтобы L×Box делал то, что делает, пришлось взяться за само ядро: так появился sing-box-lx. В нём — поддержка протоколов, которых нет в базовом sing-box, механизмы экономии батареи в простое, свои DNS-режимы и балансировка нагрузки. Например, MASQUE к Cloudflare: трафик идёт поверх QUIC/HTTP-3 и со стороны выглядит как обычный HTTPS. При этом всё обратно совместимо: конфиги базового sing-box работают без правок.\n\nЯдро — самостоятельный открытый проект: собирается под Linux, macOS и Windows, его можно поставить хоть на роутер. А для компьютера есть готовый Singbox Launcher.\n\nЕсли ценишь то, что под капотом, — поставь звезду и проекту ядра: для него это такая же поддержка, как и для самого приложения.",
+          "message": "Чтобы Hapai делал то, что делает, пришлось взяться за само ядро: так появился sing-box-lx. В нём — поддержка протоколов, которых нет в базовом sing-box, механизмы экономии батареи в простое, свои DNS-режимы и балансировка нагрузки. Например, MASQUE к Cloudflare: трафик идёт поверх QUIC/HTTP-3 и со стороны выглядит как обычный HTTPS. При этом всё обратно совместимо: конфиги базового sing-box работают без правок.\n\nЯдро — самостоятельный открытый проект: собирается под Linux, macOS и Windows, его можно поставить хоть на роутер. А для компьютера есть готовый Singbox Launcher.\n\nЕсли ценишь то, что под капотом, — поставь звезду и проекту ядра: для него это такая же поддержка, как и для самого приложения.",
           "links": [
             {
               "label": "⭐ Звезда ядру sing-box-lx",
@@ -262,7 +262,7 @@
       "i18n": {
         "en": {
           "title": "Back the project with money",
-          "message": "I build L×Box in my spare time, while servers and infrastructure cost real money. The project runs on donations — it has no other income.\n\nIf the app has become part of your life, back it: one-time, any amount. Crypto works too — the USDT (TRON) address is on the About screen, other options are behind the button.\n\nThis is the last asking message. From here on — only news and useful stuff. Thanks for reading this far.",
+          "message": "I build Hapai in my spare time, while servers and infrastructure cost real money. The project runs on donations — it has no other income.\n\nIf the app has become part of your life, back it: one-time, any amount. Crypto works too — the USDT (TRON) address is on the About screen, other options are behind the button.\n\nThis is the last asking message. From here on — only news and useful stuff. Thanks for reading this far.",
           "links": [
             {
               "label": "💰 Support the project",
@@ -276,7 +276,7 @@
         },
         "ru": {
           "title": "Поддержи проект деньгами",
-          "message": "L×Box я делаю в свободное время, а серверы и инфраструктура стоят денег. Проект живёт на донаты — других источников у него нет.\n\nЕсли приложение стало частью твоей жизни, поддержи его: разово, любой суммой. Криптой тоже можно — адрес USDT (TRON) есть на экране About, остальные способы за кнопкой.\n\nЭто последнее сообщение с просьбой. Дальше — только новости и полезное. Спасибо, что дочитал до конца.",
+          "message": "Hapai я делаю в свободное время, а серверы и инфраструктура стоят денег. Проект живёт на донаты — других источников у него нет.\n\nЕсли приложение стало частью твоей жизни, поддержи его: разово, любой суммой. Криптой тоже можно — адрес USDT (TRON) есть на экране About, остальные способы за кнопкой.\n\nЭто последнее сообщение с просьбой. Дальше — только новости и полезное. Спасибо, что дочитал до конца.",
           "links": [
             {
               "label": "💰 Поддержать проект",

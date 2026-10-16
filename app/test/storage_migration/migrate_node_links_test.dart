@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/storage_migration/migrate_storage.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/storage_migration/migrate_storage.dart';
 
 import '../parser/engine_test_setup.dart';
 
@@ -246,7 +246,7 @@ void main() {
       expect((ruleRecord['group'] as Map)['members_rule'],
           {'include': 'DE', 'exclude': 'slow'});
       expect(ruleRecord.containsKey('members_rule'), isFalse,
-          reason: 'поле стороны LxBox лежит в group (контракт 1.0.1)');
+          reason: 'поле стороны Hapai лежит в group (контракт 1.0.1)');
     });
 
     test('документ формы 1.0 ранней сборки с autogroup:// мигрирует на месте',

@@ -62,7 +62,7 @@ The feature protects three principles:
 - **P5. External commands are off by default.** While "Accept automation
   commands" is off, neither a direct command nor an automation plugin is
   executed. **Witness:** manual check — `am broadcast -a
-  com.leadaxe.lxbox.START_VPN` with the toggle off does nothing.
+  studio.creater120.hapai.START_VPN` with the toggle off does nothing.
   **Mutation:** intake enabled on a clean install.
 - **P6. Command preconditions are checked before the action.** An empty
   `tag`/`group` → `bad_request`; no group selected, the tunnel down or the app
@@ -131,13 +131,13 @@ the user is `docs/AUTOMATION.md` (+ `AUTOMATION.ru.md`).
 ## Inputs / Outputs
 
 **Inputs:** a tile touch and its long press; an icon menu item; commands
-`com.leadaxe.lxbox.<ACTION>` with extras; automation plugin calls (action and
+`studio.creater120.hapai.<ACTION>` with extras; automation plugin calls (action and
 condition check); tunnel status; node/group changes, subscription update
 results, a found app update.
 
 **Outputs:** tunnel start/stop and app actions (node and group change, config
 rebuild, subscription update, network reset, URL test); the tile look and the
-icon menu contents; events `com.leadaxe.lxbox.event.<EVENT>`; the condition
+icon menu contents; events `studio.creater120.hapai.event.<EVENT>`; the condition
 answer (satisfied / not satisfied / unknown); log lines with the `automation`
 filter.
 
@@ -196,8 +196,8 @@ tile touch / menu item / command / plugin
 | Function | What it does | Promises | File |
 |----------|--------------|----------|------|
 | Quick toggle | Turns the tunnel on or off with one touch from the Quick Settings tile or the app icon menu; both show the current state. | P1–P4, P11 | [quick-toggle.md](FUNCTIONS/quick-toggle.md) |
-| Command intake | Executes public `com.leadaxe.lxbox.*` commands behind one main toggle, checks preconditions and answers a failure with an error event. | P5–P8, P11 | [command-intake.md](FUNCTIONS/command-intake.md) |
-| Outbound events | Sends `com.leadaxe.lxbox.event.*` broadcasts for enabled categories with rate limiting, and confirms or rejects commands in request-response scenarios. | P7–P10, P13, P14 | [outbound-events.md](FUNCTIONS/outbound-events.md) |
+| Command intake | Executes public `studio.creater120.hapai.*` commands behind one main toggle, checks preconditions and answers a failure with an error event. | P5–P8, P11 | [command-intake.md](FUNCTIONS/command-intake.md) |
+| Outbound events | Sends `studio.creater120.hapai.event.*` broadcasts for enabled categories with rate limiting, and confirms or rejects commands in request-response scenarios. | P7–P10, P13, P14 | [outbound-events.md](FUNCTIONS/outbound-events.md) |
 | Automation plugin | Adds LxBox actions and conditions to Tasker-compatible apps, with node and group pick lists and condition answers without starting the UI. | P5, P12 | [automation-plugin.md](FUNCTIONS/automation-plugin.md) |
 
 ## Related features

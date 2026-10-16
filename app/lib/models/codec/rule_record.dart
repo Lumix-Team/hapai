@@ -3,7 +3,7 @@
 ///
 /// **Запись = метаданные приложения + `body` = правило sing-box как есть.**
 /// Метаданные — `kind`, `id`, `name`, `enabled`, `num`, `refs`, `ref`, `vars`;
-/// поля LxBox рядом с телом — `dns{}`, `resolve{}`, `update_interval_hours`
+/// поля Hapai рядом с телом — `dns{}`, `resolve{}`, `update_interval_hours`
 /// (srs), `verbatim` (inline).
 ///
 /// Один кодек на хранение, бэкап, файл правил, секции узла и Debug API, поэтому
@@ -106,7 +106,7 @@ List<dynamic>? _arrayOf(String text) {
   }
 }
 
-/// Правило LxBox → запись 1.0.
+/// Правило Hapai → запись 1.0.
 Map<String, dynamic> ruleToRecord(CustomRule r) {
   final out = <String, dynamic>{
     'kind': r is CustomRuleJson ? 'inline' : r.kind.name,
@@ -179,7 +179,7 @@ Map<String, dynamic> _ruleBody(CustomRule r, {required bool includeMatch}) {
   return b;
 }
 
-/// Запись 1.0 → правило LxBox.
+/// Запись 1.0 → правило Hapai.
 ///
 /// [unknownAsVerbatim] — путь хранения: inline-запись, тело которой модель не
 /// выражает (незнакомый матчер, `rule_set`, `action` кроме `reject`,

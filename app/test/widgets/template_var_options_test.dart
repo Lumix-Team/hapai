@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/widgets/template_var_list.dart';
-import 'package:lxbox/widgets/var_values_model.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/widgets/template_var_list.dart';
+import 'package:hapai/widgets/var_values_model.dart';
 
 /// §555 / задача 570 — `options` и `options_open` в редакторе переменных
 /// (TEMPLATE_LANG §2.1, SPEC 143 D-125): `text_list` + `options` —

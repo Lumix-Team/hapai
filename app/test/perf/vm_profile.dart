@@ -135,4 +135,4 @@ String _fnName(Map f) {
 /// Код приложения: `resolvedUrl` у профилировщика бывает и `package:`, и
 /// `file://` — смотря как VM загрузила библиотеку.
 bool _isOwn(String url) =>
-    url.startsWith('package:lxbox/') || url.contains('/app/lib/');
+    url.startsWith('package:hapai/') || url.contains('/app/lib/');

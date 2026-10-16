@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/services/parser/json_parsers.dart';
-import 'package:lxbox/services/parser/uri_parsers.dart';
-import 'package:lxbox/services/parser/uri_utils.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/services/parser/json_parsers.dart';
+import 'package:hapai/services/parser/uri_parsers.dart';
+import 'package:hapai/services/parser/uri_utils.dart';
 
 import 'engine_test_setup.dart';
 

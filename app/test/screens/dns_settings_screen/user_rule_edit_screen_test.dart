@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/screens/dns_settings_screen/user_rule_edit_screen.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/screens/dns_settings_screen/user_rule_edit_screen.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 // §626 ревизия 2 — полноэкранный редактор DNS-правила: создание, правка,
 // Save, битый JSON, Back с правкой → диалог Unsaved changes, без правки —

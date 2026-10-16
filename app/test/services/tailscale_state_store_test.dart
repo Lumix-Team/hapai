@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/tailscale_state/state_keys.dart';
-import 'package:lxbox/services/tailscale_state/state_store.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/tailscale_state/state_keys.dart';
+import 'package:hapai/services/tailscale_state/state_store.dart';
 
 /// §445 — каталоги состояния узлов Tailscale: ключи узлов, индекс
 /// `tailscale_state.json`, реестр (переименование, перенос, удаление),

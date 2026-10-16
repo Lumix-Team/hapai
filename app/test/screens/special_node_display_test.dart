@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/home/special_node_display.dart';
+import 'package:hapai/screens/home/special_node_display.dart';
 
 /// §125 — подмена служебных нод (direct/auto) по ТИПУ из конфига, не по маске.
 void main() {

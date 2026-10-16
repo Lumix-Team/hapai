@@ -4,17 +4,17 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/direction_mutations.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/direction_mutations.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 import '../parser/engine_test_setup.dart';
 

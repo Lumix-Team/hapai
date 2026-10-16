@@ -1,28 +1,28 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/import_rule.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/models/subscription_meta.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
-import 'package:lxbox/services/lx_backup_import.dart';
-import 'package:lxbox/services/lx_backup_slice.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/import_rule.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/models/subscription_meta.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
+import 'package:hapai/services/lx_backup_import.dart';
+import 'package:hapai/services/lx_backup_slice.dart';
 
 import '../parser/engine_test_setup.dart';
 
 /// §439 §1.3 — LX Backup 1.0 = срез записи хранения одной таблицей полей
-/// (`lx_backup_slice.dart`): поле контракта едет, настройка LxBox без дома в
+/// (`lx_backup_slice.dart`): поле контракта едет, настройка Hapai без дома в
 /// 1.0 срезается одним `backup_local_only_dropped` на сущность, рантайм и
 /// маркеры — молча. Флаг Л2 `declared` снимает срез с поля: оно едет, импорт
-/// его знает и применяет. Контракт 1.0.1 объявил поля стороны LxBox
+/// его знает и применяет. Контракт 1.0.1 объявил поля стороны Hapai
 /// (`BACKUP.md` §2): в таблице они `declared`, срезается и называется только
 /// DNS-правило `kind: srs`. Механизм среза необъявленной настройки проверяется
 /// подменой таблицы ([_settingsUndeclared]).
@@ -61,7 +61,7 @@ SubscriptionServers _subscription({
       onUpdateAction: onUpdateAction,
     );
 
-/// Состояние со всеми настройками LxBox из §1.3, отличными от умолчания.
+/// Состояние со всеми настройками Hapai из §1.3, отличными от умолчания.
 ({
   List<ServerList> lists,
   List<SourceChain> chains,
@@ -161,7 +161,7 @@ List<String> _lines(List<LxBackupWarning> warnings) =>
   return (file: plan.file, lists: plan.lists, chains: plan.chains);
 }
 
-/// Таблица, в которой настройки LxBox контрактом НЕ объявлены (форма до 1.0.1):
+/// Таблица, в которой настройки Hapai контрактом НЕ объявлены (форма до 1.0.1):
 /// механизм среза с названием.
 List<BackupField> _settingsUndeclared() => [
       for (final f in kBackupFields)
@@ -394,7 +394,7 @@ void main() {
   });
 
   group('Л2: declared — поле едет и применяется', () {
-    test('таблица объявляет ровно поля стороны LxBox контракта (tls — 1.1.117)', () {
+    test('таблица объявляет ровно поля стороны Hapai контракта (tls — 1.1.117)', () {
       expect(
         [
           for (final f in kBackupFields)
@@ -535,7 +535,7 @@ void main() {
       importRulesEnabled: false,
       onUpdateAction: SubscriptionOnUpdateAction.none,
     );
-    // Файл стороны, которая полей LxBox не носит (лаунчер): подписка тем же
+    // Файл стороны, которая полей Hapai не носит (лаунчер): подписка тем же
     // URL, без detour_policy/import_rules/on_update_action.
     final launcherFile = jsonEncode({
       'lx_backup': 2,

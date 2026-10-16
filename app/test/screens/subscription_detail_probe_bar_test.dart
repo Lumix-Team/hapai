@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscription_detail_screen.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscription_detail_screen.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
 
 NodeSpec _node(String label) => VlessSpec(
       id: label,

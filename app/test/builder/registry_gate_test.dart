@@ -9,9 +9,9 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/services/builder/registry_gate.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/services/builder/registry_gate.dart';
 
 import '../storage_migration/golden_harness.dart';
 

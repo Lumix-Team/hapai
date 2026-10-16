@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/services/debug/handlers/rules.dart';
-import 'package:lxbox/services/debug/serializers/rules.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/services/debug/handlers/rules.dart';
+import 'package:hapai/services/debug/serializers/rules.dart';
 
 /// §256 — read/write симметрия DNS-опции правила в Debug API.
 ///

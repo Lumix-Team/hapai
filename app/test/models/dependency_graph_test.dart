@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dependency_graph.dart';
+import 'package:hapai/models/dependency_graph.dart';
 
 /// §355 — граф detour-зависимостей: health-правила и BFS-распространение.
 void main() {

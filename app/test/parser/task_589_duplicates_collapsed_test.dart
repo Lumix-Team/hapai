@@ -8,13 +8,13 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller/core_reject_ops.dart'
+import 'package:hapai/controllers/subscription_controller/core_reject_ops.dart'
     show stampNodeWarnings, unstampCoreRejected;
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import '../contract_paths.dart';
 import 'engine_test_setup.dart';

@@ -3,7 +3,7 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/source/line_info.dart';
 
-import 'package:lxbox/services/l10n/plural_resolver.dart';
+import 'package:hapai/services/l10n/plural_resolver.dart';
 
 // §285 Ф3 — natural-key CI-гейт (аналог мёртвого arb_check для ARB-мира).
 // Держит call-site'ы getLocalText и словарь assets/l10n/<tag>/ui.json в

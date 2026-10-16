@@ -1494,7 +1494,7 @@ The health model and the non-goals are in [the §355 spec](spec/tasks/355-detour
 
 ## Dart `BoxVpnClient` API surface
 
-A thin client over three channels (`com.leadaxe.lxbox/methods` plus two EventChannels).
+A thin client over three channels (`studio.creater120.hapai/methods` plus two EventChannels).
 
 **Singleton + DI:**
 - In production it is `BoxVpnClient.I` (or `BoxVpnClient()`, an alias of the singleton kept for backward compatibility).
@@ -1606,8 +1606,8 @@ The three Flutter–Android channels live in `VpnPlugin.kt`:
 
 | Channel | Type | Direction |
 |---|---|---|
-| `com.leadaxe.lxbox/methods` | MethodChannel | Bidirectional (Dart → Native; Dart ← Native for `wifi_history`) |
-| `com.leadaxe.lxbox/status_events` | EventChannel | Native → Dart (TunnelStatus broadcasts) |
+| `studio.creater120.hapai/methods` | MethodChannel | Bidirectional (Dart → Native; Dart ← Native for `wifi_history`) |
+| `studio.creater120.hapai/status_events` | EventChannel | Native → Dart (TunnelStatus broadcasts) |
 | `lxbox/coreLog` | EventChannel | Native → Dart (sing-box log lines) |
 
 **The MethodChannel methods** (the groups follow the `_Methods` constants in `box_vpn_client.dart`):
@@ -1672,7 +1672,7 @@ cursor line stayed under the keyboard. The native view has a full
 
 | Side | What |
 |---|---|
-| Kotlin | [`SoraEditorPlatformView.kt`](../app/android/app/src/main/kotlin/com/leadaxe/lxbox/editor/SoraEditorPlatformView.kt): view type `lxbox/sora_editor`, a `MethodChannel` per view `com.leadaxe.lxbox/sora_editor_<id>` |
+| Kotlin | [`SoraEditorPlatformView.kt`](../app/android/app/src/main/kotlin/com/leadaxe/lxbox/editor/SoraEditorPlatformView.kt): view type `lxbox/sora_editor`, a `MethodChannel` per view `studio.creater120.hapai/sora_editor_<id>` |
 | Assets | `app/android/app/src/main/assets/sora/`: TextMate grammars JSON, INI (VS Code, MIT) and URI (own), token themes `lx-light/lx-dark.json`; TextMate registries are process singletons |
 | R8 | [`proguard-sora.pro`](../app/android/app/proguard-sora.pro): keep for jcodings/joni/tm4e/sora — the TextMate engine loads classes by name |
 | Not Android | `flutter test` and desktop draw a `TextField` stub with the same layout (gate `Platform.isAndroid`, not `defaultTargetPlatform`) |
@@ -2132,7 +2132,7 @@ LxBox is a monolith, but architecturally it holds several self-contained layers 
 **The public API surface:** `BoxVpnClient.I` (see the [Dart `BoxVpnClient` API surface](#dart-boxvpnclient-api-surface) section).
 
 **The coupling with LxBox (to be broken before extraction):**
-- **The channel names are hardcoded** — `com.leadaxe.lxbox/methods`, `com.leadaxe.lxbox/status_events`, `lxbox/coreLog`.
+- **The channel names are hardcoded** — `studio.creater120.hapai/methods`, `studio.creater120.hapai/status_events`, `lxbox/coreLog`.
 - **The SharedPreferences keys are hardcoded** — `boxvpn_boot.{auto_start_vpn, keep_vpn_on_exit, background_mode, core_logs_enabled, …}`.
 - **The notification icon and channel name** — `ServiceNotification.kt` references `R.drawable.ic_notification`.
 - **The manifest declarations** — the package must **document** the permissions it requires.

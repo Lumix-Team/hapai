@@ -7,9 +7,9 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/services/contract/body_sanitizer.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/services/contract/body_sanitizer.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 
 /// Пин ядра, на котором сверена схема (`body.core` реестра): под ним

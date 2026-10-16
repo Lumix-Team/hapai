@@ -27,7 +27,7 @@ class UpdateChecker {
   /// Schema контролируем сами; raw-endpoint cdn-cached, anti-abuse лояльнее.
   static const _repoFallback =
       'https://raw.githubusercontent.com/Leadaxe/LxBox/main/docs/latest.json';
-  static const _userAgent = 'LxBox';
+  static const _userAgent = 'Hapai';
   static const _httpTimeout = Duration(seconds: 10);
   static const _minCheckInterval = Duration(hours: 24);
 

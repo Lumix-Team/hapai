@@ -3,18 +3,18 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/models/singbox_entry.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/contract/warning_codes.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/models/singbox_entry.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/contract/warning_codes.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import 'corpus_warnings.dart';
 
-// Конформанс-раннер корпуса ТЕЛ подписки (SPEC 103, фаза 2), сторона LxBox.
+// Конформанс-раннер корпуса ТЕЛ подписки (SPEC 103, фаза 2), сторона Hapai.
 // Аналог core/config/contract_body_test.go — гоняет тот же
 // contract/corpus/body/**/*.body через decode() → parseAll() и сравнивает
 // состав узлов с ожиданиями лаунчера.
@@ -150,7 +150,7 @@ List<String> _expectedSignatures(Map<String, dynamic> data) {
 
 /// Отбраковка из ожидания: нормативны `ref` и `code`, `reason` — НЕТ
 /// (corpus/README «Отбраковки и meta.extension», D-088). `reason` — текст
-/// СТОРОНЫ: у лаунчера формат ошибки Go, у LxBox свой, и побайтовая сверка
+/// СТОРОНЫ: у лаунчера формат ошибки Go, у Hapai свой, и побайтовая сверка
 /// заставила бы вторую сторону копировать чужие строки.
 ///
 /// `code` необязателен: ожидание без него проверяется только по `ref`.
@@ -257,7 +257,7 @@ void main() {
         // проверяет и прячет настоящие расхождения.
         final ext = (expected['meta'] as Map?)?['extension'];
         if (ext is String && ext.isNotEmpty && ext != _thisSide) {
-          markTestSkipped('meta.extension=$ext — схемы у LxBox нет');
+          markTestSkipped('meta.extension=$ext — схемы у Hapai нет');
           return;
         }
 

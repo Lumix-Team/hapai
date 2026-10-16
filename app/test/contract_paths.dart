@@ -9,7 +9,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 /// Бандлируемое зеркало реестра (в git, в APK).
 const kRegistryRoot = 'assets/contract';

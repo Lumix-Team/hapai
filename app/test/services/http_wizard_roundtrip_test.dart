@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/tls_spec.dart';
-import 'package:lxbox/services/parser/uri_utils.dart' show newUuidV4;
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/tls_spec.dart';
+import 'package:hapai/services/parser/uri_utils.dart' show newUuidV4;
 
 /// §222 — verify HttpSpec → JSON outbound → UserServer round-trip
 /// preserves user-chosen tag verbatim (тот же lossless-путь, что SOCKS §074:

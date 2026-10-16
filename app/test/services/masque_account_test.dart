@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/warp/masque_account.dart';
+import 'package:hapai/services/warp/masque_account.dart';
 
 /// §130 — MasqueAccount round-trip + redaction + URI.
 void main() {

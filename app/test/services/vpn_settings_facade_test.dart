@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/vpn_settings/vpn_settings_facade.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/vpn_settings/vpn_settings_facade.dart';
 
 /// §293 — VpnSettingsFacade.applyVpnMode: три инварианта, которые раньше нёс
 /// только UI, а Debug пропускал (реальная дивергенция stale has_tun).
 void main() {
   late Directory tmp;
   const pathChannel = MethodChannel('plugins.flutter.io/path_provider');
-  const methodsChannel = MethodChannel('com.leadaxe.lxbox/methods');
+  const methodsChannel = MethodChannel('studio.creater120.hapai/methods');
   final hasTunCalls = <bool>[];
 
   setUp(() async {

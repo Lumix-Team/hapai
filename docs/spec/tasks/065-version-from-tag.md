@@ -142,7 +142,7 @@ UpdateChecker для `0.0.0-dev` сравнит с latest GH tag и предло
 После tagged release v1.8.2:
 1. CI собрал APK с `versionName=1.8.2`, `versionCode=N` (= commits count HEAD на момент tag)
 2. `adb install -r LxBox-v1.8.2-arm64-v8a.apk` — поверх v1.8.1
-3. `dumpsys package com.leadaxe.lxbox | grep version` → `versionName=1.8.2 versionCode=N`
+3. `dumpsys package studio.creater120.hapai | grep version` → `versionName=1.8.2 versionCode=N`
 4. App → Settings → About → показывает `v1.8.2`
 5. UpdateChecker → silent (latest tag == current version)
 6. Debug API `/state` показывает `app_version: 1.8.2+N`

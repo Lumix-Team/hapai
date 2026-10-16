@@ -42,7 +42,7 @@ Future<DebugResponse> helpHandler(DebugRequest req, DebugContext ctx) async {
 // для LLM-агентов, шпаргалок, и потенциальных wrapper'ов (MCP etc.).
 
 const _capabilityText = '''
-=== L×Box Debug API ===
+=== Hapai Debug API ===
 
 Localhost HTTP server for dev introspection and control. Runs inside the
 Flutter app when "Debug API toggle" is enabled in App Settings → Developer.

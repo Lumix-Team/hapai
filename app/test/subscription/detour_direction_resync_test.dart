@@ -4,15 +4,15 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/direction_mutations.dart';
-import 'package:lxbox/services/record_vars.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/direction_mutations.dart';
+import 'package:hapai/services/record_vars.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §248 — зеркальный ресинк in-memory `_entries` контроллера после
 /// storage-heal detour-ссылок (`syncDetourDirectionRefsCleared`): без него

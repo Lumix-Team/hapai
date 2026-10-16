@@ -4,10 +4,10 @@ import 'dart:io';
 import 'package:collection/collection.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../contract_paths.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/builder/if_engine.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/builder/if_engine.dart';
 
-// Конформанс-раннер корпуса шаблонов (SPEC 103, фаза 3, D-047), сторона LxBox.
+// Конформанс-раннер корпуса шаблонов (SPEC 103, фаза 3, D-047), сторона Hapai.
 // Аналог core/template/contract_template_test.go в singbox-launcher — гоняет
 // ТОТ ЖЕ корпус contract/corpus/template/** через walk()/makeResolver() и
 // сравнивает с <case>.expected.json.

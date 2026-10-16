@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/tls_policy.dart';
-import 'package:lxbox/models/template_vars.dart';
-import 'package:lxbox/models/tls_spec.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/probe/probe_config.dart';
-import 'package:lxbox/services/probe/probe_controller.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/tls_policy.dart';
+import 'package:hapai/models/template_vars.dart';
+import 'package:hapai/models/tls_spec.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/probe/probe_config.dart';
+import 'package:hapai/services/probe/probe_controller.dart';
 
 import '../parser/engine_test_setup.dart';
 

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/record_codec.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/record_codec.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 /// D-111 (BACKUP.md §2 «Одно правило — одно тело») на обоих входах LX Backup:
 /// запись 1.0 с массивом тел в `body` и правило `kind: json` 0.x с массивом в

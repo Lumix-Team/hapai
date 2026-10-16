@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/config_node.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/screens/chain_edit/chain_hop_candidate.dart';
-import 'package:lxbox/screens/chain_edit/chain_hop_targets.dart';
+import 'package:hapai/models/config_node.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/screens/chain_edit/chain_hop_candidate.dart';
+import 'package:hapai/screens/chain_edit/chain_hop_targets.dart';
 
 // §393 C7 — что можно поставить позицией цепочки. Позиция это ссылка на тег
 // СОБРАННОГО конфига: предлагать имена, которых в конфиге не будет, значило бы

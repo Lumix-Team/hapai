@@ -97,7 +97,7 @@ class DonateMethods {
     final client = httpClientForTesting ?? http.Client();
     try {
       final resp = await client
-          .get(Uri.parse(_url), headers: {'User-Agent': 'LxBox/1.x'})
+          .get(Uri.parse(_url), headers: {'User-Agent': 'Hapai/1.x'})
           .timeout(_httpTimeout);
       if (resp.statusCode == 200) {
         final parsed = _parse(resp.body);

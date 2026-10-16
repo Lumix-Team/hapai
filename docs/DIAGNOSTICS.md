@@ -491,9 +491,9 @@ A live map of MASQUE endpoints (which IPs and ports should answer at all) is in
    - `android.permission.NEARBY_WIFI_DEVICES` — API 33+; **required** for a real SSID once `targetSdk≥33`. Without it `WifiInfo.ssid` is `"<unknown ssid>"` and Wi-Fi rules silently fail to match
 3. Checking the current state:
    ```bash
-   adb shell dumpsys package com.leadaxe.lxbox | grep -E "granted=" | grep -iE "location|nearby"
+   adb shell dumpsys package studio.creater120.hapai | grep -E "granted=" | grep -iE "location|nearby"
    ```
-4. The cure: either grant through the Flutter dialog (there is an `Allow Wi-Fi info` button for one-tap NEARBY plus `Open Settings` for BACKGROUND_LOCATION), or `adb shell pm grant com.leadaxe.lxbox android.permission.NEARBY_WIFI_DEVICES` for a quick test
+4. The cure: either grant through the Flutter dialog (there is an `Allow Wi-Fi info` button for one-tap NEARBY plus `Open Settings` for BACKGROUND_LOCATION), or `adb shell pm grant studio.creater120.hapai android.permission.NEARBY_WIFI_DEVICES` for a quick test
 5. Alternatively, remove the Wi-Fi rules from the config. If `cs.needWIFIState() == false`, the permission check is skipped.
 
 **A diagnostic marker**: on a successful startup logcat shows
@@ -556,7 +556,7 @@ current network asynchronously, a moment after registration. A steady
 
 ```bash
 adb logcat -d | grep -E "WifiInfoReader|WifiStateCache|PIW" | tail
-adb shell dumpsys package com.leadaxe.lxbox | grep -E "granted=" | grep -iE "location|nearby"
+adb shell dumpsys package studio.creater120.hapai | grep -E "granted=" | grep -iE "location|nearby"
 adb shell settings get secure location_mode   # 0 = off
 ```
 
@@ -617,7 +617,7 @@ hijacker is real; go find it.
 | `POST /action/stop-vpn` / start-vpn | The tun teardown, RAM state | At the user's request |
 | `PUT /config` | The live config is replaced, not gracefully | Only in an experiment, with `config_locked=true` set beforehand |
 | `PUT /settings/*` | Changes storage at runtime, which may trigger a rebuild | If changing it for a test, set `config_locked` beforehand |
-| `adb shell am force-stop com.leadaxe.lxbox` | A complete RAM wipe | After a snapshot |
+| `adb shell am force-stop studio.creater120.hapai` | A complete RAM wipe | After a snapshot |
 
 **Auto-rebuild safety:** to experiment with the config through `PUT /config`,
 first `PUT /settings/config_locked {"locked": true}`. Then any UI-triggered

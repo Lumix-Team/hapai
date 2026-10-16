@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:asn1lib/asn1lib.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/warp/masque_keys.dart';
+import 'package:hapai/services/warp/masque_keys.dart';
 
 /// §130 — контракт DER-ключей MASQUE с ядром (sing-box-lx SPEC 021).
 ///

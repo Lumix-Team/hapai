@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/storage_migration/legacy_form_v0.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/storage_migration/legacy_form_v0.dart';
 
 /// §294 → §439 — чтение DNS-записей формы хранения 2.23.2 (`dns_options`)
 /// замороженными читателями `legacy_form_v0.dart`: миграция формы и файл

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/screens/custom_rule_edit/edit_controller.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/screens/custom_rule_edit/edit_controller.dart';
 
 /// §381 — `snapshot()` обязан переносить `orderNum` (ось §370) из `initial`.
 ///

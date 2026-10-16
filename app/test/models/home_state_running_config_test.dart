@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/home_state.dart';
+import 'package:hapai/models/home_state.dart';
 
 /// §311 — running config от ядра (клиентская часть kernel SPEC 036).
 ///

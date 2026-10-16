@@ -122,7 +122,7 @@ class _LiveEventsTabState extends State<LiveEventsTab> {
               onTap: () {
                 Navigator.pop(sheetCtx);
                 SharePlus.instance.share(
-                    ShareParams(text: json, subject: 'LxBox profiler export'));
+                    ShareParams(text: json, subject: 'Hapai profiler export'));
               },
             ),
             ListTile(

@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/builder/post_steps.dart';
-import 'package:lxbox/services/builder/validator.dart';
-import 'package:lxbox/services/direction_mutations.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/builder/post_steps.dart';
+import 'package:hapai/services/builder/validator.dart';
+import 'package:hapai/services/direction_mutations.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 import '../storage_migration/golden_harness.dart';
 

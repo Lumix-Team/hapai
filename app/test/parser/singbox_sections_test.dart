@@ -1,15 +1,15 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/registry.dart';
-import 'package:lxbox/services/parser/engine/section_loader.dart';
+import 'package:hapai/services/contract/registry.dart';
+import 'package:hapai/services/parser/engine/section_loader.dart';
 
 import 'engine_test_setup.dart';
 
 /// §480 W5 — СЕКЦИИ ВИДА ИСТОЧНИКА `singbox`.
 ///
 /// Секции порождены механически (норма `MAPPER_ENGINE.md` §8a, ответ
-/// лаунчера на находку 7 LxBox: «да, генерируйте»), поэтому проверяет их
+/// лаунчера на находку 7 Hapai: «да, генерируйте»), поэтому проверяет их
 /// ЛИНТЕР ФОРМЫ, а не ревью глазами.
 ///
 /// **Граница волны.** `parseSingboxEntry` — читатель тела в модель — и форма

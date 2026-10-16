@@ -4,13 +4,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/debug_entry.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/subscription_node_list.dart';
-import 'package:lxbox/screens/subscriptions_screen/widgets/subscription_entry_subtitle.dart';
-import 'package:lxbox/services/app_log.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/debug_entry.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/subscription_node_list.dart';
+import 'package:hapai/screens/subscriptions_screen/widgets/subscription_entry_subtitle.dart';
+import 'package:hapai/services/app_log.dart';
+import 'package:hapai/services/settings_storage.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

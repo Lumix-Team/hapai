@@ -1,7 +1,7 @@
 // Фича 478 — разбор строки отказа ядра, PARSING_PRINCIPLES §9.1–§9.2.
 // Таблица примеров §9.2 взята дословно.
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/core_reject/core_error_parse.dart';
+import 'package:hapai/services/core_reject/core_error_parse.dart';
 
 void main() {
   group('PARSING_PRINCIPLES §9.2 — таблица примеров дословно', () {

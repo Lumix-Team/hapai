@@ -8,12 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/screens/dns_settings_screen.dart';
-import 'package:lxbox/services/l10n/locale_controller.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/template_loader.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/screens/dns_settings_screen.dart';
+import 'package:hapai/services/l10n/locale_controller.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/template_loader.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -35,7 +35,7 @@ class _FakePathProvider extends PathProviderPlatform
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const methods = MethodChannel('com.leadaxe.lxbox/methods');
+  const methods = MethodChannel('studio.creater120.hapai/methods');
   const ccStatus = MethodChannel('lxbox/cc/status');
   const ccGroups = MethodChannel('lxbox/cc/groups');
   final messenger =

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/error_humanize.dart';
+import 'package:hapai/services/error_humanize.dart';
 
 // §279 Phase 4 — humanizeError возвращает UiMsg; тесты ассертят английский
 // рендер (renderEn).

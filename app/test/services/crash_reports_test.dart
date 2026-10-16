@@ -4,9 +4,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/crash_banner_state.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/stderr_reader.dart';
+import 'package:hapai/services/crash_banner_state.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/stderr_reader.dart';
 
 /// §316 (пользовательская половина) — история краш-репортов ядра: чтение
 /// правильного файла, список, ротация, одноразовость плашки.

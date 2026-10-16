@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/widgets/big_text_view.dart';
+import 'package:hapai/widgets/big_text_view.dart';
 
 void main() {
   group('chunkTextLines', () {

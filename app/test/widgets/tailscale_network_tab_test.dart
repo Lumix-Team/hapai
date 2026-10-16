@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/services/tailscale_network.dart' show TailscalePathKind;
-import 'package:lxbox/vpn/cc_channel.dart';
-import 'package:lxbox/widgets/node_diagnostics_tab.dart';
-import 'package:lxbox/widgets/tailscale_network_tab.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/services/tailscale_network.dart' show TailscalePathKind;
+import 'package:hapai/vpn/cc_channel.dart';
+import 'package:hapai/widgets/node_diagnostics_tab.dart';
+import 'package:hapai/widgets/tailscale_network_tab.dart';
 
 /// Задача 581 — вкладка Network (состояния без данных, блок Exit node,
 /// устройства) и правка вкладки Diagnostics.

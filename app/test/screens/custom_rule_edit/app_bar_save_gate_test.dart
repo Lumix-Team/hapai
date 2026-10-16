@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/screens/custom_rule_edit_screen.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/screens/custom_rule_edit_screen.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 // §447 — Save в AppBar редактора правила идёт через ту же проверку, что Save
 // формы: массив или невалидный JSON не сохраняются, набранный текст остаётся

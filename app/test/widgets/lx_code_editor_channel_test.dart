@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/widgets/lx_code_editor.dart';
+import 'package:hapai/widgets/lx_code_editor.dart';
 
 /// §624 — Dart-логика нативного редактора без нативного view: канал
 /// подключается к заглушке (`debugAttachChannel`), натив изображают
 /// сообщения через тестовый messenger.
 void main() {
   const id = 7;
-  const channel = MethodChannel('com.leadaxe.lxbox/sora_editor_$id');
+  const channel = MethodChannel('studio.creater120.hapai/sora_editor_$id');
 
   late List<MethodCall> calls;
   String nativeText = '';

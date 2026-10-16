@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/subscriptions_screen/entry_delete_title.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/subscriptions_screen/entry_delete_title.dart';
 
 /// §603 — удаление своего сервера спрашивало «Delete subscription?».
 void main() {

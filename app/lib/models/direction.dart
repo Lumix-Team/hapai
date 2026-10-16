@@ -21,7 +21,7 @@ import 'parser_config.dart' show DirectionTemplate, DefaultDirection;
 /// §393 A3 — верхняя граница ДЕФОЛТНЫХ имён «VPN ①..VPN ⑩» (Unicode-блок
 /// Enclosed Alphanumerics кончается на ⑩). Лимитом на СОЗДАНИЕ Направлений
 /// больше НЕ является: паритет с лаунчером
-/// (`configtypes.NextDirectionTag` — потолка нет, лимит LxBox в 10 был
+/// (`configtypes.NextDirectionTag` — потолка нет, лимит Hapai в 10 был
 /// следствием интерфейса, а не модели). N>10 получает честное «VPN 11»
 /// текстом (см. [defaultDirectionLabel]).
 const int kMaxDirections = 10;

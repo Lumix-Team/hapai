@@ -57,7 +57,7 @@ CERT_VERSION=v2.21.0 CERT_DATE="September 2026" ./generate.sh recipients.tsv
 ## Бейдж Google Play
 
 Официальный asset размещён **как ссылка на страницу тестирования**
-(`play.google.com/apps/testing/com.leadaxe.lxbox`) — это разрешённый
+(`play.google.com/apps/testing/studio.creater120.hapai`) — это разрешённый
 лицензией сценарий. Бейдж нельзя перекрашивать, обрезать и перерисовывать,
 а также использовать так, будто Google удостоверяет сам сертификат:
 удостоверяющая сторона — автор приложения, его подпись стоит в футере.

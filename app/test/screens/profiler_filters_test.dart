@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/traffic_profiler.dart';
-import 'package:lxbox/screens/stats_screen/profiler_filter.dart';
-import 'package:lxbox/screens/stats_screen/profiler_filters.dart';
+import 'package:hapai/services/traffic_profiler.dart';
+import 'package:hapai/screens/stats_screen/profiler_filter.dart';
+import 'package:hapai/screens/stats_screen/profiler_filters.dart';
 
 /// §244 — тесты session-холдера фильтров профайлера (баг B4 с 4PDA: фильтр
 /// слетал при переключении вкладок). Инвариант: инстансы стабильны между

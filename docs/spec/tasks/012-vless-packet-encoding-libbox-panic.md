@@ -15,7 +15,7 @@
 ```
 App: L×Box, Version: 1.4.0
 Time: 2026-04-28 07:27:35
-#00 pc 0000000000880dc8  /data/app/.../com.leadaxe.lxbox-.../lib/arm64/libbox.so
+#00 pc 0000000000880dc8  /data/app/.../studio.creater120.hapai-.../lib/arm64/libbox.so
 ```
 
 Симптом со слов пользователя: «при подключённом чёрном списке» — речь про первую публичную подписку из встроенного `public-servers-manifest.json` (`BLACK_VLESS_RUS_mobile.txt`). VPN не стартует — это native crash в libbox.so, не «не подключилось к серверу».

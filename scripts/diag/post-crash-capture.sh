@@ -65,8 +65,8 @@ echo "→ device.txt"
   echo "=== getprop ==="
   adb $DEVICE_ARG shell getprop | grep -iE "ro.product.model|ro.build.version|ro.product.cpu.abi" | head -10
   echo
-  echo "=== dumpsys package com.leadaxe.lxbox | head ==="
-  adb $DEVICE_ARG shell "dumpsys package com.leadaxe.lxbox 2>/dev/null | head -30"
+  echo "=== dumpsys package studio.creater120.hapai | head ==="
+  adb $DEVICE_ARG shell "dumpsys package studio.creater120.hapai 2>/dev/null | head -30"
 } > "$OUT_DIR/device.txt" 2>&1
 
 # 2. Logcat dump — последние 5000 строк всего (без filter — фильтруем потом grep'ом)
@@ -75,7 +75,7 @@ adb $DEVICE_ARG logcat -d -t 5000 > "$OUT_DIR/logcat-all.txt" 2>&1
 
 # Прицельный фильтр на наш TAG + crash signatures
 echo "→ logcat-lxbox.txt (filtered)"
-grep -E "BoxVpnService|libbox|VpnPlugin|BoxApplication|sing-box|FATAL|SIGABRT|tombstone|com.leadaxe.lxbox|libc|DEBUG.*pid" \
+grep -E "BoxVpnService|libbox|VpnPlugin|BoxApplication|sing-box|FATAL|SIGABRT|tombstone|studio.creater120.hapai|libc|DEBUG.*pid" \
   "$OUT_DIR/logcat-all.txt" > "$OUT_DIR/logcat-lxbox.txt" 2>&1 || true
 
 # 3. Native crash dropbox (если есть)
@@ -92,11 +92,11 @@ adb $DEVICE_ARG shell "ls -la /data/tombstones/ 2>/dev/null" > "$OUT_DIR/tombsto
 # 5. dumpsys для нашего сервиса
 echo "→ dumpsys-service.txt"
 {
-  echo "=== dumpsys activity service com.leadaxe.lxbox/.vpn.BoxVpnService ==="
-  adb $DEVICE_ARG shell "dumpsys activity service com.leadaxe.lxbox/.vpn.BoxVpnService 2>/dev/null"
+  echo "=== dumpsys activity service studio.creater120.hapai/.vpn.BoxVpnService ==="
+  adb $DEVICE_ARG shell "dumpsys activity service studio.creater120.hapai/.vpn.BoxVpnService 2>/dev/null"
   echo
   echo "=== dumpsys meminfo ==="
-  adb $DEVICE_ARG shell "dumpsys meminfo com.leadaxe.lxbox 2>/dev/null | head -50"
+  adb $DEVICE_ARG shell "dumpsys meminfo studio.creater120.hapai 2>/dev/null | head -50"
 } > "$OUT_DIR/dumpsys-service.txt" 2>&1
 
 # 6. tun0 / network state (если VPN жив)

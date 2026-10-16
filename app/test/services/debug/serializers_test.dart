@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/debug/serializers/storage.dart';
-import 'package:lxbox/services/debug/serializers/subs.dart';
+import 'package:hapai/services/debug/serializers/storage.dart';
+import 'package:hapai/services/debug/serializers/subs.dart';
 
 void main() {
   group('maskSubscriptionUrl', () {

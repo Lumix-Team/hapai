@@ -112,7 +112,7 @@ Profile активируется, пока условие истинно. Host �
 
 ## Incoming actions (команды → L×Box)
 
-Все — broadcast intents. Префикс `com.leadaxe.lxbox.`.
+Все — broadcast intents. Префикс `studio.creater120.hapai.`.
 
 | Action | Extra | Эффект |
 |---|---|---|
@@ -141,7 +141,7 @@ Profile активируется, пока условие истинно. Host �
 
 ## Outgoing events (L×Box → наружу)
 
-Префикс `com.leadaxe.lxbox.event.`. Эмитятся только если включена
+Префикс `studio.creater120.hapai.event.`. Эмитятся только если включена
 соответствующая категория в Emit-настройках.
 
 | Event | Extras | Категория | Когда |
@@ -228,11 +228,11 @@ Task "Switch to Russia with confirmation":
 
 ### 1. Auto-disable VPN на домашнем Wi-Fi
 - Profile: Wi-Fi connected = `MyHomeWiFi`
-- Task: Send Intent `com.leadaxe.lxbox.STOP_VPN` (Broadcast)
+- Task: Send Intent `studio.creater120.hapai.STOP_VPN` (Broadcast)
 
 ### 2. Auto-enable на любом другом Wi-Fi
 - Profile: Wi-Fi connected = NOT `MyHomeWiFi`
-- Task: Send Intent `com.leadaxe.lxbox.START_VPN`
+- Task: Send Intent `studio.creater120.hapai.START_VPN`
 
 ### 3. Switch на Russia-node при запуске банка (с подтверждением)
 - Profile: App launched = `ru.bank.app`
@@ -242,7 +242,7 @@ Task "Switch to Russia with confirmation":
   3. If matched → Vibrate(50); else → Notify error
 
 ### 4. Уведомление при падении подписки
-- Profile: Event Received `com.leadaxe.lxbox.event.SUB_REFRESH_FAILED`
+- Profile: Event Received `studio.creater120.hapai.event.SUB_REFRESH_FAILED`
 - Task: Notify «📡 Sub %sub_id failed: %error»
 
 ### 5. Periodic mass-ping каждые 30 минут
@@ -257,7 +257,7 @@ Task "Switch to Russia with confirmation":
 - Trigger: Shake Device; Action: Send Intent `URLTEST_ALL`
 
 ### 7. Notification на часы при падении VPN
-- Profile: Event Received `com.leadaxe.lxbox.event.VPN_ERROR`
+- Profile: Event Received `studio.creater120.hapai.event.VPN_ERROR`
 - Task: Notify Wear «❌ VPN: %code — %message»
 
 ---
@@ -267,7 +267,7 @@ Task "Switch to Russia with confirmation":
 | Симптом | Причина | Решение |
 |---|---|---|
 | Команда не доходит | Мастер-toggle OFF | Включить в App Settings → Automation |
-| Тоже, но toggle ON | Неверный action / target не Broadcast Receiver / опечатка в `com.leadaxe.lxbox.…` | Сверить со списком команд; факт приёма — в logcat `adb logcat -s LxBoxIntent` (строка `received <action>`); результат команд — log filter `automation` |
+| Тоже, но toggle ON | Неверный action / target не Broadcast Receiver / опечатка в `studio.creater120.hapai.…` | Сверить со списком команд; факт приёма — в logcat `adb logcat -s LxBoxIntent` (строка `received <action>`); результат команд — log filter `automation` |
 | **Событие не приходит** (напр. `ACTIVE_NODE_CHANGED` не ловится) | **Категория события OFF** — проверять первым | Включить нужную категорию (для `ACTIVE_NODE_CHANGED` / `NODE_ALREADY_ACTIVE` — **State**) в App Settings → Automation → Outbound events. Пока категория выключена, событие не эмитится вовсе |
 | Событие приходит, но переменные (`%new_tag` и пр.) пустые | Экстры не объявлены в Tasker | В `Event → System → Intent Received` вручную добавить имена переменных-экстр (см. ниже) — Tasker не подхватывает их автоматически |
 | `SWITCH_NODE` не выбирает ноду | tag не существует / typo | Проверить log filter `automation` |
@@ -279,7 +279,7 @@ Task "Switch to Russia with confirmation":
 > **Объявление экстр в Tasker.** Событие несёт данные в intent-экстрах, но
 > Tasker не создаёт из них переменные сам — имена нужно прописать вручную в
 > `Event → System → Intent Received` (фильтр action — полное имя события, напр.
-> `com.leadaxe.lxbox.event.ACTIVE_NODE_CHANGED`), после чего они доступны как
+> `studio.creater120.hapai.event.ACTIVE_NODE_CHANGED`), после чего они доступны как
 > `%new_tag` и т.д. Ключи по событиям:
 > - `ACTIVE_NODE_CHANGED` — `old_tag`, `new_tag`, `group`, `reason`;
 > - `NODE_ALREADY_ACTIVE` — `tag`, `group`;

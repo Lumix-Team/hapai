@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/screens/direction_edit_screen.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/screens/direction_edit_screen.dart';
 
 // §442 — редактор Направления: interval больше idle_timeout сохранить можно,
 // сборка поднимет idle_timeout до interval. Форма показывает подсказку ровно

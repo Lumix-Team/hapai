@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/config_node.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/screens/chain_edit_screen.dart';
-import 'package:lxbox/services/contract/chain_strip.dart';
+import 'package:hapai/models/config_node.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/screens/chain_edit_screen.dart';
+import 'package:hapai/services/contract/chain_strip.dart';
 
 import '../../contract_paths.dart';
 

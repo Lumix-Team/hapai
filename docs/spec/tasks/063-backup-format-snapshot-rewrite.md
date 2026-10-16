@@ -61,7 +61,7 @@ Backup от 10 мая (`lxbox-backup-20260510-135255.json` на устройст
 
 ### Дополнительная проблема
 
-Native-side VPN system toggles живут в **`boxvpn_boot` SharedPreferences** ([BootReceiver.kt](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/BootReceiver.kt)) — это отдельный файл `/data/data/com.leadaxe.lxbox/shared_prefs/boxvpn_boot.xml`, не часть `lxbox_settings.json`. 5 toggles (`auto_start_vpn`, `keep_vpn_on_exit`, `background_mode`, `core_logs_enabled`, `allow_bypass`) **никогда не были в backup**. Это §052 surface — после переноса VPN System tab настроек в UI прыгающий gap'.
+Native-side VPN system toggles живут в **`boxvpn_boot` SharedPreferences** ([BootReceiver.kt](../../../app/android/app/src/main/kotlin/com/leadaxe/lxbox/vpn/BootReceiver.kt)) — это отдельный файл `/data/data/studio.creater120.hapai/shared_prefs/boxvpn_boot.xml`, не часть `lxbox_settings.json`. 5 toggles (`auto_start_vpn`, `keep_vpn_on_exit`, `background_mode`, `core_logs_enabled`, `allow_bypass`) **никогда не были в backup**. Это §052 surface — после переноса VPN System tab настроек в UI прыгающий gap'.
 
 ---
 

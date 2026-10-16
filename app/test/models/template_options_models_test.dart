@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/parser_config.dart';
+import 'package:hapai/models/parser_config.dart';
 
 /// §279 Phase 2 (§3.3 hardening) — typed-модели трёх raw-секций шаблона
 /// (dns_options.servers / ping_options.presets / speed_test_options.servers)

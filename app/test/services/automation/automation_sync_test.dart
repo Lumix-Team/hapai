@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/automation/automation_sync.dart';
-import 'package:lxbox/services/automation/event_emitter.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/services/automation/automation_sync.dart';
+import 'package:hapai/services/automation/event_emitter.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §605 — receiver'ы автоматизации выставляются по сохранённому тумблеру, а не
 /// только по нажатию в UI (бэкап и набор пишут переменную напрямую).

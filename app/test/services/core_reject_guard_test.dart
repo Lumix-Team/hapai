@@ -3,8 +3,8 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/core_reject_verdict.dart';
-import 'package:lxbox/services/core_reject/core_reject_guard.dart';
+import 'package:hapai/models/core_reject_verdict.dart';
+import 'package:hapai/services/core_reject/core_reject_guard.dart';
 
 /// Поддельное ядро: список узлов с тегами, каждый — годный либо негодный.
 /// `realStart`/`check` отвечают отказом на ПЕРВЫЙ негодный из ещё не

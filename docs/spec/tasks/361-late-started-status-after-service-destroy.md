@@ -91,7 +91,7 @@ JNI-вызов**. Возвращаясь, корутина идёт дальше
 ```
 NetworkAgentInfo{network{121} ni{VPN CONNECTED} InterfaceName: tun2
   TransportInfo: <VpnTransportInfo{... sessionId=sing-box ...}>
-  OwnerUid: 10193     ← appId com.leadaxe.lxbox
+  OwnerUid: 10193     ← appId studio.creater120.hapai
 ```
 
 `isForeignVpnActive` владельца не проверял: любая сеть с `TRANSPORT_VPN`

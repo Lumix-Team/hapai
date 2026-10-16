@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §125 F0.3 / §393 A2 — one-shot миграция состава Направлений:
 /// легаси `channels`/`channels_migrated` → `directions`/`directions_migrated`

@@ -1740,10 +1740,10 @@ Automation.
 
 | Команда | Параметр |
 |---|---|
-| `com.leadaxe.lxbox.SWITCH_NODE` | `tag` — тег узла |
-| `com.leadaxe.lxbox.SET_GROUP` | `group` — тег группы, например `vpn-1` |
-| `com.leadaxe.lxbox.URLTEST_GROUP` | `group` — тег группы, например `vpn-1` |
-| `com.leadaxe.lxbox.REFRESH_SUBS` | `force` |
+| `studio.creater120.hapai.SWITCH_NODE` | `tag` — тег узла |
+| `studio.creater120.hapai.SET_GROUP` | `group` — тег группы, например `vpn-1` |
+| `studio.creater120.hapai.URLTEST_GROUP` | `group` — тег группы, например `vpn-1` |
+| `studio.creater120.hapai.REFRESH_SUBS` | `force` |
 
 Секция **Outbound events (emit)** отдаёт события L×Box наружу. Категорий
 три, все выключены по умолчанию:

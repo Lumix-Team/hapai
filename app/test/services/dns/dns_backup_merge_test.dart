@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/services/dns/dns_backup.dart';
-import 'package:lxbox/services/lx_backup.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/services/dns/dns_backup.dart';
+import 'package:hapai/services/lx_backup.dart';
 
 /// §439 §6.5 п. 12 — слияние DNS-правил секции `dns` (BACKUP.md §9 п. 5):
 /// файл — сериализация состояния, и одинаковые пользовательские правила в нём

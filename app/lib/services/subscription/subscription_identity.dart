@@ -23,7 +23,7 @@ class SubscriptionIdentity {
   static const varVerOs = 'subscription_ver_os';
   static const varDeviceModel = 'subscription_device_model';
 
-  /// Пусто = слать брендированный `LxBox-android/<ver>` ([resolveSubscriptionUserAgent]).
+  /// Пусто = слать брендированный `Hapai-android/<ver>` ([resolveSubscriptionUserAgent]).
   static String userAgentOverride = '';
 
   /// Слать ли `x-hwid` + device-meta. OFF по умолчанию (решение №3).

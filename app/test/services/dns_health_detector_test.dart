@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/dns_health_detector.dart';
+import 'package:hapai/services/dns_health_detector.dart';
 
 // §262 — юнит на вердикт детектора здоровья DNS.
 // unhealthy = failRatio>=20% && failCount>=3 && hasConnActivity

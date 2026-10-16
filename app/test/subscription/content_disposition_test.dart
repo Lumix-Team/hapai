@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/subscription/sources.dart';
+import 'package:hapai/services/subscription/sources.dart';
 
 // content-disposition служит fallback'ом для имени подписки, когда провайдер
 // не ставит кастомный profile-title — многие стандартные админки (Marzban,

@@ -33,7 +33,7 @@ Future<bool> shareCrashReport(CrashReportFile report) async {
     }
     await SharePlus.instance.share(ShareParams(
       files: files,
-      subject: 'L×Box core crash — ${report.mtime.toIso8601String()}',
+      subject: 'Hapai core crash — ${report.mtime.toIso8601String()}',
     ));
     return true;
   } catch (_) {

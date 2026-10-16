@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/format_utils.dart';
+import 'package:hapai/services/format_utils.dart';
 
 /// §084 H4 — tests for unified byte/duration/time formatters.
 void main() {

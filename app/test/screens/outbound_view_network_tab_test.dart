@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/controllers/home_controller.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/config_node.dart';
-import 'package:lxbox/models/node_spec.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/screens/outbound_view_screen.dart';
-import 'package:lxbox/widgets/tailscale_network_tab.dart';
+import 'package:hapai/controllers/home_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/config_node.dart';
+import 'package:hapai/models/node_spec.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/screens/outbound_view_screen.dart';
+import 'package:hapai/widgets/tailscale_network_tab.dart';
 
 /// Задача 581 — вкладка Network на экране просмотра узла: видимость,
 /// начальная вкладка, Save choice только у записи своего сервера/папки.

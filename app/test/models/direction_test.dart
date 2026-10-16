@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart' show kMaxPoolTolerance;
-import 'package:lxbox/models/codec/source_replace_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/services/builder/source_replace_build.dart'
+import 'package:hapai/models/auto_select.dart' show kMaxPoolTolerance;
+import 'package:hapai/models/codec/source_replace_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/services/builder/source_replace_build.dart'
     show buildAutoGroup;
-import 'package:lxbox/models/parser_config.dart';
+import 'package:hapai/models/parser_config.dart';
 
 void main() {
   group('Direction JSON round-trip', () {

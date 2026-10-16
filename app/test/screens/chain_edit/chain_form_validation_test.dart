@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../contract_paths.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/screens/chain_edit/chain_form_validation.dart';
-import 'package:lxbox/screens/chain_edit/chain_hop_candidate.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/screens/chain_edit/chain_form_validation.dart';
+import 'package:hapai/screens/chain_edit/chain_hop_candidate.dart';
 
 // §393 C6 — валидация формы цепочки. ФОРМА — ЕДИНСТВЕННЫЙ РУБЕЖ (§393 L4):
 // `sing-box check` ошибки старта не ловит, ядро отвергает конфиг ЦЕЛИКОМ, и

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/auto_select.dart';
-import 'package:lxbox/models/home_state.dart';
-import 'package:lxbox/screens/home/node_list_presenter.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
+import 'package:hapai/models/auto_select.dart';
+import 'package:hapai/models/home_state.dart';
+import 'package:hapai/screens/home/node_list_presenter.dart';
+import 'package:hapai/vpn/cc_channel.dart';
 
 /// §322 — ядру и auto-двойник Направления, и узел автовыбора приходят одинаковым
 /// `urltest`. Спец-обращение (подмена имени на «✨ Auto», пин в верхнюю

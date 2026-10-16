@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/screens/warp_wizard_screen.dart';
+import 'package:hapai/screens/warp_wizard_screen.dart';
 
 void main() {
   const mark = '(recommended)';

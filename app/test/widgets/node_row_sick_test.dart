@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/widgets/node_row.dart';
-import 'package:lxbox/widgets/node_view_item.dart';
+import 'package:hapai/widgets/node_row.dart';
+import 'package:hapai/widgets/node_view_item.dart';
 
 /// §355 — ⚠-метка корня беды на строке ноды: рисуется только при
 /// isSickRoot, тап по ней дёргает onSickTap (открытие sheet — за caller'ом).

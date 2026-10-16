@@ -156,7 +156,7 @@ class WarpClient {
       };
 
   /// §143 — собирает [Awg] для obfuscate-ветки через masquerade `id/ip/ib`
-  /// (ядро 009 само разворачивает в `i1`; LxBox `i1` НЕ генерит).
+  /// (ядро 009 само разворачивает в `i1`; Hapai `i1` НЕ генерит).
   ///
   /// - `ip` = протокол ([QuicParams.ip]: quic/dns/stun/sip).
   /// - `id` = домен ([QuicParams.sni], пустой → `www.google.com`); на провод идёт

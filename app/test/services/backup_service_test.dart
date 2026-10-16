@@ -4,13 +4,13 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/services/backup_service.dart';
-import 'package:lxbox/services/settings_storage.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/services/backup_service.dart';
+import 'package:hapai/services/settings_storage.dart';
 
 /// §607 — канал нативных методов VPN (зеркало тумблеров пишет и туда).
-const _vpnMethods = MethodChannel('com.leadaxe.lxbox/methods');
+const _vpnMethods = MethodChannel('studio.creater120.hapai/methods');
 
 /// §040 backup-restore — round-trip и edge cases для нового single-format
 /// (`storage` + `vpn_settings` блоки).

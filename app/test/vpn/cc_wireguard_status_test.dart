@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/platform_channels.dart';
-import 'package:lxbox/services/wg_peer_status.dart';
-import 'package:lxbox/vpn/cc_channel.dart';
+import 'package:hapai/services/platform_channels.dart';
+import 'package:hapai/services/wg_peer_status.dart';
+import 'package:hapai/vpn/cc_channel.dart';
 
 /// §613 (ядро SPEC 114/115) — разбор статуса пиров WG/AWG и пути пиров
 /// Tailscale из канала, вердикт «на связи».

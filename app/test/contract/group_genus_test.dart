@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/services/contract/group_genus.dart';
-import 'package:lxbox/services/contract/registry.dart';
+import 'package:hapai/services/contract/group_genus.dart';
+import 'package:hapai/services/contract/registry.dart';
 
 import '../contract_paths.dart';
 

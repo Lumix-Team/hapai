@@ -7,12 +7,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:lxbox/controllers/subscription_controller.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/config_dirty_check.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/subscription/auto_updater.dart';
-import 'package:lxbox/services/workspaces/workspace_controller.dart';
+import 'package:hapai/controllers/subscription_controller.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/config_dirty_check.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/subscription/auto_updater.dart';
+import 'package:hapai/services/workspaces/workspace_controller.dart';
 
 import '../parser/engine_test_setup.dart';
 

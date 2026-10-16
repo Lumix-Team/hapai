@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/services/subscription/subscription_identity.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/services/subscription/subscription_identity.dart';
 
 void main() {
   group('§118 generateUuidV4', () {

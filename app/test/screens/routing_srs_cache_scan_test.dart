@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/screens/routing_screen/routing_screen_helpers.dart'
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/screens/routing_screen/routing_screen_helpers.dart'
     show RoutingHelpers;
 
 /// §601 — экран Routing не выключает правило из-за нескачанного набора:

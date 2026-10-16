@@ -1,20 +1,20 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/codec/chain_record.dart';
-import 'package:lxbox/models/codec/source_record.dart';
-import 'package:lxbox/models/direction.dart';
-import 'package:lxbox/models/import_rule.dart';
-import 'package:lxbox/models/node_link.dart';
-import 'package:lxbox/models/server_list.dart';
-import 'package:lxbox/models/source_chain.dart';
-import 'package:lxbox/models/source_replace.dart';
-import 'package:lxbox/models/subscription_meta.dart';
-import 'package:lxbox/models/tls_policy.dart';
-import 'package:lxbox/services/builder/verbatim_body.dart';
-import 'package:lxbox/services/node_hash.dart';
-import 'package:lxbox/services/parser/body_decoder.dart';
-import 'package:lxbox/services/parser/parse_all.dart';
+import 'package:hapai/models/codec/chain_record.dart';
+import 'package:hapai/models/codec/source_record.dart';
+import 'package:hapai/models/direction.dart';
+import 'package:hapai/models/import_rule.dart';
+import 'package:hapai/models/node_link.dart';
+import 'package:hapai/models/server_list.dart';
+import 'package:hapai/models/source_chain.dart';
+import 'package:hapai/models/source_replace.dart';
+import 'package:hapai/models/subscription_meta.dart';
+import 'package:hapai/models/tls_policy.dart';
+import 'package:hapai/services/builder/verbatim_body.dart';
+import 'package:hapai/services/node_hash.dart';
+import 'package:hapai/services/parser/body_decoder.dart';
+import 'package:hapai/services/parser/parse_all.dart';
 
 import '../parser/engine_test_setup.dart';
 

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/config/consts.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/dns_ref.dart';
-import 'package:lxbox/models/record_codec.dart';
+import 'package:hapai/config/consts.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/dns_ref.dart';
+import 'package:hapai/models/record_codec.dart';
 
 /// §435 — кодек записей ONE_NAMESPACE §1–§2: метаданные + `body` sing-box.
 void main() {

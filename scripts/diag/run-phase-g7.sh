@@ -92,9 +92,9 @@ echo "── 5 trials ──"
 for i in 1 2 3 4 5; do
   echo "─── Trial $i ───"
   adb -s "$DEVICE" logcat -c
-  adb -s "$DEVICE" shell am force-stop com.leadaxe.lxbox
+  adb -s "$DEVICE" shell am force-stop studio.creater120.hapai
   sleep 2
-  adb -s "$DEVICE" shell am start -n com.leadaxe.lxbox/.MainActivity > /dev/null
+  adb -s "$DEVICE" shell am start -n studio.creater120.hapai/.MainActivity > /dev/null
   sleep 12
   echo "[G7 marker]:"
   adb -s "$DEVICE" logcat -d 2>&1 | grep -E "G7" | head -2

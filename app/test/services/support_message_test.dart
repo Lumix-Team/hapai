@@ -6,10 +6,10 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/support/active_time_tracker.dart';
-import 'package:lxbox/services/support/support_message.dart';
-import 'package:lxbox/services/support/support_state.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/support/active_time_tracker.dart';
+import 'package:hapai/services/support/support_message.dart';
+import 'package:hapai/services/support/support_state.dart';
 import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/node_warning.dart';
-import 'package:lxbox/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
-import 'package:lxbox/screens/subscriptions_screen/clipboard_analysis.dart';
-import 'package:lxbox/screens/subscriptions_screen/paste_dialogs.dart';
+import 'package:hapai/models/node_warning.dart';
+import 'package:hapai/screens/subscription_detail_screen/widgets/node_warnings_sheet.dart';
+import 'package:hapai/screens/subscriptions_screen/clipboard_analysis.dart';
+import 'package:hapai/screens/subscriptions_screen/paste_dialogs.dart';
 
 import '../parser/engine_test_setup.dart';
 

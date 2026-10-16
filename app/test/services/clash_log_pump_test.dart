@@ -2,8 +2,8 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:lxbox/models/debug_entry.dart';
-import 'package:lxbox/services/clash_log_pump.dart';
+import 'package:hapai/models/debug_entry.dart';
+import 'package:hapai/services/clash_log_pump.dart';
 
 void main() {
   group('ClashLogPump.parseLevel (§043)', () {
@@ -59,7 +59,7 @@ void main() {
     // §043 fix — sing-box default formatter (после strip'а ANSI) выдаёт
     // уровень слитно с timer'ом: `INFO[0006]` без пробела перед `[`.
     test('default-formatter формат INFO[NNNN] → DebugLevel.info', () {
-      const line = 'INFO[0006] [402815533 25ms] router: found package name: com.leadaxe.lxbox';
+      const line = 'INFO[0006] [402815533 25ms] router: found package name: studio.creater120.hapai';
       expect(ClashLogPump.parseLevel(line), DebugLevel.info);
     });
 

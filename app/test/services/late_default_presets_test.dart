@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lxbox/models/custom_rule.dart';
-import 'package:lxbox/models/parser_config.dart';
-import 'package:lxbox/services/settings_storage.dart';
-import 'package:lxbox/services/settings_storage_keys.dart';
+import 'package:hapai/models/custom_rule.dart';
+import 'package:hapai/models/parser_config.dart';
+import 'package:hapai/services/settings_storage.dart';
+import 'package:hapai/services/settings_storage_keys.dart';
 
 /// §578 — разовый шаг: поздний дефолтный пресет `tailscale` у пользователя
 /// с уже сохранённым состоянием.
